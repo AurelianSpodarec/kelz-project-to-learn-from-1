@@ -1,0 +1,21 @@
+{
+  "LEADS_INDEX_ERROR": "Leads index unsuccessful",
+  "LEAD_GET_ERROR": "An error occurred getting the lead details",
+  "LEAD_DELETE_SUCCESS": "Lead has been successfully deleted",
+  "LEAD_DELETE_ERROR": "An error occurred deleting the lead",
+  "LEAD_UPDATE_SUCCESS": "Lead has been successfully updated",
+  "LEAD_UPDATE_ERROR": "An error occurred updating the lead",
+  "LEAD_ADD_SUCCESS": "Lead has been successfully added",
+  "LEAD_ADD_ERROR": "An error occurred adding the lead",
+  "CLIENT_HAS_QUOTES_IN_PROGRESS": "This entity could not be deleted because they have quotes in progress",
+  "NOTES_INDEX_ERROR": "An error occurred getting the notes",
+  "NOTE_ADD_SUCCESS": "A note has been successfully added",
+  "NOTE_ADD_ERROR": "An error occurred adding the note",
+  "LEAD_CONFIG_FETCH_ERROR": "An error occurred getting the lead config data",
+  "LEAD_DISPOSITION_UPDATE_SUCCESS": "The lead's disposition has been successfully updated",
+  "LEAD_DISPOSITION_UPDATE_ERROR": "An error occurred updating the lead's disposition",
+  "LEAD_TRANSFER_SUCCESS": "The lead has been successfully transferred to the specified user",
+  "LEAD_TRANSFER_ERROR": "An error occurred while transferring the lead",
+  "LEAD_IMPORT_SUCCESS": "Leads have been successfully imported from the file",
+  "LEAD_IMPORT_ERROR": "An error occurred importing the leads from the file"
+}

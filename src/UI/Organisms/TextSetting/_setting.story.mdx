@@ -1,0 +1,74 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import { useFormik } from "formik"
+import TextSetting from "."
+
+<Meta title="Organisms/TextSetting" component={TextSetting} />
+
+# TextSetting
+
+The `TextSetting` component allows the user to view and manipulate text settings for Networks, Organisations, and Providers. It has an internal `formik` instance to handle this based on the name passed to the setting.
+
+The Edit state is controlled by a prop called `isEdit`, and a setter function to change its value should be passed as `setEdit`. This is external to the component to allow control of this state by the `onCompleted` callback in mutations.
+
+`onSubmit` and `onDelete` props should be passed to handle the behaviour of the submit and delete actions within the component.
+
+`helperText` can be passed to apply `helperText` to the setting's title.
+
+By default, this component will utilize a `TextEditor` `Form` element, which means it will return a string of valid HTML. If this is not desired, the `canEditHTML` prop can be passed with a value of `false` to control the text setting with a `TextArea` instead.
+
+## Usage
+
+Import
+
+```javascript
+import { TextSetting } from "../../UI/Organisms"
+```
+
+Implement as follows:
+
+```javascript
+<TextSetting
+  name="consent_text"
+  title="Consent Text"
+  content={consentText}
+  onSubmit={val => {
+    onSubmitConsentText(val)
+  }}
+  helperText="Yes, this has Helper Text"
+  isEdit={editConsent}
+  setEdit={setEditConsent}
+/>
+```
+
+## Story
+
+export const Template = args => {
+  const [content, setContent] = React.useState("<p>This is where the content goes.</p>")
+  const [isEdit, setIsEdit] = React.useState(false)
+  return (
+    <div style={{ width: "50rem" }}>
+      <TextSetting
+        {...args}
+        name="story"
+        content={content}
+        isEdit={isEdit}
+        setEdit={setIsEdit}
+        onSubmit={val => {
+          setContent(val.story)
+          setIsEdit(false)
+        }}
+      />
+    </div>
+  )
+}
+
+<Canvas>
+  <Story
+    name="TextSetting"
+    args={{
+      title: "Text Setting"
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>

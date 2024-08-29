@@ -1,0 +1,29 @@
+import { Meta } from "@storybook/addon-docs"
+
+<Meta
+  title="Helpers/Responses"
+  parameters={{
+    viewMode: "docs",
+    previewTabs: { canvas: { hidden: true } }
+  }}
+/>
+
+# Responses
+
+The objects and arrays defined within the `responses` directory are designed to provide a common resource for expected responses from the backend. These are meant to be used for writing Unit Tests for `page`-level components, whenever mocking axios requests is required.
+
+By keeping these in one place, it is possible to reuse the same data structures in multiple places throughout the app's testing files. For example, in Provider Users and Organisation Users. If the data structure is then changed to reflect new changes to the backend, this can be changed in one place to affect tests everywhere in the application.
+
+## Usage
+
+Import
+
+```javascript
+import { fakeUsersGetResponse } from "../../UI/Helpers"
+```
+
+Implement as follows
+
+```javascript
+mockAxios.onGet(`${fakeApiUrl}/users`).replyOnce(200, fakeUsersGetResponse)
+```

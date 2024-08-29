@@ -1,0 +1,69 @@
+import MockAdapter from "axios-mock-adapter"
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import { Container } from "@4cplatform/elements/Atoms"
+import { H1 } from "@4cplatform/elements/Typography"
+import { ConfigProvider } from "@4cplatform/elements/Config"
+import { TranslationsProvider } from "@4cplatform/elements/Translations"
+import { AlertsProvider, AlertsContainer } from "@4cplatform/elements/Alerts"
+import { Page } from "../../Organisms"
+import { Providers, fakeOrganisationsGetResponse } from "../../Helpers"
+import TestNetworkInvitationsProvider from "./story/networkInvitations.story.provider.js"
+import NetworkInvitations from "."
+
+<Meta
+  title="Templates/NetworkInvitations"
+  decorators={[
+    StoryFn => (
+      <Providers>
+        <TestNetworkInvitationsProvider>
+          <AlertsContainer />
+          <StoryFn />
+        </TestNetworkInvitationsProvider>
+      </Providers>
+    )
+  ]}
+/>
+
+# Network Invitations
+
+The `NetworkInvitations` component is designed to allow network administrators and system administrators to view, remove, or create invitations to join a network.
+
+## Usage
+
+There are two main parts to this component:
+
+1. `NetworkInvitations`
+2. `NetworkInvitationsProvider`
+
+`NetworkInvitations` contains the `Table` component for displaying the index invitations data as well as tools for sorting and filtering the invitations.
+
+It also contains tools for adding new invitations and cancelling existing invitations.
+
+`NetworkInvitationsProvider` is the Context Provider. It controls the state of the `NetworkInvitations` component.
+
+An example of a functional `NetworkInvitationsProvider` component instance can be found inside `./story/networkInvitations.story.provider.js`.
+
+Implement as follows:
+
+```javascript
+<NetworkInvitationsProvider>
+  <Container>
+    <NetworkInvitations {...props} />
+  </Container>
+</NetworkInvitationsProvider>
+```
+
+## Story
+
+export const Template = args => (
+  <>
+    <Container>
+      <H1 margin="3rem 0">Network Invitations</H1>
+      <NetworkInvitations {...args} />
+    </Container>
+  </>
+)
+
+<Canvas>
+  <Story name="NetworkInvitations">{Template.bind()}</Story>
+</Canvas>

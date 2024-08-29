@@ -1,0 +1,9 @@
+{
+  "CLIENTS_INDEX_ERROR": "There was an error fetching clients",
+  "CLIENT_VIEW_ERROR": "There was an error fetching the client",
+  "CLIENT_UPDATE_SUCCESS": "Client update successful",
+  "CLIENT_UPDATE_ERROR": "Client update unsuccessful",
+  "CLIENT_POLICIES_INDEX_ERROR": "An error occurred while retrieving client's policies",
+  "CLIENT_QUOTE_DELETE_SUCCESS": "Client quote has been successfully deleted",
+  "CLIENT_QUOTE_DELETE_ERROR": "An error occurred while deleting the client quote"
+}

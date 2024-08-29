@@ -1,0 +1,61 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs"
+import { Provider } from "@4cplatform/elements/Auth/auth.context"
+import Notes from "."
+
+<Meta
+  title="Molecules/Notes"
+  component={Notes}
+  parameters={{ jest: ["_notes.test.js"] }}
+  decorators={[
+    StoryFn => {
+      return (
+        <Provider
+          value={{
+            canAccess: () => true,
+            loggedIn: true,
+            user: { first_name: "first", last_name: "last" }
+          }}
+        >
+          <StoryFn />
+        </Provider>
+      )
+    }
+  ]}
+/>
+
+## Notes
+
+The `Notes` component is will create a user messages context along with timestamp and username.
+
+## Usage
+
+Import
+
+```javascript
+import { Notes } from "./src/UI/Molecules"
+```
+
+Implement as follows
+
+```javascript
+<Notes />
+```
+
+### Data Structure
+
+In order to render a note properly, it must be have the following keys:
+
+| Key        | Description                                                                     |
+| ---------- | ------------------------------------------------------------------------------- |
+| id         | String. The unique identifier for this note.                                    |
+| note       | String. The content of the note.                                                |
+| user       | Object. The user who created the note. Must have first_name and last_name keys. |
+| created_at | String. A timestamp to mark when the note was created.                          |
+
+## Story
+
+export const Template = args => <Notes {...args} />
+
+<Canvas>
+  <Story name="Notes">{Template.bind()}</Story>
+</Canvas>

@@ -1,0 +1,114 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import { colours } from "@4cplatform/elements/Helpers"
+import { H3 } from "@4cplatform/elements/Typography"
+import { FlyOutPanel } from "../../Molecules"
+import { Providers } from "../../Helpers"
+import { PageContext } from "../../Organisms"
+import Timeline from "."
+
+<Meta
+  title="Organisms/Timeline"
+  component={Timeline}
+  decorators={[
+    StoryFn => (
+      <Providers>
+        <StoryFn />
+      </Providers>
+    )
+  ]}
+/>
+
+# Timeline
+
+The `Timeline` component is designed to organise a list of dated events. It allows for viewing and interacting with those events, as well as changing some visual properties (icon color, icon type) according to the developer's need.
+
+## Usage
+
+The `Timeline` takes four props. These include:
+
+| Prop    | Type   | Description                                                                                                                 |
+| ------- | ------ | --------------------------------------------------------------------------------------------------------------------------- |
+| margin  | string | The margin prop passed to the                                                                                               |
+| events  | array  | An array of event elements to display in the timeline                                                                       |
+| name    | string | The name prop passed to the elements, for use in unit tests as test-ids.                                                    |
+| orderBy | string | The direction by which to sort the timeline elements. It defaults to "desc", with the latest elements appearing at the top. |
+
+The `events` prop warrants additional explanation. Each `event` element can contain many props - some required, some optional - which can affect the appearance and behaviour of the timeline element.
+
+| Key        | Type             | Description                                                                                                                                                      |
+| ---------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| content    | string           | Required. The text content appearing inside the first row of the event element.                                                                                  |
+| icon       | string           | The icon attached to this part of the timeline element. Default is 'plus'. This can be set according to need.                                                    |
+| colour     | string           | The colour of the icon element. Default is white. Most of the time this won't need to be changed, but some situations may call for it.                           |
+| iconColour | string           | The background colour of the icon element. Default is darkBlue. Can be changed according to need.                                                                |
+| date       | string           | Required. The date of the event. Most come in in the "YYYY-MM-DD HH:mm" format commonly sent by the backend.                                                     |
+| id         | string OR number | The unique identifier of the element. This isn't strictly required, but it should be passed if passing an onClick function to any of the events.                 |
+| onClick    | function         | If passed, this will render the top row of content as a button instead of a p tag. When the button is clicked, this will fire with the id passed as an argument. |
+| buttonIcon | string           | If passed along with onClick and id, this will render a trailingIcon inside the button.                                                                          |
+
+## Story
+
+export const Template = args => {
+  const { setPanelStatus } = React.useContext(PageContext)
+  return (
+    <div style={{ height: "50rem" }}>
+      <div
+        style={{
+          width: "100%",
+          height: "calc(100vh - 14rem)",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }}
+      >
+        <button onClick={() => setPanelStatus("open")}>Open Panel</button>
+      </div>
+      <FlyOutPanel
+        body={() => (
+          <div style={{ padding: "2rem 3rem" }}>
+            <H3 appearance="light" margin="0 0 4rem">
+              Timeline Example
+            </H3>
+            <Timeline {...args} />
+          </div>
+        )}
+      />
+    </div>
+  )
+}
+
+<Canvas>
+  <Story
+    name="Timeline"
+    args={{
+      events: [
+        {
+          id: 1,
+          content: "Test content 1",
+          icon: "check",
+          iconColour: colours.green,
+          date: "2018-06-10T09:30Z"
+        },
+        {
+          id: 2,
+          content: "Interactive Item",
+          icon: "plus",
+          iconColour: colours.darkBlue,
+          date: "2018-05-10T09:30Z",
+          onClick: e => console.log(e),
+          buttonIcon: "file-cog-outline"
+        },
+        {
+          id: 3,
+          content: "Last Item",
+          icon: "alert",
+          colour: colours.darkBlue,
+          iconColour: colours.orange,
+          date: "2018-02-10T09:30Z"
+        }
+      ]
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>

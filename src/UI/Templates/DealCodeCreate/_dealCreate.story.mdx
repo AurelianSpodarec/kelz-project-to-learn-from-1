@@ -1,0 +1,71 @@
+import MockAdapter from "axios-mock-adapter"
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import { get } from "lodash"
+import { AlertsProvider, AlertsContainer } from "@4cplatform/elements/Alerts"
+import { Container } from "@4cplatform/elements/Atoms"
+import { H1 } from "@4cplatform/elements/Typography"
+import { api } from "@4cplatform/elements/Api/fetchData"
+import {
+  Providers,
+  fakeApiUrl,
+  fakeProductTypesGetResponse,
+  fakeProvidersGetResponse
+} from "../../Helpers"
+import DealCreate from "."
+const mockAxios = new MockAdapter(api)
+mockAxios.onGet(`${fakeApiUrl}/product-types`).reply(200, fakeProductTypesGetResponse)
+
+<Meta
+  title="Templates/DealCodeCreate"
+  parameters={{
+    layout: "fullscreen",
+    jest: ["_dealCreate.test.js"]
+  }}
+  decorators={[
+    StoryFn => (
+      <Providers mockAxios={mockAxios}>
+        <StoryFn />
+      </Providers>
+    )
+  ]}
+/>
+
+# Deal Code Creation
+
+The Create Deal Code template implements a `formik` form around several fields. When the submit button is clicked, it runs the passed `onSubmit` button with the body passed as an argument. These can then be used within a `usePost` hook as desired.
+
+An array of `providers` must also be passed to populate the `provider` Select with data.
+
+## Usage
+
+Import
+
+```javascript
+import { DealCodeCreate } from "../UI/Templates"
+```
+
+Implement as follows
+
+```javascript
+<DealCodeCreate
+  providers={providers}
+  onSubmit={body => create({ body })}
+  isLoading={providersLoading || createLoading}
+  onCancel={() => setOpen(true)}
+/>
+```
+
+## Story
+
+export const Template = args => (
+  <div style={{ width: "70rem", margin: "0 auto" }}>
+    <Container>
+      <H1>Add Deal Code</H1>
+      <DealCreate onSubmit={body => console.log(body)} {...args} />
+    </Container>
+  </div>
+)
+
+<Canvas>
+  <Story name="DealCodeCreate">{Template.bind()}</Story>
+</Canvas>

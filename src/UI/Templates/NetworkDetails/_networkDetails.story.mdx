@@ -1,0 +1,68 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import { ConfigProvider } from "@4cplatform/elements/Config"
+import { TranslationsProvider } from "@4cplatform/elements/Translations"
+import { AlertsProvider, AlertsContainer } from "@4cplatform/elements/Alerts"
+import { Page } from "../../Organisms"
+import { FakeAuthProvider } from "../../Helpers"
+import CONFIG from "../../../config"
+import TestDetailsProvider from "./story/network.story.provider"
+import NetworkDetails from "."
+
+<Meta
+  title="Templates/NetworkDetails"
+  parameters={{ jest: ["_networkDetails.test.js"], layout: "fullscreen" }}
+  component={NetworkDetails}
+  decorators={[
+    StoryFn => (
+      <ConfigProvider config={CONFIG}>
+        <TranslationsProvider>
+          <AlertsProvider>
+            <FakeAuthProvider>
+              <Page>
+                <TestDetailsProvider>
+                  <AlertsContainer />
+                  <StoryFn />
+                </TestDetailsProvider>
+              </Page>
+            </FakeAuthProvider>
+          </AlertsProvider>
+        </TranslationsProvider>
+      </ConfigProvider>
+    )
+  ]}
+/>
+
+# OrganisationDetails
+
+The `NetworkDetails` component allows users to view details about the selected Network. This same component can also be used to edit those details.
+
+## Usage
+
+This component must be paired with the included Provider and Context in order to function. Relevant queries should be passed to the `NetworkDetails` component through the use of this context provider.
+
+Example:
+
+```javascript
+<NetworkDetailsProvider
+  value={{
+    data,
+    isEdit,
+    setEdit,
+    onEditDetailsSubmit: body => editDetails(body)
+  }}
+>
+  <NetworkDetails />
+</NetworkDetailsProvider>
+```
+
+## Story
+
+export const Template = args => (
+  <div style={{ width: "80rem", margin: "0 auto" }}>
+    <NetworkDetails {...args} />
+  </div>
+)
+
+<Canvas>
+  <Story name="NetworkDetails">{Template.bind()}</Story>
+</Canvas>

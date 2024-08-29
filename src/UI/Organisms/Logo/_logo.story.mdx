@@ -1,0 +1,54 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import Logo from "."
+
+<Meta title="Organisms/Logo" component={Logo} />
+
+# Logo
+
+The `Logo` component wraps a `ConfirmationModal` and an `UploadModal` component with a `formik` instance and dresses them up with some `Button`s and styled components for interactve behaviour.
+
+It's designed to allow users to view, update, and delete company logos attached to Networks, Providers, and Organisations.
+
+## Usage
+
+The Logo component must have methods for updating and deleting the logo passed into the component as props, as `onUpdateLogo` and `onDeleteLogo` respectively. These will typically be handled in a Context Provider as the point where the application interacts with 4c-api.
+
+Import
+
+```javascript
+import { Logo } from "../../UI/Organisms"
+```
+
+Implement as follows:
+
+```javascript
+<Logo
+  isEdit={isEdit}
+  title="Network logo"
+  onSubmit={body => onLogoUpdate(body)}
+  onDelete={() => onLogoDelete()}
+  updateLoading={isLogoUpdateLoading}
+  deleteLoading={isDeleteLoading}
+  path={get(network, "logo_file_path", null)}
+/>
+```
+
+## Story
+
+export const Template = args => {
+  const [isEdit, setEdit] = React.useState(false)
+  return (
+    <div style={{ width: "46.5rem" }}>
+      <Logo
+        onSubmit={body => console.log("Submit", body)}
+        onDelete={() => console.log("Delete logo")}
+        isEdit={isEdit}
+      />
+      <button onClick={() => setEdit(!isEdit)}>Toggle Edit</button>
+    </div>
+  )
+}
+
+<Canvas>
+  <Story name="Logo">{Template.bind()}</Story>
+</Canvas>

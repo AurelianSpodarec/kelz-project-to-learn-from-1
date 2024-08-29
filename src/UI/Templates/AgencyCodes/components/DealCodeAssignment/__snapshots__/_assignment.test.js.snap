@@ -1,0 +1,440 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DealCodeAssignment /> Basic styles and appearance 1`] = `
+.c7 {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0;
+}
+
+.c10 {
+  width: 2rem;
+  height: 2rem;
+  margin: 0;
+}
+
+.c8 {
+  -webkit-transition: fill 0.2s linear;
+  transition: fill 0.2s linear;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c1 svg {
+  cursor: pointer;
+}
+
+.c1 svg:hover {
+  opacity: 0.8;
+}
+
+.c2 {
+  width: auto;
+  color: #FFF;
+  text-align: left;
+  margin: 1rem 0 2rem;
+  padding: 0;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.c12 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background-color: transparent;
+  border: 2px solid #FFF;
+  color: #FFF;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  position: relative;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-letter-spacing: 0px;
+  -moz-letter-spacing: 0px;
+  -ms-letter-spacing: 0px;
+  letter-spacing: 0px;
+  border-radius: 0.3rem;
+  font-size: 1.7rem;
+  font-style: bold;
+  font-weight: 700;
+  height: 4rem;
+  padding: 0 1rem;
+  margin: 2rem 0 0 0;
+  padding: 0 1rem 0 1.5rem;
+}
+
+.c12:disabled {
+  color: #F9F9F9;
+  background-color: transparent;
+  border-color: #F9F9F9;
+  pointer-events: auto;
+  cursor: not-allowed;
+}
+
+.c12:disabled svg path {
+  fill: #F9F9F9;
+}
+
+.c12:focus {
+  outline: none;
+}
+
+.c12:hover:not([disabled]) {
+  background-color: transparent;
+  border-color: #F9F9F9;
+  color: #F9F9F9;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: calc(2rem + 1rem);
+  height: calc(2rem + 1rem);
+  -webkit-transition: background 0.2s linear;
+  transition: background 0.2s linear;
+  -webkit-appearance: none !important;
+  margin-left: 1.1rem;
+}
+
+.c13 svg path {
+  fill: #FFF;
+}
+
+.c4 {
+  font-weight: 400;
+  width: auto;
+  color: #335257;
+  text-align: left;
+  margin: 0 0 0.5rem;
+  padding: 0;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.c4 em,
+.c4 i {
+  font-style: italic;
+}
+
+.c4 b,
+.c4 strong {
+  font-weight: bold;
+}
+
+.c4 pre {
+  font-family: "Courier 10 Pitch",Courier,monospace;
+  font-size: 95%;
+  line-height: 140%;
+  white-space: pre;
+  white-space: -moz-pre-wrap;
+  white-space: -o-pre-wrap;
+  white-space: pre-wrap;
+}
+
+.c4 code {
+  font-family: Monaco,Consolas,"Andale Mono","DejaVu Sans Mono",monospace;
+  font-size: 95%;
+  line-height: 140%;
+  white-space: pre;
+  white-space: -moz-pre-wrap;
+  white-space: -o-pre-wrap;
+  white-space: pre-wrap;
+  background: #faf8f0;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  color: #00272E;
+}
+
+.c9 {
+  font-size: 1.4rem;
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+
+.c6 {
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c0 {
+  margin: 0 0 2rem;
+}
+
+.c3 {
+  background: #FFF;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.c11 {
+  margin: 0 0 0 1rem;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.c11:focus {
+  outline: none;
+}
+
+@media screen and (min-width:400px) {
+  .c2 {
+    font-size: calc(12px + (16 - 12) * (100vw - 400px) / (1200 - 400));
+    line-height: calc(16px + (20 - 16) * (100vw - 400px) / (1200 - 400));
+  }
+}
+
+@media screen and (min-width:1200px) {
+  .c2 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@media screen and (min-width:400px) {
+  .c4 {
+    font-size: calc(14px + (16 - 14) * (100vw - 400px) / (1200 - 400));
+    line-height: calc(16px + (20 - 16) * (100vw - 400px) / (1200 - 400));
+  }
+}
+
+@media screen and (min-width:1200px) {
+  .c4 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1"
+    data-testid="heading_4-helper_text-container"
+  >
+    <h4
+      class="c2"
+    >
+      Assigned deal codes
+    </h4>
+    
+  </div>
+  <div
+    class="c3"
+    data-testid="deal_code_assignment-card-0"
+  >
+    <div>
+      <p
+        class="c4"
+        font-size=""
+      >
+        Deal Code name
+      </p>
+      <div
+        class="c5"
+      >
+        <div
+          class="c6"
+        >
+          <svg
+            class="c7"
+            viewBox="0 0 24 24"
+          >
+            <path
+              class="c8"
+              d="M5.41,21L6.12,17H2.12L2.47,15H6.47L7.53,9H3.53L3.88,7H7.88L8.59,3H10.59L9.88,7H15.88L16.59,3H18.59L17.88,7H21.88L21.53,9H17.53L16.47,15H20.47L20.12,17H16.12L15.41,21H13.41L14.12,17H8.12L7.41,21H5.41M9.53,9L8.47,15H14.47L15.53,9H9.53Z"
+              fill="#00272E"
+            />
+          </svg>
+        </div>
+        <span
+          class="c9"
+          font-size="1.4rem"
+        >
+          03492
+        </span>
+      </div>
+    </div>
+    <div>
+      <svg
+        class="c10"
+        viewBox="0 0 24 24"
+      >
+        <path
+          class="c8"
+          d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M11,16.5L18,9.5L16.59,8.09L11,13.67L7.91,10.59L6.5,12L11,16.5Z"
+          fill="#19B446"
+        />
+      </svg>
+      <button
+        class="c11"
+        data-testid="deal_code_assignment-view_button-0"
+      >
+        <svg
+          class="c10"
+          viewBox="0 0 24 24"
+        >
+          <path
+            class="c8"
+            d="M16,12A2,2 0 0,1 18,10A2,2 0 0,1 20,12A2,2 0 0,1 18,14A2,2 0 0,1 16,12M10,12A2,2 0 0,1 12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12M4,12A2,2 0 0,1 6,10A2,2 0 0,1 8,12A2,2 0 0,1 6,14A2,2 0 0,1 4,12Z"
+            fill="#197DA4"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div
+    class="c3"
+    data-testid="deal_code_assignment-card-1"
+  >
+    <div>
+      <p
+        class="c4"
+        font-size=""
+      >
+        Deal Code 2
+      </p>
+      <div
+        class="c5"
+      >
+        <div
+          class="c6"
+        >
+          <svg
+            class="c7"
+            viewBox="0 0 24 24"
+          >
+            <path
+              class="c8"
+              d="M5.41,21L6.12,17H2.12L2.47,15H6.47L7.53,9H3.53L3.88,7H7.88L8.59,3H10.59L9.88,7H15.88L16.59,3H18.59L17.88,7H21.88L21.53,9H17.53L16.47,15H20.47L20.12,17H16.12L15.41,21H13.41L14.12,17H8.12L7.41,21H5.41M9.53,9L8.47,15H14.47L15.53,9H9.53Z"
+              fill="#00272E"
+            />
+          </svg>
+        </div>
+        <span
+          class="c9"
+          font-size="1.4rem"
+        >
+          39943223B
+        </span>
+      </div>
+    </div>
+    <div>
+      <svg
+        class="c10"
+        viewBox="0 0 24 24"
+      >
+        <path
+          class="c8"
+          d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M11,16.5L18,9.5L16.59,8.09L11,13.67L7.91,10.59L6.5,12L11,16.5Z"
+          fill="#19B446"
+        />
+      </svg>
+      <button
+        class="c11"
+        data-testid="deal_code_assignment-view_button-1"
+      >
+        <svg
+          class="c10"
+          viewBox="0 0 24 24"
+        >
+          <path
+            class="c8"
+            d="M16,12A2,2 0 0,1 18,10A2,2 0 0,1 20,12A2,2 0 0,1 18,14A2,2 0 0,1 16,12M10,12A2,2 0 0,1 12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12M4,12A2,2 0 0,1 6,10A2,2 0 0,1 8,12A2,2 0 0,1 6,14A2,2 0 0,1 4,12Z"
+            fill="#197DA4"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+  <button
+    class="c12"
+    data-testid="assign-button"
+    loading="false"
+    type="button"
+  >
+    Assign new deal code
+    <div
+      class="c13"
+      data-testid="assign-button-trailing_icon"
+    >
+      <svg
+        class="c10"
+        viewBox="0 0 24 24"
+      >
+        <path
+          class="c8"
+          d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+          fill="#00222b"
+        />
+      </svg>
+    </div>
+  </button>
+</div>
+`;

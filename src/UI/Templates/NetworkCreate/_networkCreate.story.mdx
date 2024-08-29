@@ -1,0 +1,53 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import { AlertsProvider, AlertsContainer } from "@4cplatform/elements/Alerts"
+import { Container } from "@4cplatform/elements/Atoms"
+import { H1 } from "@4cplatform/elements/Typography"
+import NetworkCreate from "."
+
+<Meta
+  title="Templates/NetworkCreate"
+  parameters={{
+    viewMode: "canvas"
+  }}
+  decorators={[
+    StoryFn => (
+      <AlertsProvider>
+        <AlertsContainer />
+        <StoryFn />
+      </AlertsProvider>
+    )
+  ]}
+/>
+
+# Network Creation
+
+The Create Network template implements a `formik` form around several fields. When the submit button is clicked, it runs the passed `onSubmit` button with the body passed as an argument. These can then be used within a `usePost` hook as desired.
+
+## Usage
+
+Import
+
+```javascript
+import { NetworkCreate } from "../src/UI/Templates"
+```
+
+Implement as follows
+
+```javascript
+<NetworkCreate onSubmit={body => create({ body })} />
+```
+
+## Story
+
+export const Template = args => (
+  <div style={{ width: "70rem", margin: "0 auto" }}>
+    <Container>
+      <H1>Add Network</H1>
+      <NetworkCreate onSubmit={body => console.log(body)} />
+    </Container>
+  </div>
+)
+
+<Canvas>
+  <Story name="NetworkCreate">{Template.bind()}</Story>
+</Canvas>

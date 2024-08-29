@@ -1,0 +1,93 @@
+import { Meta } from "@storybook/addon-docs"
+
+<Meta
+  title="Helpers/Strings"
+  parameters={{
+    viewMode: "docs",
+    previewTabs: { canvas: { hidden: true } }
+  }}
+/>
+
+# Strings helpers
+
+The tools defined within the `strings` directory are designed to provide a common resource for helper functions that which return or manipulate `String` data.
+
+More tools can be added here in the future.
+
+## Exposed tools
+
+- [`getName()`](#getname)
+- [`getOrderBy()`](#getorderby)
+- [`alphanumericRegex`](#alphanumericregex)
+
+### `getName()`
+
+This is a simple function that extracts a human-readable name from an object with the typical keys. It will work for any object with standard person name keys attached - first_name, last_name, middle_names, title.
+
+By default, `getName` will return a combined first and last name in one string. It is possible to add the person's title and middle names if the appropriate arguments are passed to the function.
+
+#### Usage
+
+Import
+
+```javascript
+import { getName } from "../UI/Helpers"
+```
+
+Implement as follows
+
+```javascript
+const data = {
+  first_name: "Joseph",
+  middle_names: "Randall",
+  last_name: "Bloggs",
+  title: {
+    label: "Mr",
+    key: "MR"
+  }
+}
+
+getName({ data }) // 'Joseph Bloggs'
+getName({ data, hasMiddle: true }) // 'Joseph Randall Bloggs'
+getName({ data, hasTitle: true }) // 'Mr Joseph Bloggs'
+getName({ data, hasMiddle: true, hasTitle: true }) // 'Mr Joseph Randall Bloggs'
+```
+
+### `getOrderBy()`
+
+This is a simple function that returns the `order_by` string needed by the backend for index requests.
+
+This is primarily used along the `Table` organism, passing it the `sorting` object that it manipulates.
+
+#### Usage
+
+Import
+
+```javascript
+import { getOrderBy } from "../UI/Helpers"
+```
+
+Implement as follows
+
+```javascript
+getName({ direction: "asc", dataKey: "product_type" }) // product_type
+getName({ direction: "desc", dataKey: "product_type" }) // product_type_desc
+```
+
+### `alphanumericRegex`
+
+This is a simple regular expression (RegEx) constant helper for easily checking if strings are valid alphanumeric strings. This can be used with `test()` or inside a `yup` validation schema.
+
+#### Usage
+
+Import
+
+```javascript
+import { alphanumericRegex } from "../UI/Helpers"
+```
+
+Implement as follows
+
+```javascript
+yup.string().matches(alphanumericRegex, "INVALID_ALPHANUMERIC")
+```

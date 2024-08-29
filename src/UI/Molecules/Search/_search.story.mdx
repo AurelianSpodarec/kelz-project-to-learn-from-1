@@ -1,0 +1,54 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import Search from "."
+
+<Meta title="Molecules/Search" />
+
+## Search
+
+The Search component connects an `Input` component to another string variable. When changes are made to the `Input`, the passed `handleChange` function will be called with a 500ms delay. This is because the `Search` component is meant to control a variable used to query the backend. The 500ms delay will prevent the query from firing too many times in quick succession.
+
+The `handleChange` prop should be used to update the search variable. `onCancel` will be called when the cancel button is clicked, and should be used to return the search variable to its default state - typically an empty string.
+
+## Usage
+
+Import
+
+```javascript
+import { Search } from "../UI/Molecules"
+```
+
+Implement as follows
+
+```javascript
+<Search
+  name="search"
+  handleChange={value => setSearch(value)}
+  onCancel={() => setSearch("")}
+  margin="0 0 2rem"
+  width="30rem"
+  placeholder="Search Records..."
+/>
+```
+
+## Story
+
+export const Template = args => {
+  const [search, setSearch] = React.useState("")
+  React.useEffect(() => {
+    console.log(search)
+  }, [search])
+  return <Search handleChange={val => setSearch(val)} onCancel={() => setSearch("")} {...args} />
+}
+
+<Canvas>
+  <Story
+    name="Search"
+    args={{
+      label: "",
+      width: "30rem",
+      name: "story"
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>

@@ -1,0 +1,53 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import { useFormik } from "formik"
+import * as yup from "yup"
+import Typeahead from "."
+
+<Meta title="Forms/Typeahead" component={Typeahead} parameters={{ jest: ["_typeahead.test.js"] }} />
+
+# Typeahead
+
+The Typeahead is designed to be implemented alongside a `useGet` query. It has an `onDebouncedChange` prop, a function which fires 500ms after the user stops typing. This can be used to update a variable outside of the `Typeahead` component, which runs a query and updates the list of suggestions. If suggestions are present, they will be displayed in the dropdown below the `Input` component.
+
+## Story
+
+export const Template = args => {
+  const validationSchema = yup.object({
+    story: yup.string().required()
+  })
+  const formik = useFormik({
+    initialValues: {
+      story: ""
+    },
+    validationSchema,
+    onSubmit: body => console.log(body)
+  })
+  return (
+    <div style={{ width: "50rem" }}>
+      <Typeahead {...args} name="story" formik={formik} />
+      <button type="submit" onClick={formik.handleSubmit}>
+        Submit
+      </button>
+    </div>
+  )
+}
+
+<Canvas>
+  <Story
+    name="Typeahead"
+    args={{
+      suggestions: [
+        { id: "1", label: "Sales Adviser" },
+        { id: "2", label: "System Admin" },
+        { id: "3", label: "Organisation Admin" },
+        { id: "4", label: "Marketing" },
+        { id: "5", label: "Client" },
+        { id: "6", label: "Provider" }
+      ],
+      isDebounced: true,
+      label: "Typeahead"
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>

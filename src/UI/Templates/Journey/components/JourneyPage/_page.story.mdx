@@ -1,0 +1,174 @@
+import { Meta } from "@storybook/addon-docs"
+
+<Meta
+  title="Templates/Journey/Journey Components/JourneyPage"
+  parameters={{
+    viewMode: "docs",
+    previewTabs: { canvas: { hidden: true } }
+  }}
+/>
+
+# `JourneyPage`
+
+`JourneyPage` is a simple component that renders a page based on the page's `key` component. This is done with a page transformer function called `getJourneyPageComponent`, which is defined inside `Journey/components/JourneyPage/page.helpers.js`.
+
+The current page's `title` and `subtitle` keys are handled in this component.
+
+## Adding custom pages
+
+Sometimes, there is a need for the user to add fully customised pages to handle parts of the sales journey. This can be done by defining the page in the `pages` directory within `JourneyPage`, creating a relevant entry for it in the `getJourneyPageComponent` transformer and a config file like described below.
+
+## `DynamicPage`
+
+If no custom page is specified for the current page's `key` inside `getJourneyPageComponent`, `DynamicPage` will be rendered. This is just a wrapper which pulls the sections from the current page's `data` and passes them in an array to one `JourneyForm` component, which will render the components inside dynamically.
+
+Pages that do not need any custom behaviour can be handled entirely with `DynamicPage` and without their own entry in the `getJourneyPageComponent` function.
+
+However, a config is still required for validation and Journey audit log purposes.
+
+## Page config
+
+The Journey page `config` is a mandatory `function` for each Journey page and is used to augment the API data for the page with behaviour, sections and components details used in page construction and journey audit.
+This is passed `data` via the `getPageData` helper in order to populate components with initial values for already stored page data.
+
+This is placed in a `_config.js` inside each Journey page’s directory.
+
+**Please note:** Every Journey page must have named exports for its config and the component exposing the custom page, if applicable.
+
+### Usage
+
+Implement as follows:
+
+```javascript
+// Imports for yup, lodash, Form level elements or any other needed constructs.
+
+export const config = data => ({
+  // The title of the page.
+  title: "Example page title",
+  // The title of the nav item. OPTIONAL: Only include if a custom nav item title is needed.
+  navTitle: "Navigation title",
+  // The subtitle of the page.
+  subtitle: "Example page subtitle",
+  // The sections of the page.
+  sections: [
+    {
+      // The key of the section.
+      key: "section_1",
+      // The title of the section.
+      title: "Example section 1 title",
+      // The helper text for the title of the section. OPTIONAL: Only include if `title` is present and a helper text is needed for it.
+      titleHelper: "Example section 1 title helper text",
+      // The subtitle of the section.
+      subtitle: "Example section 1 subtitle",
+      // The helper text for the subtitle of the section. OPTIONAL: Only include if `subtitle` is present and a helper text is needed for it.
+      subtitleHelper: "Example section 1 subtitle helper text",
+      // The components of the section.
+      components: [
+        {
+          // The key of the component. IMPORTANT: Must match the API key to which the value is linked.
+          key: "key_1",
+          // The initial value of the component.
+          initialValue: get(data, "page.data.key_1", ""),
+          // The `yup` validation schema of the component. This is getting inserted into a `yup` `object()` instance.
+          validationSchema: string().email("INVALID_EMAIL").required("MISSING_REQUIRED_FIELD"),
+          // The label of the component.
+          label: "Field 1",
+          // The correspondent React component of the component. OPTIONAL: Only include if this a dynamic or partly dynamic page (e.g passing the component's parent section to JourneyForm).
+          component: Input,
+          // The props of the React component. OPTIONAL: Only include if `component` is present and the default props of the component need to be changed.
+          componentProps: {
+            type: "email",
+            isHorizontal: true,
+            labelWidth: "18rem"
+          }
+        },
+        {
+          key: "key_2",
+          initialValue: get(data, "page.data.key_2", ""),
+          validationSchema: boolean().required("MISSING_REQUIRED_FIELD"),
+          label: "Field 2",
+          component: Toggle,
+          componentProps: {
+            options: [
+              {
+                order: 0,
+                label: "No",
+                value: false
+              },
+              {
+                order: 1,
+                label: "Yes",
+                value: true
+              }
+            ],
+            isHorizontal: true,
+            labelWidth: "100%"
+          },
+          // The value triggered `FieldModal` object. OPTIONAL: Only include if this component needs to trigger a `FieldModal` at the point of value change.
+          modal: {
+            // Whether the `FieldModal` needs to be a `ConfirmationModal` or not. OPTIONAL: Only include if this component needs a value change confirmation.
+            confirmation: true.
+            // The value of the component that triggers the value triggered `FieldModal`.
+            fieldValueTrigger: true,
+            // The title of the value triggered `FieldModal`.
+            title: "Value triggered Modal",
+            // The content of the value triggered `FieldModal`.
+            content: "<p>Triggered key_2's false value, but only on onChange.</p>"
+          }
+        },
+        {
+          key: "key_3",
+          title: "Field 3",
+          components: [
+            {
+              key: "key_3",
+              initialValue: get(data, "page.data.key_3", {}),
+              validationSchema: object({
+                key_3_1: string().required(),
+                key_3_2: string()
+              }),
+              // The labels of the object contained in the component's value. OPTIONAL: Only include if the component has more than one label.
+              labels: {
+                key_3_1: "Field 3 label 1",
+                key_3_2: "Field 3 label 2"
+              },
+              component: Address,
+              componentProps: {
+                isHorizontal: true
+              }
+            }
+          ]
+        },
+        {
+
+          key: "key_4",
+          component: ComplianceNote,
+          componentProps: {
+            children: (
+                <P>Compliance text</P>
+            ),
+            type: "error"
+          },
+          // Whether to skip the component from being processed in helpers or not. OPTIONAL: Only include if this component doesn't need to be included to `yup`, `formik` and in the Journey audit trail.
+          skipDataMap: true
+        }
+      ]
+    }
+  ],
+  // The `SubmitModal` object. OPTIONAL: Only include if a certain component value needs to trigger a `SubmitModal` at the point of submission.
+  modals: {
+    submit: [
+      {
+        // The key of the component that triggers the `SubmitModal`.
+        fieldKey: "key_2",
+        // The value of the component that triggers the `SubmitModal`.
+        fieldValueTrigger: false,
+        // The title of the `SubmitModal`.
+        title: "Submit Modal",
+        // The content of the `SubmitModal`.
+        content: "<p>Triggered key_2's false value, but only on submit</p>"
+      }
+    ]
+  }
+})
+```

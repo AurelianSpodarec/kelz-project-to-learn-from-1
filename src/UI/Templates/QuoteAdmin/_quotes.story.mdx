@@ -1,0 +1,84 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import Container from "@4cplatform/elements/Atoms/Container"
+import { H1 } from "@4cplatform/elements/Typography"
+import { ConfigProvider } from "@4cplatform/elements/Config"
+import { TranslationsProvider } from "@4cplatform/elements/Translations"
+import { AlertsProvider, AlertsContainer } from "@4cplatform/elements/Alerts"
+import { Page } from "../../Organisms"
+import { FakeAuthProvider } from "../../Helpers"
+import CONFIG from "../../../config"
+import TestQuotesProvider from "./story/quotes.story.provider"
+import QuoteAdmin, { QuotesPanel } from "."
+
+<Meta
+  title="Templates/QuoteAdmin"
+  decorators={[
+    StoryFn => (
+      <ConfigProvider config={CONFIG}>
+        <TranslationsProvider>
+          <AlertsProvider>
+            <FakeAuthProvider>
+              <Page>
+                <TestQuotesProvider>
+                  <AlertsContainer />
+                  <StoryFn />
+                </TestQuotesProvider>
+              </Page>
+            </FakeAuthProvider>
+          </AlertsProvider>
+        </TranslationsProvider>
+      </ConfigProvider>
+    )
+  ]}
+/>
+
+# Quote Administration
+
+The `QuoteAdmin` component allows you to view quotes sold on the platform. It is designed to be used in multiple different contexts, as the platform requires different views for quotes in different states, and these require their own pages.
+
+## Usage
+
+Implementing this component is more complicated than usual because there are three components that must be defined and implemented separately in order for it to work. This is because different contexts for `QuoteAdmin` have different visual design guidelines that must be worked around. Developers therefore need more control over how these components are implemented.
+
+There are three main parts to this component:
+
+1. `QuoteAdmin`
+2. `QuotesPanel`
+3. `QuotesProvider`
+
+`QuoteAdmin` contains the `Table` component for displaying the index quotes data as well as several tools for sorting and refining the Index Quotes query.
+
+`QuotesPanel` is a `FlyOutPanel` component that contains the View Quote and Edit Quote functionality. Because `FlyOutPanel` is an absolutely positioned element, it must be defined at the root of the page being designed. It is for this reason that a React context is desirable for managing the state of this component.
+
+`QuotesProvider` is the Context Provider. It controls the state of the `QuoteAdmin` component and the `QuotesPanel` component. It must be defined outside of the component in order to allow developers to control how the queries and mutations are performed inside the multiple pages that the `QuoteAdmin` component is defined within. Different implementations of `QuoteAdmin` will have slightly different needs, and using a context to control the state will allow for that.
+
+Although the particular state management technique within the context is left open, it makes sense to use a `useReducer` hook for state management of page actions. For the `EditQuote` component, a formik instance internal to the component handles the state of the form inputs.
+
+An example of a functional `QuotesProvider` instance can be found inside `./story/quotes.story.provider.js`. Refer to this when considering the bare minimum of fields required to make this component functional.
+
+Implement as follows:
+
+```javascript
+<>
+  <Container>
+    <QuoteAdmin {...props} />
+  </Container>
+  <QuotesPanel {...props} />
+</>
+```
+
+## Story
+
+export const Template = args => (
+  <>
+    <Container backgroundColour="#fff">
+      <H1 margin="3rem 0">Quotes</H1>
+      <QuoteAdmin {...args} />
+    </Container>
+    <QuotesPanel {...args} />
+  </>
+)
+
+<Canvas>
+  <Story name="QuoteAdmin">{Template.bind()}</Story>
+</Canvas>

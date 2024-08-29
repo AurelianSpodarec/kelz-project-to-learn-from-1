@@ -1,0 +1,53 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import { AlertsProvider, AlertsContainer } from "@4cplatform/elements/Alerts"
+import { Container } from "@4cplatform/elements/Atoms"
+import { H1 } from "@4cplatform/elements/Typography"
+import ProviderCreate from "."
+
+<Meta
+  title="Templates/ProviderCreate"
+  parameters={{
+    viewMode: "canvas"
+  }}
+  decorators={[
+    StoryFn => (
+      <AlertsProvider>
+        <AlertsContainer />
+        <StoryFn />
+      </AlertsProvider>
+    )
+  ]}
+/>
+
+# Provider Creation
+
+The Create Provider template implements a `formik` form around several fields. When the submit button is clicked, it runs the passed `onSubmit` button with the body passed as an argument. These can then be used within a `usePost` hook as desired.
+
+## Usage
+
+Import
+
+```javascript
+import { ProviderCreate } from "../src/UI/Templates"
+```
+
+Implement as follows
+
+```javascript
+<ProviderCreate onSubmit={body => create({ body })} />
+```
+
+## Story
+
+export const Template = args => (
+  <div style={{ width: "70rem", margin: "0 auto" }}>
+    <Container>
+      <H1>Add Provider</H1>
+      <ProviderCreate onSubmit={body => console.log(body)} />
+    </Container>
+  </div>
+)
+
+<Canvas>
+  <Story name="ProviderCreate">{Template.bind()}</Story>
+</Canvas>

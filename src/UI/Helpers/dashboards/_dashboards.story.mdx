@@ -1,0 +1,159 @@
+import { Meta, Description } from "@storybook/addon-docs"
+
+<Meta
+  title="Helpers/User Dashboards"
+  parameters={{
+    viewMode: "docs",
+    previewTabs: { canvas: { hidden: true } }
+  }}
+/>
+
+## User dashboards
+
+Dashboard getter functions are used to render the content of the `Dashboard` Template as well as the `Navigation` sub-component defined in the `Page` Organism.
+
+## File Structure
+
+Each dashboard function can be found within `src/helpers/dashboards`. There should be one for every user type with its own defined dashboard structure. This does mean there will be some repetition, but it is necessary because different roles may display the same pages in a different way, i.e. "Quotes Completed" is in the Sales category for System Admin, but it's in the Quotes category for Organisation users.
+
+Import as follows:
+
+```javascript
+import { getSystemAdminDash } from "../helpers"
+```
+
+## Array Structure
+
+A dashboard is a `function` that returns an `array` of `objects` representing categories. This `array` can be two-dimensional, representing multiple categories placed in the same column.
+
+### Category Structure
+
+Categories are used to populate the top level of the `Navigation` menu as well as the groupings found in the `Dashboard`.
+
+Category objects have the following keys:
+
+| key      | Description                                                                                                                                                                                           |
+| -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `title`  | The name of the category represented, e.g. "Leads" or "Admin".                                                                                                                                        |
+| `colour` | The colour associated with the category. This should correspond to one of the application's theme colours. It is used to determine the background colours of `Card` elements on the user's dashboard. |
+| `icon`   | This is a string corresponding to a valid icon key in the `Icon` component, used to render an icon at the top level of the Navigation menu.                                                           |
+| `route`  | This is a string representing the page the user will be taken to if the category's top level button is clicked in the `Navigation` menu.                                                              |
+| `links`  | This is an array of `Link` objects. These are used to populate `Card`-element content on the Dashboard as well as `SubNavItemLink`-elements in the `Navigation` sub-component.                        |
+
+### Link Structure
+
+Links are used to populate `Cards` on the Dashboard and `SubNavItemLink` elements in the `Navigation` menu.
+
+Links have the following keys:
+
+| key           | Description                                                                                                    |
+| ------------- | -------------------------------------------------------------------------------------------------------------- |
+| `title`       | The name of the page represented, e.g. "Quick Quote" or "Quotes Awaiting Terms".                               |
+| `description` | Text content that describes the destination page, visible on `Card` elements within the `Dashboard` component. |
+| `route`       | This is a string representing the destination page of the `Link` or `Card`.                                    |
+
+## Example
+
+An example of a valid dashboard object can be found below:
+
+```javascript
+export const testDash = [
+  {
+    title: "Leads",
+    links: [
+      {
+        title: "Quick quote",
+        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
+        route: "/"
+      },
+      {
+        title: "Create new lead",
+        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
+        route: "/"
+      },
+      {
+        title: "Clients",
+        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
+        route: "/"
+      },
+      {
+        title: "Reports",
+        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
+        route: "/"
+      }
+    ],
+    colour: colours.peopleGreen,
+    icon: MdAssignmentInd,
+    route: "/"
+  },
+  {
+    title: "Quotes",
+    links: [
+      {
+        title: "Quotes completed",
+        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
+        route: "/"
+      },
+      {
+        title: "Quotes in-progress",
+        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
+        route: "/"
+      }
+    ],
+    colour: colours.quotesBlue,
+    icon: RiChatQuoteLine,
+    route: "/"
+  },
+  {
+    title: "Policies",
+    links: [
+      {
+        title: "All policies",
+        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
+        route: "/"
+      },
+      {
+        title: "Quotes awaiting terms",
+        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
+        route: "/"
+      },
+      {
+        title: "Awaiting acceptance",
+        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
+        route: "/"
+      }
+    ],
+    colour: colours.policiesPurple,
+    icon: MdList,
+    route: "/"
+  },
+  {
+    title: "Admin",
+    links: [
+      {
+        title: "My account",
+        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
+        route: "/"
+      },
+      {
+        title: "User administration",
+        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
+        route: "/"
+      },
+      {
+        title: "Mail log",
+        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
+        route: "/"
+      },
+      {
+        title: "Organisation settings",
+        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
+        route: "/"
+      }
+    ],
+    colour: colours.adminBlue,
+    icon: BsFillInboxesFill,
+    route: "/"
+  }
+]
+```

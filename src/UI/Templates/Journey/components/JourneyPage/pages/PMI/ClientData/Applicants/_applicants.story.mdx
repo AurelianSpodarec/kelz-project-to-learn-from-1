@@ -1,0 +1,46 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import Container from "@4cplatform/elements/Atoms/Container"
+import { default as Applicants } from "./applicants.body"
+import StoryProvider from "./story/applicants.story.provider"
+import { Providers } from "../../../../../../../../Helpers"
+
+<Meta
+  title="Templates/Journey/Pages/PMI/Applicants"
+  decorators={[
+    StoryFn => (
+      <Providers>
+        <StoryFn />
+      </Providers>
+    )
+  ]}
+/>
+
+# Journey Applicants
+
+This implements the Template and Page for the Journey Applicants functionality in the PMI Sales Journey. Because this is defined within the Journey Template and requires a Story implementation, there are two directories to manage state and story - one for each case that handles a different usage.
+
+### `story` directory
+
+This contains a sample ApplicantsProvider, containing all of the data and information required for implementing the component within Storybook. It is only used inside this `_journey.applicants.story.mdx` file and within the `journey.applicants.test.js` file.
+
+### `context` directory
+
+This contains the state and queries for Applicants, and is what is used inside the actual sales journey.
+
+The `story` provider wraps the component in the .mdx file, and the `context` provider wraps the component within `applicants.js`.
+
+## Story
+
+export const Template = args => (
+  <>
+    <StoryProvider>
+      <Container width="80%">
+        <Applicants {...args} />
+      </Container>
+    </StoryProvider>
+  </>
+)
+
+<Canvas>
+  <Story name="Applicants">{Template.bind()}</Story>
+</Canvas>

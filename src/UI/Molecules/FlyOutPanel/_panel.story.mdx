@@ -1,0 +1,180 @@
+import MockAdapter from "axios-mock-adapter"
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import { Page, PageContext } from "../../Organisms"
+import { AlertsProvider, AlertsContainer } from "@4cplatform/elements/Alerts"
+import { ConfigProvider } from "@4cplatform/elements/Config"
+import { TranslationsProvider } from "@4cplatform/elements/Translations"
+import { FakeAuthProvider } from "../../Helpers"
+import CONFIG from "../../../config"
+import { api } from "@4cplatform/elements/Api/fetchData"
+import FlyOutPanel, { PanelHeader } from "."
+const mock = new MockAdapter(api)
+const url = `${CONFIG.API_URL}/${CONFIG.API_SCOPE}`
+mock.onGet(`${url}/}/self-service/robert-smith`).reply(200, {
+  data: {
+    id: 90,
+    slug: "robert-smith",
+    title: "Mr",
+    role: "QUEUE_WORKER",
+    parent: {},
+    first_name: "Robert",
+    middle_names: "James",
+    last_name: "Smith",
+    email: "james.smith@cure.com",
+    mobile: 98676876,
+    two_factor_auth: "authenticator",
+    google_2fa_secret: "5VQUV6K5SEJZLWQ",
+    email_verified_at: "2018-02-10T09:30Z",
+    password_expires_at: "2018-02-10T09:30Z",
+    simulation_mode: true,
+    active: true,
+    locked: false,
+    created_at: "2018-02-10T09:30Z"
+  }
+})
+mock.onGet(`${url}/notifications/unread`).reply(200, { data: [] })
+
+<Meta
+  title="Molecules/FlyOutPanel"
+  parameters={{
+    layout: "fullscreen"
+  }}
+  decorators={[
+    StoryFn => (
+      <ConfigProvider config={CONFIG}>
+        <TranslationsProvider>
+          <AlertsProvider>
+            <FakeAuthProvider>
+              <AlertsContainer />
+              <Page>
+                <StoryFn />
+              </Page>
+            </FakeAuthProvider>
+          </AlertsProvider>
+        </TranslationsProvider>
+      </ConfigProvider>
+    )
+  ]}
+/>
+
+## FlyOutPanel
+
+The `FlyOutPanel` is designed to provide retractable space for content to be displayed. It slides in from the right-hand side to display content. It has three different states - `closed`, `open`, and `wide`. Different content is displayed within the panel when the `FlyOutPanel` is in an `open` state vs. a `wide` state.
+
+### PanelHeader
+
+Some views require a vertical separation between header and body content within the `FlyOutPanel`. To this end, a `PanelHeader` component has been exposed in the index file for the `FlyOutPanel` as a named export. This provides a wrapper for the header content, which shows a dividing line and a gradient to create visual separation between the two.
+
+This is included as a separate component to give users the ability to define the views for `open` and `wide` states as subcomponents in a directory, for easy logical separation of code.
+
+### PanelBody
+
+The `PanelBody` component provides a default set of styles to wrap content inside a `FlyOutPanel`. By default, it is meant to be used with a `PanelHeader`, so it has padding styles to compensate for the header's divider. If it is meant to stand on its own, simply pass `hasHeader` with a value of true to the `PanelBody`.
+
+### Animations
+
+The animations for this component are all included in a separate file called `panel.animations.js` in the FlyOutPanel directory.
+
+Animations also play on the blue gradient trim on the `Header` and `Footer` components in UI/Molecules. These are defined locally to those components and care should be taken to ensure that the durations line up if editing them
+
+### Limitations
+
+The following should be kept in mind when adding a FlyOutPanel.
+
+1. This element is absolutely positioned, and should therefore be defined at the root level of a `page` most of the time in order to avoid position-related bugs.
+2. The state for the FlyOutPanel can only accept one of three values - `closed`, `open`, and `wide`. The animations for the panel are built on it.
+3. The state for the FlyOutPanel can be accessed and updated from the `Page` component's context, accessible at `src/UI/Organisms` as `PageContext`.
+
+Ex:
+
+```javascript
+import { PageContext } from "../../UI/Organisms"
+
+const Example = () => {
+  const { setPanelStatus, panelStatusControls } = React.useContext(PageContext)
+  return <button onClick={() => setPanelStatus("open")}>Click me to open the panel></button>
+}
+```
+
+## Scrolling
+
+There are three different scrolling states for the `FlyOutPanel`. These are controlled by a `scroll` prop on the `FlyOutPanel`.
+
+1. `default`. The whole Panel component scrolls.
+2. `body`. Only the `PanelBody` has a scrollbar. If you want to use this setting, then please note that you must include an explicit height property on the scrolled container.
+3. `none`. Overflow-y is hidden.
+
+### Usage
+
+Import
+
+```javascript
+import FlyOutPanel, { PanelHeader } from "../UI/Molecules/FlyOutPanel"
+```
+
+Implement as follows:
+
+```javascript
+<FlyOutPanel
+  body={() => <ViewUser />}
+  wideBody={() => <EditUser />}
+  setPanel={setPanelStatus}
+  statusControls={panelStatusControls}
+/>
+```
+
+## Story
+
+export const Template = args => {
+  const { setPanelStatus } = React.useContext(PageContext)
+  return (
+    <div style={{ height: "50rem" }}>
+      <div
+        style={{
+          width: "100%",
+          height: "calc(100vh - 14rem)",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }}
+      >
+        <button onClick={() => setPanelStatus("open")}>Open Panel</button>
+        <button onClick={() => setPanelStatus("wide")}>Open Wide</button>
+      </div>
+      <FlyOutPanel
+        body={() => (
+          <>
+            <PanelHeader>
+              <h1>This is Panel Header content.</h1>
+              <p>Anything passed into this section here will be rendered as above the divider.</p>
+              <p>Here is another p tag, to pad out the header.</p>
+              <p>Just one more.</p>
+            </PanelHeader>
+            <h1>This is Panel Content.</h1>
+            <p>
+              Anything passed as a child to the FlyOutPanel will be rendered inside the body section
+              of the panel.
+            </p>
+            <p>Here is some more content.</p>
+            <p>
+              Just a little bit more to pad out the display. Any sort of component can be rendered.
+            </p>
+            <button onClick={() => setPanelStatus("wide")}>Open Wide</button>
+          </>
+        )}
+        wideBody={() => (
+          <>
+            <h1>This is Wide Body Content.</h1>
+            <p>
+              This content should only ever be displayed when the FlyOutPanel is in a 'wide' state.
+            </p>
+          </>
+        )}
+      />
+    </div>
+  )
+}
+
+<Canvas>
+  <Story name="FlyOutPanel">{Template.bind()}</Story>
+</Canvas>

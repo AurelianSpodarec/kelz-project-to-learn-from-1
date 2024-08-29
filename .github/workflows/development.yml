@@ -1,0 +1,29 @@
+name: Development
+
+on:
+  pull_request:
+    branches:
+      - develop
+jobs:
+  test:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      # https://github.com/marketplace/actions/webfactory-ssh-agent
+      - name: Add SSH Private key for private repo installations
+        uses: webfactory/ssh-agent@v0.5.4
+        with:
+          ssh-private-key: ${{ secrets.ACTIONS_SSH_PRIVATE_KEY }}
+
+      - name: Login to npm, install dependencies and run tests
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+      - run: |
+          touch .npmrc
+          echo ${{ secrets.NPMRC_FILE }} > .npmrc
+      - run: yarn
+      - run: SKIP_PREFLIGHT_CHECK=true CI=true yarn test

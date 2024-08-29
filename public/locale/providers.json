@@ -1,0 +1,10 @@
+{
+  "PROVIDER": "Provider",
+  "PROVIDERS_INDEX_ERROR": "Provider index unsuccessful",
+  "PROVIDER_ADD_SUCCESS": "Provider add successful",
+  "PROVIDER_ADD_ERROR": "Provider add unsuccessful",
+  "PROVIDER_DELETE_SUCCESS": "Provider delete successful",
+  "PROVIDER_DELETE_ERROR": "Provider delete unsuccessful",
+  "PROVIDER_UPDATE_SUCCESS": "Provider update successful",
+  "PROVIDER_VIEW_ERROR": "Provider view unsuccessful"
+}

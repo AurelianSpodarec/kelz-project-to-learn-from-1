@@ -1,0 +1,41 @@
+import { Meta } from "@storybook/addon-docs/blocks"
+
+<Meta
+  title="Helpers/Providers"
+  parameters={{
+    viewMode: "docs",
+    previewTabs: { canvas: { hidden: true } }
+  }}
+/>
+
+# Providers helpers
+
+The providers helpers are designed to centralise reusable logic.
+
+## Exposed tools
+
+- [`renderA()`](#renderA)
+
+### `renderA()`
+
+This is a helper function used to render anchor links and returns `<A />` component.
+
+It accepts the following props:
+
+- The `type` prop is used to determine what to prefix the passed in value for the `url` with. Defaults to `url`.
+- The `url` prop is the value to assign to the `href` attribute of the anchor tag.
+- The `appearance` prop can be passed to use the default dark or light styles. Defaults to `dark`.
+
+#### Usage
+
+Import
+
+```javascript
+import { renderA } from "../../UI/Helpers"
+```
+
+Implement as follows
+
+```javascript
+renderA("email", "primary@example.com", "light")
+```

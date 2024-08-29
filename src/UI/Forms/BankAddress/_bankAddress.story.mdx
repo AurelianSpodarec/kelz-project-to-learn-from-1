@@ -1,0 +1,112 @@
+import MockAdapter from "axios-mock-adapter"
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import Container from "@4cplatform/elements/Atoms/Container"
+import { fakeSortcodeLookupPostResponse } from "@4cplatform/elements/Helpers"
+import { Providers, fakeApiUrl } from "../../Helpers"
+import { api } from "@4cplatform/elements/Api/fetchData"
+import { useFormik } from "formik"
+import * as yup from "yup"
+import BankAddress from "."
+const mockAxios = new MockAdapter(api)
+mockAxios.onPost(`${fakeApiUrl}/sortcode-lookup`).replyOnce(200, fakeSortcodeLookupPostResponse)
+
+<Meta
+  title="Forms/BankAddress"
+  component={BankAddress}
+  parameters={{ jest: ["_bankAddress.test.js"] }}
+  decorators={[
+    StoryFn => (
+      <Providers mockAxios={mockAxios}>
+        <StoryFn />
+      </Providers>
+    )
+  ]}
+/>
+
+# BankAddress
+
+The `BankAddress` component is designed to allow users to provide a valid bank sortcode and fetch the associated bank's address using it.
+
+## `formik` integration
+
+This component is designed to be used with `formik`. Much like `Form`-level components in the `4c-elements` library, you must pass a `formik` instance to the Address component for automatic state handling.
+
+It is designed to work with a bank address object, like so:
+
+```javascript
+{
+    branch: "Test",
+    bank: "Test Bank",
+    address_line_one: "The Address",
+    address_line_two: "Two Lines",
+    city: "InACity",
+    county: "TheCounty",
+    postcode: "GL7 5XZ",
+    sortcode: '00-00-00'
+  }
+```
+
+## Implementation and usage
+
+Import
+
+```javascript
+import { BankAddress } from "../../UI/Forms"
+```
+
+Implement as follows
+
+```javascript
+<BankAddress name="bank_address" formik={formik} />
+```
+
+## Story
+
+export const Template = args => {
+  const [sortcode, setSortcode] = React.useState("")
+  const validationSchema = yup.object({
+    story: yup.object({
+      branch: yup.string().required(),
+      bank: yup.string().required(),
+      line_one: yup.string(),
+      line_two: yup.string().required(),
+      city: yup.string(),
+      county: yup.string().required(),
+      postcode: yup.string().required()
+    })
+  })
+  const formik = useFormik({
+    initialValues: {
+      story: {
+        branch: "",
+        bank: "",
+        line_one: "",
+        line_two: "",
+        city: "",
+        county: "",
+        postcode: ""
+      }
+    },
+    validationSchema,
+    onSubmit: values => console.log(values)
+  })
+  return (
+    <form autoComplete="off" noValidate onSubmit={formik.handleSubmit}>
+      <Container>
+        <BankAddress
+          {...args}
+          formik={{ ...formik, validationSchema }}
+          sortcode={sortcode}
+          setSortcode={setSortcode}
+        />
+        <button type="submit">Simulate Submit</button>
+      </Container>
+    </form>
+  )
+}
+
+<Canvas>
+  <Story name="BankAddress" args={{ name: "story" }}>
+    {Template.bind()}
+  </Story>
+</Canvas>

@@ -1,0 +1,2103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Users 1`] = `
+<div
+  class="sc-kBzgEd gXUufT"
+  data-testid="test-page"
+>
+  <header
+    class="sc-iWBNLc kTycSn"
+    data-testid="test-header"
+  >
+    <a
+      class="sc-hJZKUC qxGEm"
+      href="/"
+    >
+      <img
+        alt="4C Branding"
+        class="sc-hYQoXb caWgWu"
+        src="./logo-short.svg"
+      />
+    </a>
+    <div
+      class="sc-ewSTlh bTxKvC"
+      data-testid="self-service-wrapper"
+    >
+      <div
+        class="sc-dkqQuH hLXA-dc"
+      />
+      <a
+        class="sc-eicpiI cFCoYH"
+        data-testid="user_info-wrapper"
+        href="/my-account?my-account=details"
+      >
+        <div
+          class="sc-djWRfJ hHXyWW"
+          data-testid="self-service-avatar-wrapper"
+        >
+          <div
+            class="sc-gIBqdA fxBeoA"
+            data-testid="self-service-avatar-content"
+          >
+            S
+            A
+          </div>
+        </div>
+        <div
+          class="sc-cVAmsi gmbLyk"
+        >
+          <p
+            class="sc-kHxTfl bggTM"
+            data-testid="self-service-name"
+          >
+            System Admin
+          </p>
+          <p
+            class="sc-ksHpcM iVhVcV"
+            data-testid="self-service-email"
+          >
+            system.admin@usaycompare.com
+          </p>
+        </div>
+      </a>
+      <div
+        class="sc-gXRojI cjiNtA"
+        data-testid="self-service-notifications"
+      >
+        <div
+          class="sc-bGaVxB cBktYB"
+          data-testid="self-service-icon"
+        >
+          <svg
+            class="sc-jRQBWg hVeekp"
+            style="transform: rotate(-10deg);"
+            viewBox="0 0 24 24"
+          >
+            <path
+              class="sc-gKclnd gxtOty"
+              d="M21,19V20H3V19L5,17V11C5,7.9 7.03,5.17 10,4.29C10,4.19 10,4.1 10,4A2,2 0 0,1 12,2A2,2 0 0,1 14,4C14,4.1 14,4.19 14,4.29C16.97,5.17 19,7.9 19,11V17L21,19M14,21A2,2 0 0,1 12,23A2,2 0 0,1 10,21"
+              fill="#FFF"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        class="sc-gnnDb joniBa"
+        data-testid="logout-button"
+        role="button"
+      >
+        <div
+          class="sc-fyrocj cqUqRs"
+        >
+          <div
+            class="sc-jKTccl iICdJh"
+          >
+            <svg
+              class="sc-jRQBWg hVeekp"
+              viewBox="0 0 24 24"
+            >
+              <path
+                class="sc-gKclnd gxtOty"
+                d="M19,3H5C3.89,3 3,3.89 3,5V9H5V5H19V19H5V15H3V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M10.08,15.58L11.5,17L16.5,12L11.5,7L10.08,8.41L12.67,11H3V13H12.67L10.08,15.58Z"
+                fill="#FFF"
+              />
+            </svg>
+          </div>
+          <span
+            class="sc-iWVNaa cTUDJE"
+            font-size="1.2rem"
+          >
+            Log out
+          </span>
+        </div>
+      </div>
+    </div>
+  </header>
+  <nav
+    class="sc-eJRTFu dXEujO"
+  >
+    <div
+      class="sc-fGoOlv hwAozh"
+    >
+      <div
+        class="sc-hlGDCY kulXJq nav-link"
+      >
+        <a
+          class="sc-dYPfWK fUBKOS"
+          href="/providers"
+        >
+          <div
+            class="sc-gfXuXe uXOgA icon"
+          >
+            <svg
+              class="sc-jRQBWg gltuxR"
+              viewBox="0 0 24 24"
+            >
+              <path
+                class="sc-gKclnd gxtOty"
+                d="M2,22V7A1,1 0 0,1 3,6H7V2H17V6H21A1,1 0 0,1 22,7V22H14V17H10V22H2M9,4V10H11V8H13V10H15V4H13V6H11V4H9M4,20H8V17H4V20M4,15H8V12H4V15M16,20H20V17H16V20M16,15H20V12H16V15M10,15H14V12H10V15Z"
+                fill="#00222b"
+              />
+            </svg>
+          </div>
+          <label
+            class="sc-hcupDf gdDUDh label"
+          >
+            Providers
+          </label>
+        </a>
+        <div
+          class="sc-iidyiZ cTa-DCV sub-nav"
+        >
+          <a
+            class="sc-gA-DPUo oWriJ"
+            href="/providers/add"
+          >
+            Add provider
+          </a>
+          <a
+            class="sc-gA-DPUo oWriJ"
+            href="/providers"
+          >
+            Manage providers
+          </a>
+        </div>
+      </div>
+      <div
+        class="sc-hlGDCY kulXJq nav-link"
+      >
+        <a
+          class="sc-dYPfWK fUBKOS"
+          href="/networks"
+        >
+          <div
+            class="sc-gfXuXe uXOgA icon"
+          >
+            <svg
+              class="sc-jRQBWg gltuxR"
+              viewBox="0 0 24 24"
+            >
+              <path
+                class="sc-gKclnd gxtOty"
+                d="M18,15H16V17H18M18,11H16V13H18M20,19H12V17H14V15H12V13H14V11H12V9H20M10,7H8V5H10M10,11H8V9H10M10,15H8V13H10M10,19H8V17H10M6,7H4V5H6M6,11H4V9H6M6,15H4V13H6M6,19H4V17H6M12,7V3H2V21H22V7H12Z"
+                fill="#00222b"
+              />
+            </svg>
+          </div>
+          <label
+            class="sc-hcupDf gdDUDh label"
+          >
+            Networks
+          </label>
+        </a>
+        <div
+          class="sc-iidyiZ cTa-DCV sub-nav"
+        >
+          <a
+            class="sc-gA-DPUo oWriJ"
+            href="/networks/add"
+          >
+            Add network
+          </a>
+          <a
+            class="sc-gA-DPUo oWriJ"
+            href="/networks"
+          >
+            Manage networks
+          </a>
+        </div>
+      </div>
+      <div
+        class="sc-hlGDCY kulXJq nav-link"
+      >
+        <a
+          class="sc-dYPfWK fUBKOS"
+          href="/organisations"
+        >
+          <div
+            class="sc-gfXuXe uXOgA icon"
+          >
+            <svg
+              class="sc-jRQBWg gltuxR"
+              viewBox="0 0 24 24"
+            >
+              <path
+                class="sc-gKclnd gxtOty"
+                d="M19 3V21H13V17.5H11V21H5V3H19M15 7H17V5H15V7M11 7H13V5H11V7M7 7H9V5H7V7M15 11H17V9H15V11M11 11H13V9H11V11M7 11H9V9H7V11M15 15H17V13H15V15M11 15H13V13H11V15M7 15H9V13H7V15M15 19H17V17H15V19M7 19H9V17H7V19M21 1H3V23H21V1Z"
+                fill="#00222b"
+              />
+            </svg>
+          </div>
+          <label
+            class="sc-hcupDf gdDUDh label"
+          >
+            Organisations
+          </label>
+        </a>
+        <div
+          class="sc-iidyiZ cTa-DCV sub-nav"
+        >
+          <a
+            class="sc-gA-DPUo oWriJ"
+            href="/organisations"
+          >
+            Manage organisations
+          </a>
+        </div>
+      </div>
+      <div
+        class="sc-hlGDCY kulXJq nav-link"
+      >
+        <div
+          class="sc-eVmaCL flZdNV"
+        >
+          <div
+            class="sc-gfXuXe uXOgA icon"
+          >
+            <svg
+              class="sc-jRQBWg gltuxR"
+              viewBox="0 0 24 24"
+            >
+              <path
+                class="sc-gKclnd gxtOty"
+                d="M12,6A3,3 0 0,0 9,9A3,3 0 0,0 12,12A3,3 0 0,0 15,9A3,3 0 0,0 12,6M6,8.17A2.5,2.5 0 0,0 3.5,10.67A2.5,2.5 0 0,0 6,13.17C6.88,13.17 7.65,12.71 8.09,12.03C7.42,11.18 7,10.15 7,9C7,8.8 7,8.6 7.04,8.4C6.72,8.25 6.37,8.17 6,8.17M18,8.17C17.63,8.17 17.28,8.25 16.96,8.4C17,8.6 17,8.8 17,9C17,10.15 16.58,11.18 15.91,12.03C16.35,12.71 17.12,13.17 18,13.17A2.5,2.5 0 0,0 20.5,10.67A2.5,2.5 0 0,0 18,8.17M12,14C10,14 6,15 6,17V19H18V17C18,15 14,14 12,14M4.67,14.97C3,15.26 1,16.04 1,17.33V19H4V17C4,16.22 4.29,15.53 4.67,14.97M19.33,14.97C19.71,15.53 20,16.22 20,17V19H23V17.33C23,16.04 21,15.26 19.33,14.97Z"
+                fill="#00222b"
+              />
+            </svg>
+          </div>
+          <label
+            class="sc-hcupDf gdDUDh label"
+          >
+            People
+          </label>
+        </div>
+        <div
+          class="sc-iidyiZ cTa-DCV sub-nav"
+        >
+          <a
+            class="sc-gA-DPUo oWriJ"
+            href="/leads"
+          >
+            Manage leads
+          </a>
+          <a
+            class="sc-gA-DPUo oWriJ"
+            href="/clients"
+          >
+            Manage clients
+          </a>
+        </div>
+      </div>
+      <div
+        class="sc-hlGDCY kulXJq nav-link"
+      >
+        <a
+          class="sc-dYPfWK fUBKOS"
+          href="/policies"
+        >
+          <div
+            class="sc-gfXuXe uXOgA icon"
+          >
+            <svg
+              class="sc-jRQBWg gltuxR"
+              viewBox="0 0 24 24"
+            >
+              <path
+                class="sc-gKclnd gxtOty"
+                d="M3,5H9V11H3V5M5,7V9H7V7H5M11,7H21V9H11V7M11,15H21V17H11V15M5,20L1.5,16.5L2.91,15.09L5,17.17L9.59,12.59L11,14L5,20Z"
+                fill="#00222b"
+              />
+            </svg>
+          </div>
+          <label
+            class="sc-hcupDf gdDUDh label"
+          >
+            Policies
+          </label>
+        </a>
+        <div
+          class="sc-iidyiZ cTa-DCV sub-nav"
+        >
+          <a
+            class="sc-gA-DPUo oWriJ"
+            href="/policies?status=AWAITING_TERMS"
+          >
+            Awaiting terms
+          </a>
+          <a
+            class="sc-gA-DPUo oWriJ"
+            href="/policies?status=AWAITING_TERMS&simulated=true"
+          >
+            Simulated awaiting terms
+          </a>
+          <a
+            class="sc-gA-DPUo oWriJ"
+            href="/policies?status=AWAITING_ACCEPTANCE"
+          >
+            Awaiting acceptance
+          </a>
+          <a
+            class="sc-gA-DPUo oWriJ"
+            href="/policies?status=AWAITING_ACCEPTANCE&simulated=true"
+          >
+            Simulated awaiting acceptance
+          </a>
+          <a
+            class="sc-gA-DPUo oWriJ"
+            href="/policies?status=FAILED_ONBOARDING"
+          >
+            Failed to onboard
+          </a>
+          <a
+            class="sc-gA-DPUo oWriJ"
+            href="/policies?status=FAILED_ONBOARDING&simulated=true"
+          >
+            Simulated failed to onboard
+          </a>
+        </div>
+      </div>
+      <div
+        class="sc-hlGDCY kulXJq nav-link"
+      >
+        <div
+          class="sc-eVmaCL flZdNV"
+        >
+          <div
+            class="sc-gfXuXe uXOgA icon"
+          >
+            <svg
+              class="sc-jRQBWg gltuxR"
+              viewBox="0 0 24 24"
+            >
+              <path
+                class="sc-gKclnd gxtOty"
+                d="M18,15A3,3 0 0,1 21,18A3,3 0 0,1 18,21C16.69,21 15.58,20.17 15.17,19H14V17H15.17C15.58,15.83 16.69,15 18,15M18,17A1,1 0 0,0 17,18A1,1 0 0,0 18,19A1,1 0 0,0 19,18A1,1 0 0,0 18,17M18,8A1.43,1.43 0 0,0 19.43,6.57C19.43,5.78 18.79,5.14 18,5.14C17.21,5.14 16.57,5.78 16.57,6.57A1.43,1.43 0 0,0 18,8M18,2.57A4,4 0 0,1 22,6.57C22,9.56 18,14 18,14C18,14 14,9.56 14,6.57A4,4 0 0,1 18,2.57M8.83,17H10V19H8.83C8.42,20.17 7.31,21 6,21A3,3 0 0,1 3,18C3,16.69 3.83,15.58 5,15.17V14H7V15.17C7.85,15.47 8.53,16.15 8.83,17M6,17A1,1 0 0,0 5,18A1,1 0 0,0 6,19A1,1 0 0,0 7,18A1,1 0 0,0 6,17M6,3A3,3 0 0,1 9,6C9,7.31 8.17,8.42 7,8.83V10H5V8.83C3.83,8.42 3,7.31 3,6A3,3 0 0,1 6,3M6,5A1,1 0 0,0 5,6A1,1 0 0,0 6,7A1,1 0 0,0 7,6A1,1 0 0,0 6,5M11,19V17H13V19H11M7,13H5V11H7V13Z"
+                fill="#00222b"
+              />
+            </svg>
+          </div>
+          <label
+            class="sc-hcupDf gdDUDh label"
+          >
+            Sales
+          </label>
+        </div>
+        <div
+          class="sc-iidyiZ cTa-DCV sub-nav"
+        >
+          <a
+            class="sc-gA-DPUo oWriJ"
+            href="/journeys?status=IN_PROGRESS"
+          >
+            Journeys in progress
+          </a>
+          <a
+            class="sc-gA-DPUo oWriJ"
+            href="/journeys?status=COMPLETE"
+          >
+            Quotes completed
+          </a>
+          <a
+            class="sc-gA-DPUo oWriJ"
+            href="/policies?status=SOLD"
+          >
+            Policies sold
+          </a>
+          <div
+            class="sc-hxaKAp fsFePj"
+          >
+            Reports
+          </div>
+        </div>
+      </div>
+      <div
+        class="sc-hlGDCY kulXJq nav-link"
+      >
+        <a
+          class="sc-dYPfWK fUBKOS"
+          href="/my-account?my-account=details"
+        >
+          <div
+            class="sc-gfXuXe uXOgA icon"
+          >
+            <svg
+              class="sc-jRQBWg gltuxR"
+              viewBox="0 0 24 24"
+            >
+              <path
+                class="sc-gKclnd gxtOty"
+                d="M16,15H9V13H16V15M19,11H9V9H19V11M19,7H9V5H19V7M3,5V21H19V23H3A2,2 0 0,1 1,21V5H3M21,1A2,2 0 0,1 23,3V17C23,18.11 22.11,19 21,19H7A2,2 0 0,1 5,17V3C5,1.89 5.89,1 7,1H21M7,3V17H21V3H7Z"
+                fill="#00222b"
+              />
+            </svg>
+          </div>
+          <label
+            class="sc-hcupDf gdDUDh label"
+          >
+            Admin
+          </label>
+        </a>
+        <div
+          class="sc-iidyiZ cTa-DCV sub-nav"
+        >
+          <a
+            class="sc-gA-DPUo oWriJ"
+            href="/system-settings"
+          >
+            System settings
+          </a>
+          <a
+            class="sc-gA-DPUo oWriJ"
+            href="/users"
+          >
+            User administration
+          </a>
+          <a
+            class="sc-gA-DPUo oWriJ"
+            href="/agency-codes?agency_codes_type=agency_codes"
+          >
+            Agency codes
+          </a>
+          <a
+            class="sc-gA-DPUo oWriJ"
+            href="/deal-codes"
+          >
+            Deal codes
+          </a>
+          <a
+            class="sc-gA-DPUo oWriJ"
+            href="/my-account?my-account=details"
+          >
+            My account
+          </a>
+          <div
+            class="sc-hxaKAp fsFePj"
+          >
+            Mail log
+          </div>
+          <a
+            class="sc-gA-DPUo oWriJ"
+            href="/api-status"
+          >
+            Quote API Status
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <main
+    class="sc-gJbFto jgzHYM"
+    data-testid="test-content"
+  >
+    <div
+      class="sc-oXPCX kKsbl"
+      data-testid="test-page-overlay"
+    />
+    <div
+      class="sc-dkPtRN ipRncA"
+      width="128rem"
+    >
+      <div
+        class="sc-gslxeA hxKPJs"
+      >
+        <span
+          class="sc-avest bkRdlX"
+          data-testid="Dashboard"
+        >
+          <a
+            href="/"
+          >
+            Dashboard
+          </a>
+          <span
+            class="sc-kmQMED esUKzl"
+            data-testid="breadcrumb-divider"
+          >
+            /
+          </span>
+        </span>
+        <span
+          class="sc-avest bkRdlX"
+          data-testid="Users"
+        >
+          Users
+        </span>
+      </div>
+      <div
+        class="sc-crHmcD cHTHyz"
+        data-testid="heading_1-helper_text-container"
+      >
+        <h1
+          class="sc-hGPBjI dMBRLY"
+        >
+          Users
+        </h1>
+        
+      </div>
+      <div
+        class="sc-dXNJws eZzeRz"
+        data-testid="users-actions-wrapper"
+      >
+        <div
+          class="sc-icMgfS dYJrbv"
+        >
+          <div
+            class="sc-Galmp cYticb"
+            data-testid="show_deleted-checkbox-wrapper"
+          >
+            <div
+              class="sc-fWCJzd flFslv"
+              data-testid="show_deleted-checkbox"
+            >
+              <div
+                aria-checked="false"
+                aria-invalid="false"
+                class="sc-dvQaRk lfYa-DT"
+                data-testid="show_deleted-checkbox-checkbox"
+                role="checkbox"
+              />
+              <div
+                class="sc-crHmcD cHTHyz"
+                data-testid="show_deleted-helper_text-container"
+              >
+                <label
+                  class="sc-bBHxTw cRbBKW sc-TBWPX ioWvig"
+                  data-testid="show_deleted-checkbox-label"
+                  font-size="1.4rem"
+                  for="show_deleted"
+                  name="show_deleted"
+                >
+                  Show deleted users
+                  <sup>
+                    *
+                  </sup>
+                </label>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="sc-czWrlN kZfQVX"
+        >
+          <div
+            class="sc-jcFjpl isUAG"
+            data-testid="filter_parent_type-select-wrapper"
+          >
+            <div
+              class="sc-iAKWXU kJBFcR select"
+              data-testid="filter_parent_type-select-outer_wrapper"
+              width="100%"
+            >
+              <div
+                class="sc-caiLqq cuJuJe"
+                data-testid="filter_parent_type-select-label_wrapper"
+              >
+                <div
+                  class="sc-crHmcD cHTHyz"
+                  data-testid="filter_parent_type-helper_text-container"
+                >
+                  <label
+                    class="sc-bBHxTw cRbBKW sc-dPiLbb EOJXA select__label"
+                    data-testid="filter_parent_type-select-label"
+                    font-size="1.4rem"
+                    for="filter_parent_type"
+                    name="filter_parent_type"
+                  >
+                    Filter parent type by
+                    <sup>
+                      *
+                    </sup>
+                  </label>
+                  
+                </div>
+              </div>
+              <div
+                class="sc-iUKqMP cGnCNB"
+              >
+                <select
+                  aria-invalid="false"
+                  aria-required="false"
+                  class="sc-efQSVx cRJVwM select__field"
+                  data-testid="filter_parent_type-select"
+                  id="filter_parent_type"
+                >
+                  <option
+                    value=""
+                  >
+                    Select type
+                  </option>
+                  <option
+                    value="NETWORK"
+                  >
+                    NETWORK
+                  </option>
+                  <option
+                    value="ORGANISATION"
+                  >
+                    ORGANISATION
+                  </option>
+                  <option
+                    value="PROVIDER"
+                  >
+                    PROVIDER
+                  </option>
+                </select>
+                <span
+                  class="sc-jObWnj iqaBEP select__icon-after icon-after"
+                  data-testid="filter_parent_type-select-trailing_icon"
+                >
+                  <svg
+                    class="sc-jRQBWg gltuxR select__icon-after default"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      class="sc-gKclnd gxtOty"
+                      d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
+                      fill="#00222b"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="sc-JEhMO gxGdUp"
+            data-testid="search_users-search-wrapper"
+            width="30rem"
+          >
+            <div
+              class="sc-jIkXHa cvExdQ"
+              data-testid="search_users-input-wrapper"
+              width="100%"
+            >
+              <div
+                class="sc-jOxtWs eZurCe"
+              >
+                <div
+                  class="sc-hmjpVf jMtTML"
+                  data-testid="search_users-input-field_wrapper"
+                  type="text"
+                >
+                  <input
+                    aria-invalid="false"
+                    aria-required="false"
+                    autocomplete="on"
+                    class="sc-eLwHnm gbrZjk input__field"
+                    data-testid="search_users-input"
+                    id="search_users"
+                    name="search_users"
+                    placeholder="Enter search term"
+                    type="text"
+                    value=""
+                  />
+                  <div
+                    class="sc-kHOZwM eVltWe input__trailing-icon"
+                    data-testid="search_users-input-trailing_icon"
+                    type="button"
+                  >
+                    <svg
+                      class="sc-jRQBWg gltuxR"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        class="sc-gKclnd gxtOty"
+                        d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z"
+                        fill="#00222b"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a
+            appearance="primary"
+            buttontype="Link"
+            class="sc-iwjdpV hcGhgS sc-hRMJXU lovydj"
+            data-testid="add_user-button"
+            href="/users/add"
+            iconsize="2rem"
+            leadingicon="false"
+            loading="false"
+            trailingicon="true"
+            type="button"
+          >
+            Add user
+            <div
+              class="sc-cxpSdN kiwMcy"
+              data-testid="add_user-button-trailing_icon"
+            >
+              <svg
+                class="sc-jRQBWg gltuxR"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  class="sc-gKclnd gxtOty"
+                  d="M15,14C12.33,14 7,15.33 7,18V20H23V18C23,15.33 17.67,14 15,14M6,10V7H4V10H1V12H4V15H6V12H9V10M15,12A4,4 0 0,0 19,8A4,4 0 0,0 15,4A4,4 0 0,0 11,8A4,4 0 0,0 15,12Z"
+                  fill="#00222b"
+                />
+              </svg>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div
+        class="sc-cAhXWc gAnYlV"
+        width="100%"
+      >
+        <div
+          class="sc-gqtqkP eYreJx"
+          type="default"
+        >
+          <div
+            class="sc-bnOPBZ dxsAFW"
+            data-testid="test-header"
+            type="default"
+          >
+            <div
+              class="sc-iKMXQg sc-gLDmcm fgkoen gyqihI"
+            >
+              <label
+                class="sc-jnrVZQ crECxr"
+                data-testid="test-header-label"
+              >
+                First Name
+                <button
+                  class="sc-cqJhZP vuDFH"
+                  data-testid="first_name-sorting"
+                >
+                  <svg
+                    class="sc-jRQBWg gltuxR"
+                    style="margin-right: -.5rem;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      class="sc-gKclnd gxtOty"
+                      d="M7,10L12,15L17,10H7Z"
+                      fill="#197DA4"
+                    />
+                  </svg>
+                  <svg
+                    class="sc-jRQBWg gltuxR"
+                    style="margin-left: -.5rem;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      class="sc-gKclnd gxtOty"
+                      d="M7,15L12,10L17,15H7Z"
+                      fill="#197DA4"
+                    />
+                  </svg>
+                </button>
+              </label>
+              <label
+                class="sc-jnrVZQ cHvlyH"
+                data-testid="test-header-label"
+              >
+                Middle Names
+              </label>
+            </div>
+            <div
+              class="sc-iKMXQg fgkoen"
+            >
+              <label
+                class="sc-jnrVZQ dtKwAv"
+                data-testid="test-header-label"
+              >
+                Last Name
+              </label>
+              <button
+                class="sc-cqJhZP vuDFH"
+                data-testid="last_name-sorting"
+              >
+                <svg
+                  class="sc-jRQBWg gltuxR"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    class="sc-gKclnd gxtOty"
+                    d="M7,15L12,10L17,15H7Z"
+                    fill="#197DA4"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="sc-iKMXQg dXeMAo"
+            >
+              <label
+                class="sc-jnrVZQ dtKwAv"
+                data-testid="test-header-label"
+              >
+                Email Address
+              </label>
+              <button
+                class="sc-cqJhZP vuDFH"
+                data-testid="email-sorting"
+              >
+                <svg
+                  class="sc-jRQBWg gltuxR"
+                  style="margin-right: -.5rem;"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    class="sc-gKclnd gxtOty"
+                    d="M7,10L12,15L17,10H7Z"
+                    fill="#197DA4"
+                  />
+                </svg>
+                <svg
+                  class="sc-jRQBWg gltuxR"
+                  style="margin-left: -.5rem;"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    class="sc-gKclnd gxtOty"
+                    d="M7,15L12,10L17,15H7Z"
+                    fill="#197DA4"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="sc-iKMXQg fgkoen"
+            >
+              <label
+                class="sc-jnrVZQ dtKwAv"
+                data-testid="test-header-label"
+              >
+                Role
+              </label>
+            </div>
+            <div
+              class="sc-iKMXQg sc-gLDmcm dXeMAo gyqihI"
+            >
+              <label
+                class="sc-jnrVZQ crECxr"
+                data-testid="test-header-label"
+              >
+                Organisation name
+                <button
+                  class="sc-cqJhZP vuDFH"
+                  data-testid="parent.name-sorting"
+                >
+                  <svg
+                    class="sc-jRQBWg gltuxR"
+                    style="margin-right: -.5rem;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      class="sc-gKclnd gxtOty"
+                      d="M7,10L12,15L17,10H7Z"
+                      fill="#197DA4"
+                    />
+                  </svg>
+                  <svg
+                    class="sc-jRQBWg gltuxR"
+                    style="margin-left: -.5rem;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      class="sc-gKclnd gxtOty"
+                      d="M7,15L12,10L17,15H7Z"
+                      fill="#197DA4"
+                    />
+                  </svg>
+                </button>
+              </label>
+              <label
+                class="sc-jnrVZQ cHvlyH"
+                data-testid="test-header-label"
+              >
+                Organisation type
+              </label>
+            </div>
+          </div>
+          <div
+            class="sc-kjOQFR crqQoW"
+            data-testid="test-table-body"
+          >
+            <div
+              class="sc-bXdNzS cRNuBo"
+              data-testid="test-row-0"
+              type="default"
+            >
+              <div
+                class="sc-cTAIfT sc-eySxxw imHQTe czxEja"
+              >
+                <span
+                  class="sc-fvpsdx kJOoal"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+                <span
+                  class="sc-fvpsdx gChguP"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT imHQTe"
+              >
+                <span
+                  class="sc-fvpsdx irdibu"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT gKseKt"
+              >
+                <span
+                  class="sc-fvpsdx irdibu"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT imHQTe"
+              >
+                <span
+                  class="sc-fvpsdx irdibu"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT sc-eySxxw irPFjL czxEja"
+              >
+                <span
+                  class="sc-fvpsdx kJOoal"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+                <span
+                  class="sc-fvpsdx gChguP"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT sc-ihINtW cXRxXq hklfck"
+              >
+                <button
+                  class="sc-jefHZX bmaUJN"
+                  data-testid="users-table-actions_button_0"
+                  disabled=""
+                >
+                  <svg
+                    class="sc-jRQBWg gltuxR"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      class="sc-gKclnd gxtOty"
+                      d="M16,12A2,2 0 0,1 18,10A2,2 0 0,1 20,12A2,2 0 0,1 18,14A2,2 0 0,1 16,12M10,12A2,2 0 0,1 12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12M4,12A2,2 0 0,1 6,10A2,2 0 0,1 8,12A2,2 0 0,1 6,14A2,2 0 0,1 4,12Z"
+                      fill="#00222b"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div
+              class="sc-bXdNzS beasSd"
+              data-testid="test-row-1"
+              type="default"
+            >
+              <div
+                class="sc-cTAIfT sc-eySxxw imHQTe czxEja"
+              >
+                <span
+                  class="sc-fvpsdx kJOoal"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+                <span
+                  class="sc-fvpsdx gChguP"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT imHQTe"
+              >
+                <span
+                  class="sc-fvpsdx irdibu"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT gKseKt"
+              >
+                <span
+                  class="sc-fvpsdx irdibu"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT imHQTe"
+              >
+                <span
+                  class="sc-fvpsdx irdibu"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT sc-eySxxw irPFjL czxEja"
+              >
+                <span
+                  class="sc-fvpsdx kJOoal"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+                <span
+                  class="sc-fvpsdx gChguP"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT sc-ihINtW cXRxXq hklfck"
+              >
+                <button
+                  class="sc-jefHZX bmaUJN"
+                  data-testid="users-table-actions_button_1"
+                  disabled=""
+                >
+                  <svg
+                    class="sc-jRQBWg gltuxR"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      class="sc-gKclnd gxtOty"
+                      d="M16,12A2,2 0 0,1 18,10A2,2 0 0,1 20,12A2,2 0 0,1 18,14A2,2 0 0,1 16,12M10,12A2,2 0 0,1 12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12M4,12A2,2 0 0,1 6,10A2,2 0 0,1 8,12A2,2 0 0,1 6,14A2,2 0 0,1 4,12Z"
+                      fill="#00222b"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div
+              class="sc-bXdNzS cRNuBo"
+              data-testid="test-row-2"
+              type="default"
+            >
+              <div
+                class="sc-cTAIfT sc-eySxxw imHQTe czxEja"
+              >
+                <span
+                  class="sc-fvpsdx kJOoal"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+                <span
+                  class="sc-fvpsdx gChguP"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT imHQTe"
+              >
+                <span
+                  class="sc-fvpsdx irdibu"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT gKseKt"
+              >
+                <span
+                  class="sc-fvpsdx irdibu"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT imHQTe"
+              >
+                <span
+                  class="sc-fvpsdx irdibu"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT sc-eySxxw irPFjL czxEja"
+              >
+                <span
+                  class="sc-fvpsdx kJOoal"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+                <span
+                  class="sc-fvpsdx gChguP"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT sc-ihINtW cXRxXq hklfck"
+              >
+                <button
+                  class="sc-jefHZX bmaUJN"
+                  data-testid="users-table-actions_button_2"
+                  disabled=""
+                >
+                  <svg
+                    class="sc-jRQBWg gltuxR"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      class="sc-gKclnd gxtOty"
+                      d="M16,12A2,2 0 0,1 18,10A2,2 0 0,1 20,12A2,2 0 0,1 18,14A2,2 0 0,1 16,12M10,12A2,2 0 0,1 12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12M4,12A2,2 0 0,1 6,10A2,2 0 0,1 8,12A2,2 0 0,1 6,14A2,2 0 0,1 4,12Z"
+                      fill="#00222b"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div
+              class="sc-bXdNzS beasSd"
+              data-testid="test-row-3"
+              type="default"
+            >
+              <div
+                class="sc-cTAIfT sc-eySxxw imHQTe czxEja"
+              >
+                <span
+                  class="sc-fvpsdx kJOoal"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+                <span
+                  class="sc-fvpsdx gChguP"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT imHQTe"
+              >
+                <span
+                  class="sc-fvpsdx irdibu"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT gKseKt"
+              >
+                <span
+                  class="sc-fvpsdx irdibu"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT imHQTe"
+              >
+                <span
+                  class="sc-fvpsdx irdibu"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT sc-eySxxw irPFjL czxEja"
+              >
+                <span
+                  class="sc-fvpsdx kJOoal"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+                <span
+                  class="sc-fvpsdx gChguP"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT sc-ihINtW cXRxXq hklfck"
+              >
+                <button
+                  class="sc-jefHZX bmaUJN"
+                  data-testid="users-table-actions_button_3"
+                  disabled=""
+                >
+                  <svg
+                    class="sc-jRQBWg gltuxR"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      class="sc-gKclnd gxtOty"
+                      d="M16,12A2,2 0 0,1 18,10A2,2 0 0,1 20,12A2,2 0 0,1 18,14A2,2 0 0,1 16,12M10,12A2,2 0 0,1 12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12M4,12A2,2 0 0,1 6,10A2,2 0 0,1 8,12A2,2 0 0,1 6,14A2,2 0 0,1 4,12Z"
+                      fill="#00222b"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div
+              class="sc-bXdNzS cRNuBo"
+              data-testid="test-row-4"
+              type="default"
+            >
+              <div
+                class="sc-cTAIfT sc-eySxxw imHQTe czxEja"
+              >
+                <span
+                  class="sc-fvpsdx kJOoal"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+                <span
+                  class="sc-fvpsdx gChguP"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT imHQTe"
+              >
+                <span
+                  class="sc-fvpsdx irdibu"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT gKseKt"
+              >
+                <span
+                  class="sc-fvpsdx irdibu"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT imHQTe"
+              >
+                <span
+                  class="sc-fvpsdx irdibu"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT sc-eySxxw irPFjL czxEja"
+              >
+                <span
+                  class="sc-fvpsdx kJOoal"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+                <span
+                  class="sc-fvpsdx gChguP"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT sc-ihINtW cXRxXq hklfck"
+              >
+                <button
+                  class="sc-jefHZX bmaUJN"
+                  data-testid="users-table-actions_button_4"
+                  disabled=""
+                >
+                  <svg
+                    class="sc-jRQBWg gltuxR"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      class="sc-gKclnd gxtOty"
+                      d="M16,12A2,2 0 0,1 18,10A2,2 0 0,1 20,12A2,2 0 0,1 18,14A2,2 0 0,1 16,12M10,12A2,2 0 0,1 12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12M4,12A2,2 0 0,1 6,10A2,2 0 0,1 8,12A2,2 0 0,1 6,14A2,2 0 0,1 4,12Z"
+                      fill="#00222b"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div
+              class="sc-bXdNzS beasSd"
+              data-testid="test-row-5"
+              type="default"
+            >
+              <div
+                class="sc-cTAIfT sc-eySxxw imHQTe czxEja"
+              >
+                <span
+                  class="sc-fvpsdx kJOoal"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+                <span
+                  class="sc-fvpsdx gChguP"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT imHQTe"
+              >
+                <span
+                  class="sc-fvpsdx irdibu"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT gKseKt"
+              >
+                <span
+                  class="sc-fvpsdx irdibu"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT imHQTe"
+              >
+                <span
+                  class="sc-fvpsdx irdibu"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT sc-eySxxw irPFjL czxEja"
+              >
+                <span
+                  class="sc-fvpsdx kJOoal"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+                <span
+                  class="sc-fvpsdx gChguP"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT sc-ihINtW cXRxXq hklfck"
+              >
+                <button
+                  class="sc-jefHZX bmaUJN"
+                  data-testid="users-table-actions_button_5"
+                  disabled=""
+                >
+                  <svg
+                    class="sc-jRQBWg gltuxR"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      class="sc-gKclnd gxtOty"
+                      d="M16,12A2,2 0 0,1 18,10A2,2 0 0,1 20,12A2,2 0 0,1 18,14A2,2 0 0,1 16,12M10,12A2,2 0 0,1 12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12M4,12A2,2 0 0,1 6,10A2,2 0 0,1 8,12A2,2 0 0,1 6,14A2,2 0 0,1 4,12Z"
+                      fill="#00222b"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div
+              class="sc-bXdNzS cRNuBo"
+              data-testid="test-row-6"
+              type="default"
+            >
+              <div
+                class="sc-cTAIfT sc-eySxxw imHQTe czxEja"
+              >
+                <span
+                  class="sc-fvpsdx kJOoal"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+                <span
+                  class="sc-fvpsdx gChguP"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT imHQTe"
+              >
+                <span
+                  class="sc-fvpsdx irdibu"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT gKseKt"
+              >
+                <span
+                  class="sc-fvpsdx irdibu"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT imHQTe"
+              >
+                <span
+                  class="sc-fvpsdx irdibu"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT sc-eySxxw irPFjL czxEja"
+              >
+                <span
+                  class="sc-fvpsdx kJOoal"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+                <span
+                  class="sc-fvpsdx gChguP"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT sc-ihINtW cXRxXq hklfck"
+              >
+                <button
+                  class="sc-jefHZX bmaUJN"
+                  data-testid="users-table-actions_button_6"
+                  disabled=""
+                >
+                  <svg
+                    class="sc-jRQBWg gltuxR"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      class="sc-gKclnd gxtOty"
+                      d="M16,12A2,2 0 0,1 18,10A2,2 0 0,1 20,12A2,2 0 0,1 18,14A2,2 0 0,1 16,12M10,12A2,2 0 0,1 12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12M4,12A2,2 0 0,1 6,10A2,2 0 0,1 8,12A2,2 0 0,1 6,14A2,2 0 0,1 4,12Z"
+                      fill="#00222b"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div
+              class="sc-bXdNzS beasSd"
+              data-testid="test-row-7"
+              type="default"
+            >
+              <div
+                class="sc-cTAIfT sc-eySxxw imHQTe czxEja"
+              >
+                <span
+                  class="sc-fvpsdx kJOoal"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+                <span
+                  class="sc-fvpsdx gChguP"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT imHQTe"
+              >
+                <span
+                  class="sc-fvpsdx irdibu"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT gKseKt"
+              >
+                <span
+                  class="sc-fvpsdx irdibu"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT imHQTe"
+              >
+                <span
+                  class="sc-fvpsdx irdibu"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT sc-eySxxw irPFjL czxEja"
+              >
+                <span
+                  class="sc-fvpsdx kJOoal"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+                <span
+                  class="sc-fvpsdx gChguP"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT sc-ihINtW cXRxXq hklfck"
+              >
+                <button
+                  class="sc-jefHZX bmaUJN"
+                  data-testid="users-table-actions_button_7"
+                  disabled=""
+                >
+                  <svg
+                    class="sc-jRQBWg gltuxR"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      class="sc-gKclnd gxtOty"
+                      d="M16,12A2,2 0 0,1 18,10A2,2 0 0,1 20,12A2,2 0 0,1 18,14A2,2 0 0,1 16,12M10,12A2,2 0 0,1 12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12M4,12A2,2 0 0,1 6,10A2,2 0 0,1 8,12A2,2 0 0,1 6,14A2,2 0 0,1 4,12Z"
+                      fill="#00222b"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div
+              class="sc-bXdNzS cRNuBo"
+              data-testid="test-row-8"
+              type="default"
+            >
+              <div
+                class="sc-cTAIfT sc-eySxxw imHQTe czxEja"
+              >
+                <span
+                  class="sc-fvpsdx kJOoal"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+                <span
+                  class="sc-fvpsdx gChguP"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT imHQTe"
+              >
+                <span
+                  class="sc-fvpsdx irdibu"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT gKseKt"
+              >
+                <span
+                  class="sc-fvpsdx irdibu"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT imHQTe"
+              >
+                <span
+                  class="sc-fvpsdx irdibu"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT sc-eySxxw irPFjL czxEja"
+              >
+                <span
+                  class="sc-fvpsdx kJOoal"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+                <span
+                  class="sc-fvpsdx gChguP"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT sc-ihINtW cXRxXq hklfck"
+              >
+                <button
+                  class="sc-jefHZX bmaUJN"
+                  data-testid="users-table-actions_button_8"
+                  disabled=""
+                >
+                  <svg
+                    class="sc-jRQBWg gltuxR"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      class="sc-gKclnd gxtOty"
+                      d="M16,12A2,2 0 0,1 18,10A2,2 0 0,1 20,12A2,2 0 0,1 18,14A2,2 0 0,1 16,12M10,12A2,2 0 0,1 12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12M4,12A2,2 0 0,1 6,10A2,2 0 0,1 8,12A2,2 0 0,1 6,14A2,2 0 0,1 4,12Z"
+                      fill="#00222b"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div
+              class="sc-bXdNzS eNQRoc"
+              data-testid="test-row-9"
+              type="default"
+            >
+              <div
+                class="sc-cTAIfT sc-eySxxw imHQTe czxEja"
+              >
+                <span
+                  class="sc-fvpsdx kJOoal"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+                <span
+                  class="sc-fvpsdx gChguP"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT imHQTe"
+              >
+                <span
+                  class="sc-fvpsdx irdibu"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT gKseKt"
+              >
+                <span
+                  class="sc-fvpsdx irdibu"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT imHQTe"
+              >
+                <span
+                  class="sc-fvpsdx irdibu"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT sc-eySxxw irPFjL czxEja"
+              >
+                <span
+                  class="sc-fvpsdx kJOoal"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+                <span
+                  class="sc-fvpsdx gChguP"
+                >
+                  <span
+                    class="sc-eCImPb hSBLAI skeleton-loader"
+                    data-testid="skeleton-loader"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="sc-cTAIfT sc-ihINtW cXRxXq hklfck"
+              >
+                <button
+                  class="sc-jefHZX bmaUJN"
+                  data-testid="users-table-actions_button_9"
+                  disabled=""
+                >
+                  <svg
+                    class="sc-jRQBWg gltuxR"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      class="sc-gKclnd gxtOty"
+                      d="M16,12A2,2 0 0,1 18,10A2,2 0 0,1 20,12A2,2 0 0,1 18,14A2,2 0 0,1 16,12M10,12A2,2 0 0,1 12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12M4,12A2,2 0 0,1 6,10A2,2 0 0,1 8,12A2,2 0 0,1 6,14A2,2 0 0,1 4,12Z"
+                      fill="#00222b"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer
+    class="sc-edERGn jsHmuY"
+    data-testid="test-footer"
+  >
+    <p
+      class="sc-jlsrNB dOjJst"
+    >
+      V:0.0.1
+    </p>
+    <p
+      class="sc-jlsrNB dOjJst"
+    >
+      © Copyright 4C Platform 
+      2021
+    </p>
+  </footer>
+</div>
+`;

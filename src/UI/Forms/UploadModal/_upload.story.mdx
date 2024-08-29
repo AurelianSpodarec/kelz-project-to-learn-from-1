@@ -1,0 +1,75 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import { get } from "lodash"
+import { FileSelect } from "@4cplatform/elements/Forms"
+import { useFormik } from "formik"
+import UploadModal from "."
+
+<Meta
+  title="Forms/UploadModal"
+  component={UploadModal}
+  parameters={{ jest: ["_upload.test.js"] }}
+/>
+
+# UploadModal
+
+The `UploadModal` component combines the `Modal` and `FileSelect` from the elements library with the `FileList` molecule to allow users to upload files to the backend with an interface that can be displayed or hidden in `Modal` form.
+
+## `formik` integration
+
+Like the `FileSelect`, the `UploadModal` is driven by formik. In order to make proper use of it, you must pass a `name` prop and a `formik` instance to this component. These will be passed to (and controlled by) the `FileSelect`.
+
+There is an onConfirm prop that fires when the confirmation button is clicked, and typically this is used to run the handleSubmit statement on the formik.
+
+Since the `formik` instance is maintained outside of this component, the selected files persist even if the `Modal` is closed.
+
+Because this component is driven by `formik`, it is located in the `Forms` directory despite being composed from multiple components of varying sizes. It can be considered as a `FileSelect` with some extra wrapping attached.
+
+## Usage
+
+Import
+
+```javascript
+import { UploadModal } from "../../UI/Forms"
+```
+
+Implement as follows
+
+```javascript
+<UploadModal
+  {...props}
+  formik={formik}
+  name="story"
+  onClose={() => setOpen(false)}
+  onConfirm={formik.handleSubmit}
+/>
+```
+
+## Story
+
+export const Template = args => {
+  const [isOpen, setOpen] = React.useState(false)
+  const formik = useFormik({
+    initialValues: {
+      story: []
+    },
+    onSubmit: values => console.log(values)
+  })
+  return (
+    <div style={{ width: "46.5rem" }}>
+      {isOpen && (
+        <UploadModal
+          {...args}
+          formik={formik}
+          name="story"
+          onClose={() => setOpen(false)}
+          onConfirm={formik.handleSubmit}
+        />
+      )}
+      <button onClick={() => setOpen(true)}>Open Modal</button>
+    </div>
+  )
+}
+
+<Canvas>
+  <Story name="UploadModal">{Template.bind()}</Story>
+</Canvas>

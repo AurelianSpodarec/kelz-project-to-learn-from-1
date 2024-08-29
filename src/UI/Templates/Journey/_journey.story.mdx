@@ -1,0 +1,43 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs"
+import { Providers } from "../../Helpers"
+import TestJourneyProvider from "./story/journey.story.provider"
+import Journey from "."
+
+<Meta
+  title="Templates/Journey"
+  parameters={{
+    layout: "fullscreen",
+    jest: ["_journey.test.js"]
+  }}
+  decorators={[
+    StoryFn => (
+      <Providers>
+        <TestJourneyProvider>
+          <StoryFn />
+        </TestJourneyProvider>
+      </Providers>
+    )
+  ]}
+/>
+
+# Journey
+
+The `Journey` Template is designed to be the best possible compromise between dynamic field generation driven by a data structure provided by the backend and the need for single-use custom components to drive unique user interactions on the frontend. User-controlled behaviours are driven by `formik`, most often using fields defined in `@4cplatform/elements/Forms` or `UI/Forms`. Conditional display of modals can be driven and supported by the backend.
+
+## `JourneyProvider`
+
+The `JourneyProvider` controls the state of the Journey. This is where queries should be defined and the behaviours of included functions should be fleshed out.
+
+For the purposes of this story, a functional `JourneyProvider` has been created in `journey.story.provider.js`.
+
+## Journey components
+
+The Journey components are contained inside the `components` directory, and these are described in their individual sections.
+
+## Story
+
+export const Template = args => <Journey />
+
+<Canvas>
+  <Story name="Journey">{Template.bind()}</Story>
+</Canvas>

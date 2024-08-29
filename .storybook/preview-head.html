@@ -1,0 +1,51 @@
+<style>
+  /* Font family */
+  @font-face {
+    font-family: "Sofia Pro";
+    src: url("./fonts/sofiapro-regular-webfont.woff2") format("woff2");
+    src: url("./fonts/sofiapro-regular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Sofia Pro";
+    src: url("./fonts/sofiapro-bold-webfont.woff2") format("woff2");
+    src: url("./fonts/sofiapro-bold-webfont.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+  }
+  #root {
+    height: auto !important;
+    width: auto !important;
+  }
+  /* Body font */
+  body,
+  .sbdocs-h1,
+  .sbdocs-h2,
+  .sbdocs-h3,
+  .sbdocs-h4,
+  .sbdocs-h5,
+  .sbdocs-h6,
+  .sbdocs-p {
+    font-family: "Sofia Pro", sans-serif !important;
+  }
+  .sb-show-main {
+    overflow: auto !important;
+  }
+  /* Make canvas default to white background */
+  .sbdocs.sbdocs-preview .css-kdwx3d {
+    background: #fff;
+  }
+  /* Make the AlertsContainer display nicely in docs */
+  .css-kdwx3d .alerts-container {
+    position: unset;
+  }
+  /* Make tables dark */
+  .sbdocs.sbdocs-table tr,
+  .sbdocs.sbdocs-table tr:nth-of-type(2n) {
+    background-color: #00272e;
+  }
+  .sbdocs.sbdocs-table {
+    color: #fff;
+  }
+</style>

@@ -1,0 +1,25 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import Dashboard from "."
+import { getSystemAdminDash } from "../../Helpers"
+
+<Meta
+  title="Templates/Dashboard"
+  component={Dashboard}
+  parameters={{ jest: ["_dashboard.test.js"] }}
+/>
+
+## Dashboard
+
+`Dashboard` is a page-level component that accepts a dashboard array and renders the categories and links within in an organised fashion.
+
+The content and colours are all informed by the dashboard objects themselves.
+
+The dashboard should correspond to the logged-in user's role.
+
+## Story
+
+export const Template = args => <Dashboard dashboard={getSystemAdminDash()} {...args} />
+
+<Canvas>
+  <Story name="Dashboard">{Template.bind()}</Story>
+</Canvas>

@@ -1,0 +1,75 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import { Container } from "@4cplatform/elements/Atoms"
+import { H1 } from "@4cplatform/elements/Typography"
+import { ConfigProvider } from "@4cplatform/elements/Config"
+import { TranslationsProvider } from "@4cplatform/elements/Translations"
+import { AlertsProvider, AlertsContainer } from "@4cplatform/elements/Alerts"
+import { Page } from "../../Organisms"
+import { FakeAuthProvider } from "../../Helpers"
+import TestNetworkSettingsProvider from "./story/networkSettings.story.provider.js"
+import NetworkSettings from "."
+
+<Meta
+  title="Templates/NetworkSettings"
+  component={NetworkSettings}
+  parameters={{ jest: ["_networkSettings.test.js"] }}
+  decorators={[
+    StoryFn => (
+      <FakeAuthProvider>
+        <AlertsProvider>
+          <Page>
+            <TestNetworkSettingsProvider>
+              <AlertsContainer />
+              <StoryFn />
+            </TestNetworkSettingsProvider>
+          </Page>
+        </AlertsProvider>
+      </FakeAuthProvider>
+    )
+  ]}
+/>
+
+# NetworkSettings
+
+The `NetworkSettings` Template is a state wrapper around two `TextSetting` components.
+It provides a Context and Provider for interacting with the component and building the 4c-api connection around.
+It also provides some `ConfirmationModal` prompts for the delete action, to prevent accidental deleting of these settings.
+
+It must be included with the provider exported from its directory in order to function.
+Please see `./story/networkSettings.story.provider.js` for an example of a fully functional provider.
+
+## Usage
+
+Import
+
+```javascript
+import { NetworkSettings } from "../../UI/Templates"
+import { Provider } from "../../UI/Templates/NetworkSettings"
+```
+
+Implement as follows
+
+```javascript
+const Settings = () => (
+  <NetworkSettingsProvider>
+    <Wrapper>
+      <NetworkSettings />
+    </Wrapper>
+  </NetworkSettingsProvider>
+)
+```
+
+## Story
+
+export const Template = args => (
+  <>
+    <Container width="75rem">
+      <H1>Network Settings</H1>
+      <NetworkSettings {...args} />
+    </Container>
+  </>
+)
+
+<Canvas>
+  <Story name="NetworkSettings">{Template.bind()}</Story>
+</Canvas>

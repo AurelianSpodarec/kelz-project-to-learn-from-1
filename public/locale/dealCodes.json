@@ -1,0 +1,18 @@
+{
+  "DEAL_CODES_INDEX_ERROR": "Deal codes index unsuccessful",
+  "DEAL_CODE_GET_ERROR": "An error occurred getting the deal code",
+  "DEAL_CODE_UPDATE_SUCCESS": "Deal code was successfully updated",
+  "DEAL_CODE_UPDATE_ERROR": "An error occurred updating the deal code",
+  "DEAL_CODE_DELETE_SUCCESS": "Deal code was successfully deleted",
+  "DEAL_CODE_DELETE_ERROR": "An error occurred deleting the deal code",
+  "DEAL_CODE_CREATE_SUCCESS": "Deal code was successfully created",
+  "DEAL_CODE_CREATE_ERROR": "An error occurred creating the deal code",
+  "DEAL_CODE_SUSPEND_SUCCESS": "Deal code was successfully suspended",
+  "DEAL_CODE_SUSPEND_ERROR": "An error occurred suspending the deal code",
+  "DEAL_CODE_REINSTATE_SUCCESS": "Deal code was successfully reinstated",
+  "DEAL_CODE_REINSTATE_ERROR": "An error occurred reinstating the deal code",
+  "DEAL_CODE_ASSIGN_SUCCESS": "Deal code was successfully assigned",
+  "DEAL_CODE_ASSIGN_ERROR": "An error occurred assigning the deal code",
+  "DEAL_CODE_UNASSIGN_SUCCESS": "Deal code was successfully unassigned",
+  "DEAL_CODE_UNASSIGN_ERROR": "An error occurred unassigning the deal code"
+}

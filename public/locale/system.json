@@ -1,0 +1,13 @@
+{
+  "MAINTENANCE_MODE_ENABLE_SUCCESS": "Maintenance mode has been successfully enabled on the platform",
+  "MAINTENANCE_MODE_ENABLE_ERROR": "There was an error enabling maintenance mode on the platform",
+  "MAINTENANCE_MODE_DISABLE_SUCCESS": "Maintenance mode has been successfully disabled on the platform",
+  "MAINTENANCE_MODE_DISABLE_ERROR": "There was an error disabling maintenance mode on the platform",
+  "CREATE_DUE_DILIGENCE_SUCCESS": "New due diligence item has been successfully created",
+  "CREATE_DUE_DILIGENCE_ERROR": "There was an error creating the due diligence item",
+  "UPDATE_DUE_DILIGENCE_SUCCESS": "Due diligence item successfully updated",
+  "UPDATE_DUE_DILIGENCE_ERROR": "There was an error updating the due diligence item",
+  "DELETE_DUE_DILIGENCE_SUCCESS": "Due diligence item successfully deleted",
+  "DELETE_DUE_DILIGENCE_ERROR": "There was an error deleting the due diligence item",
+  "PRODUCT_TYPES_INDEX_ERROR": "There was an error fetching product types"
+}

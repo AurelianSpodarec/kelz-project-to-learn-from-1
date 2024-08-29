@@ -1,0 +1,70 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import { ConfigProvider } from "@4cplatform/elements/Config"
+import { TranslationsProvider } from "@4cplatform/elements/Translations"
+import { AlertsProvider, AlertsContainer } from "@4cplatform/elements/Alerts"
+import { Page } from "../../Organisms"
+import { FakeAuthProvider } from "../../Helpers"
+import CONFIG from "../../../config"
+import TestDetailsProvider from "./story/provider.story.provider"
+import ProviderManageProvider from "../../../pages/ProviderManage/context/manage.provider"
+import ProviderDetails from "."
+
+<Meta
+  title="Templates/ProviderDetails"
+  parameters={{ jest: ["_providerDetails.test.js"] }}
+  decorators={[
+    StoryFn => (
+      <ConfigProvider config={CONFIG}>
+        <TranslationsProvider>
+          <AlertsProvider>
+            <FakeAuthProvider>
+              <Page>
+                <ProviderManageProvider>
+                  <TestDetailsProvider>
+                    <AlertsContainer />
+                    <StoryFn />
+                  </TestDetailsProvider>
+                </ProviderManageProvider>
+              </Page>
+            </FakeAuthProvider>
+          </AlertsProvider>
+        </TranslationsProvider>
+      </ConfigProvider>
+    )
+  ]}
+/>
+
+# ProviderDetails
+
+The `ProviderDetails` component allows users to view details about the selected insurance provider. This same component can also be used to edit those details.
+
+## Usage
+
+This component must be paired with the included Provider and Context in order to function. Relevant queries should be passed to the `ProviderDetails` component through the use of this context provider.
+
+Example:
+
+```javascript
+<ProviderDetailsProvider
+  value={{
+    data,
+    isEdit,
+    setEdit,
+    onEditDetailsSubmit: body => editDetails(body)
+  }}
+>
+  <ProviderDetails />
+</ProviderDetailsProvider>
+```
+
+## Story
+
+export const Template = args => (
+  <div style={{ width: "100%", margin: "0 auto", backgroundColor: "#fff" }}>
+    <ProviderDetails {...args} />
+  </div>
+)
+
+<Canvas>
+  <Story name="ProviderDetails">{Template.bind()}</Story>
+</Canvas>

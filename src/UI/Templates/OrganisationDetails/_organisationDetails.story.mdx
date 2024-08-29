@@ -1,0 +1,68 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import { ConfigProvider } from "@4cplatform/elements/Config"
+import { TranslationsProvider } from "@4cplatform/elements/Translations"
+import { AlertsProvider, AlertsContainer } from "@4cplatform/elements/Alerts"
+import { Page } from "../../Organisms"
+import { FakeAuthProvider } from "../../Helpers"
+import CONFIG from "../../../config"
+import TestDetailsProvider from "./story/organisation.story.provider"
+import OrganisationDetails from "."
+
+<Meta
+  title="Templates/OrganisationDetails"
+  parameters={{ jest: ["_organisationDetails.test.js"] }}
+  component={OrganisationDetails}
+  decorators={[
+    StoryFn => (
+      <ConfigProvider config={CONFIG}>
+        <TranslationsProvider>
+          <AlertsProvider>
+            <FakeAuthProvider>
+              <Page>
+                <TestDetailsProvider>
+                  <AlertsContainer />
+                  <StoryFn />
+                </TestDetailsProvider>
+              </Page>
+            </FakeAuthProvider>
+          </AlertsProvider>
+        </TranslationsProvider>
+      </ConfigProvider>
+    )
+  ]}
+/>
+
+# OrganisationDetails
+
+The `OrganisationDetails` component allows users to view details about the selected IFA. This same component can also be used to edit those details.
+
+## Usage
+
+This component must be paired with the included Provider and Context in order to function. Relevant queries should be passed to the `OrganisationDetails` component through the use of this context provider.
+
+Example:
+
+```javascript
+<OrganisationDetailsProvider
+  value={{
+    data,
+    isEdit,
+    setEdit,
+    onEditDetailsSubmit: body => editDetails(body)
+  }}
+>
+  <OrganisationDetails />
+</OrganisationDetailsProvider>
+```
+
+## Story
+
+export const Template = args => (
+  <div style={{ width: "80rem", margin: "5rem auto" }}>
+    <OrganisationDetails {...args} />
+  </div>
+)
+
+<Canvas>
+  <Story name="OrganisationDetails">{Template.bind()}</Story>
+</Canvas>

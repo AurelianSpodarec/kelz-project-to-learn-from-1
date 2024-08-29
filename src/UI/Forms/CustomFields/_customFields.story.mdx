@@ -1,0 +1,111 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import { get, findIndex } from "lodash"
+import { object, string, array } from "yup"
+import { useFormik } from "formik"
+import { isValidPhoneNumber } from "react-phone-number-input"
+import CustomFields from "."
+
+<Meta
+  title="Forms/CustomFields"
+  component={CustomFields}
+  parameters={{ jest: ["_customFields.test.js"] }}
+/>
+
+# CustomFields
+
+The `CustomFields` component is designed to allow a form to handle adding multiple phone numbers or email addresses to be attached at form submission.
+
+## Usage
+
+Import
+
+```javascript
+import { CustomFields } from "../../UI/Organisms"
+```
+
+Implement as follows
+
+```javascript
+<CustomFields name="custom_fields" formik={formik} label="Custom fields" />
+```
+
+`CustomFields` can **only** be used in conjunction with a `formik` instance. An initial value of `{type: "", value: "", description: ""}` should be passed in the form
+
+Example formik definition:
+
+```javascript
+const validationSchema = object({
+  custom_fields: array(
+    object({
+      type: string().label("Custom field type").required("MISSING_REQUIRED_FIELD"),
+      value: string()
+        .when("type", {
+          is: "email",
+          then: string().email("INVALID_EMAIL")
+        })
+        .when("type", {
+          is: "phone",
+          then: string()
+            .test("Phone invalid", "INVALID_PHONE", val => {
+              if (!val) return false
+              return isValidPhoneNumber(val, "GB")
+            })
+            .required("MISSING_REQUIRED_FIELD")
+        })
+        .required("MISSING_REQUIRED_FIELD"),
+      description: string().optional()
+    })
+  )
+})
+const formik = useFormik({
+  initialValues: {
+    custom_fields: []
+  },
+  validationSchema
+})
+```
+
+## Story
+
+export const Template = args => {
+  const validationSchema = object({
+    custom_fields: array(
+      object({
+        type: string().label("Custom field type").required("MISSING_REQUIRED_FIELD"),
+        value: string()
+          .when("type", {
+            is: "email",
+            then: string().email("INVALID_EMAIL")
+          })
+          .when("type", {
+            is: "phone",
+            then: string().test("Phone invalid", "INVALID_PHONE", val => {
+              if (!val) return false
+              return isValidPhoneNumber(val, "GB")
+            })
+          })
+          .required("MISSING_REQUIRED_FIELD"),
+        description: string().optional()
+      })
+    )
+  })
+  const formik = useFormik({
+    initialValues: {
+      custom_fields: []
+    },
+    validationSchema,
+    onSubmit: values => {
+      console.log(values)
+    }
+  })
+  return (
+    <form style={{ width: "70rem" }} noValidate onSubmit={formik.handleSubmit}>
+      <CustomFields {...args} name="custom_fields" formik={{ ...formik, validationSchema }} />
+      <button type="submit">Simulate submit</button>
+    </form>
+  )
+}
+
+<Canvas>
+  <Story name="CustomFields">{Template.bind()}</Story>
+</Canvas>

@@ -1,0 +1,65 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import Container from "@4cplatform/elements/Atoms/Container"
+import { H1 } from "@4cplatform/elements/Typography"
+import { Providers } from "../../Helpers"
+import StoryApiStatusProvider from "./story/status.story.provider"
+import ApiStatusAdmin from "."
+
+<Meta
+  title="Templates/ApiStatusAdmin"
+  parameters={{
+    layout: "fullscreen",
+    jest: ["_status.test.js"]
+  }}
+  decorators={[
+    StoryFn => (
+      <Providers>
+        <StoryApiStatusProvider>
+          <StoryFn />
+        </StoryApiStatusProvider>
+      </Providers>
+    )
+  ]}
+/>
+
+# API Status
+
+This provides a top-down view for the current API status of all providers and their Quote APIs on the platform. At a glance, it shows which APIs are currently returning responses. It also shows how long the response took to return, as well as any error messages that return from the request.
+
+## Usage
+
+Implementing this component requires two parts working in concert:
+
+1. `ApiStatusAdmin`
+2. `ApiStatusProvider`
+
+`ApiStatusAdmin` contains the `Table` component for displaying the data.
+
+`ApiStatusProvider` contains the state of the component and the API requests made to populate the table.
+
+No panel is required for implementing this Admin component.
+
+Implement as follows:
+
+```javascript
+<ApiStatusProvider>
+  <Container>
+    <ApiStatusAdmin />
+  </Container>
+</ApiStatusProvider>
+```
+
+## Story
+
+export const Template = args => (
+  <>
+    <Container>
+      <H1>API Status</H1>
+      <ApiStatusAdmin {...args} />
+    </Container>
+  </>
+)
+
+<Canvas>
+  <Story name="ApiStatusAdmin">{Template.bind()}</Story>
+</Canvas>

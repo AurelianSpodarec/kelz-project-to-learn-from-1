@@ -1,0 +1,549 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Dashboard /> Basic styles and appearance 1`] = `
+.c0 {
+  width: 128rem;
+  margin: 0 auto;
+  position: relative;
+  background-color: transparent;
+  box-sizing: border-box;
+  max-width: 128rem;
+  padding: 1rem;
+}
+
+.c3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c3 svg {
+  cursor: pointer;
+}
+
+.c3 svg:hover {
+  opacity: 0.8;
+}
+
+.c4 {
+  width: auto;
+  color: #193C42;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 32px;
+}
+
+.c7 {
+  width: auto;
+  color: #335257;
+  text-align: left;
+  margin: 0 0 1rem;
+  padding: 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: 7rem;
+  margin-bottom: 5rem;
+  padding: 0;
+  width: 80%;
+}
+
+.c2 {
+  margin-bottom: 3rem;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c6 {
+  padding: 0 1rem;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0 1rem 0 0;
+}
+
+.c11 {
+  padding: 0 1rem;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c14 {
+  padding: 0 1rem;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0 0 0 1rem;
+}
+
+.c8 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: block;
+  color: #FFF;
+  background: #819D58;
+  padding: 1.1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 10px 0 rgba(0,34,43,0.05);
+  border-radius: 0.3rem;
+  position: relative;
+  min-height: 10rem;
+}
+
+.c8:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: #677d46;
+}
+
+.c12 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: block;
+  color: #FFF;
+  background: #3F53B8;
+  padding: 1.1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 10px 0 rgba(0,34,43,0.05);
+  border-radius: 0.3rem;
+  position: relative;
+  min-height: 10rem;
+}
+
+.c12:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: #324293;
+}
+
+.c13 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: block;
+  color: #FFF;
+  background: #9D5899;
+  padding: 1.1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 10px 0 rgba(0,34,43,0.05);
+  border-radius: 0.3rem;
+  position: relative;
+  min-height: 10rem;
+}
+
+.c13:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: #7d467a;
+}
+
+.c15 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: block;
+  color: #FFF;
+  background: #335257;
+  padding: 1.1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 10px 0 rgba(0,34,43,0.05);
+  border-radius: 0.3rem;
+  position: relative;
+  min-height: 10rem;
+}
+
+.c15:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: #284145;
+}
+
+.c9 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  margin: 0 0 0.5rem;
+}
+
+.c10 {
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  margin: 0 0 1rem;
+}
+
+@media screen and (min-width:400px) {
+  .c4 {
+    font-size: calc(28px + (45 - 28) * (100vw - 400px) / (1200 - 400));
+    line-height: calc(32px + (50 - 32) * (100vw - 400px) / (1200 - 400));
+  }
+}
+
+@media screen and (min-width:1200px) {
+  .c4 {
+    font-size: 45px;
+    line-height: 50px;
+  }
+}
+
+@media screen and (min-width:400px) {
+  .c7 {
+    font-size: calc(14px + (20 - 14) * (100vw - 400px) / (1200 - 400));
+    line-height: calc(22px + (25 - 22) * (100vw - 400px) / (1200 - 400));
+  }
+}
+
+@media screen and (min-width:1200px) {
+  .c7 {
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+
+<div
+  class="c0 c1"
+  width="128rem"
+>
+  <div
+    class="c2"
+  >
+    <div
+      class="c3"
+      data-testid="heading_1-helper_text-container"
+    >
+      <h1
+        class="c4"
+      >
+        Let's start your client journey
+      </h1>
+      
+    </div>
+  </div>
+  <div
+    class="c5"
+  >
+    <div
+      class="c6"
+      data-testid="dash-category-leads"
+    >
+      <div
+        class="c3"
+        data-testid="heading_3-helper_text-container"
+      >
+        <h3
+          class="c7"
+        >
+          Leads
+        </h3>
+        
+      </div>
+      <a
+        background="#819D58"
+        class="c8"
+        href="/"
+        length="4"
+        simulated=""
+      >
+        <h4
+          class="c9"
+        >
+          Quick quote
+        </h4>
+        <p
+          class="c10"
+        >
+          Lorem ipsum dolor sit amet consectetur adipiscing elit
+        </p>
+      </a>
+      <a
+        background="#819D58"
+        class="c8"
+        href="/"
+        length="4"
+        simulated=""
+      >
+        <h4
+          class="c9"
+        >
+          Create new lead
+        </h4>
+        <p
+          class="c10"
+        >
+          Lorem ipsum dolor sit amet consectetur adipiscing elit
+        </p>
+      </a>
+      <a
+        background="#819D58"
+        class="c8"
+        href="/"
+        length="4"
+        simulated=""
+      >
+        <h4
+          class="c9"
+        >
+          Clients
+        </h4>
+        <p
+          class="c10"
+        >
+          Lorem ipsum dolor sit amet consectetur adipiscing elit
+        </p>
+      </a>
+      <a
+        background="#819D58"
+        class="c8"
+        href="/"
+        length="4"
+        simulated=""
+      >
+        <h4
+          class="c9"
+        >
+          Reports
+        </h4>
+        <p
+          class="c10"
+        >
+          Lorem ipsum dolor sit amet consectetur adipiscing elit
+        </p>
+      </a>
+    </div>
+    <div
+      class="c11"
+      data-testid="dash-category-quotes"
+    >
+      <div
+        class="c3"
+        data-testid="heading_3-helper_text-container"
+      >
+        <h3
+          class="c7"
+        >
+          Quotes
+        </h3>
+        
+      </div>
+      <a
+        background="#3F53B8"
+        class="c12"
+        href="/"
+        length="4"
+        simulated=""
+      >
+        <h4
+          class="c9"
+        >
+          Quotes completed
+        </h4>
+        <p
+          class="c10"
+        >
+          Lorem ipsum dolor sit amet consectetur adipiscing elit
+        </p>
+      </a>
+      <a
+        background="#3F53B8"
+        class="c12"
+        href="/"
+        length="4"
+        simulated=""
+      >
+        <h4
+          class="c9"
+        >
+          Quotes in-progress
+        </h4>
+        <p
+          class="c10"
+        >
+          Lorem ipsum dolor sit amet consectetur adipiscing elit
+        </p>
+      </a>
+    </div>
+    <div
+      class="c11"
+      data-testid="dash-category-policies"
+    >
+      <div
+        class="c3"
+        data-testid="heading_3-helper_text-container"
+      >
+        <h3
+          class="c7"
+        >
+          Policies
+        </h3>
+        
+      </div>
+      <a
+        background="#9D5899"
+        class="c13"
+        href="/"
+        length="4"
+        simulated=""
+      >
+        <h4
+          class="c9"
+        >
+          All policies
+        </h4>
+        <p
+          class="c10"
+        >
+          Lorem ipsum dolor sit amet consectetur adipiscing elit
+        </p>
+      </a>
+      <a
+        background="#9D5899"
+        class="c13"
+        href="/"
+        length="4"
+        simulated=""
+      >
+        <h4
+          class="c9"
+        >
+          Quotes awaiting terms
+        </h4>
+        <p
+          class="c10"
+        >
+          Lorem ipsum dolor sit amet consectetur adipiscing elit
+        </p>
+      </a>
+      <a
+        background="#9D5899"
+        class="c13"
+        href="/"
+        length="4"
+        simulated=""
+      >
+        <h4
+          class="c9"
+        >
+          Awaiting acceptance
+        </h4>
+        <p
+          class="c10"
+        >
+          Lorem ipsum dolor sit amet consectetur adipiscing elit
+        </p>
+      </a>
+    </div>
+    <div
+      class="c14"
+      data-testid="dash-category-admin"
+    >
+      <div
+        class="c3"
+        data-testid="heading_3-helper_text-container"
+      >
+        <h3
+          class="c7"
+        >
+          Admin
+        </h3>
+        
+      </div>
+      <a
+        background="#335257"
+        class="c15"
+        href="/"
+        length="4"
+        simulated=""
+      >
+        <h4
+          class="c9"
+        >
+          My account
+        </h4>
+        <p
+          class="c10"
+        >
+          Lorem ipsum dolor sit amet consectetur adipiscing elit
+        </p>
+      </a>
+      <a
+        background="#335257"
+        class="c15"
+        href="/"
+        length="4"
+        simulated=""
+      >
+        <h4
+          class="c9"
+        >
+          User administration
+        </h4>
+        <p
+          class="c10"
+        >
+          Lorem ipsum dolor sit amet consectetur adipiscing elit
+        </p>
+      </a>
+      <a
+        background="#335257"
+        class="c15"
+        href="/"
+        length="4"
+        simulated=""
+      >
+        <h4
+          class="c9"
+        >
+          Mail log
+        </h4>
+        <p
+          class="c10"
+        >
+          Lorem ipsum dolor sit amet consectetur adipiscing elit
+        </p>
+      </a>
+      <a
+        background="#335257"
+        class="c15"
+        href="/"
+        length="4"
+        simulated=""
+      >
+        <h4
+          class="c9"
+        >
+          Organisation settings
+        </h4>
+        <p
+          class="c10"
+        >
+          Lorem ipsum dolor sit amet consectetur adipiscing elit
+        </p>
+      </a>
+    </div>
+  </div>
+</div>
+`;

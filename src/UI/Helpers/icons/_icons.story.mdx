@@ -1,0 +1,37 @@
+import { Meta } from "@storybook/addon-docs"
+
+<Meta
+  title="Helpers/Icons"
+  parameters={{
+    viewMode: "docs",
+    previewTabs: { canvas: { hidden: true } }
+  }}
+/>
+
+# Icons helpers
+
+The tools defined within the `icons` directory are designed to provide a common resource for helper functions that which return or manipulate Icons `data`.
+
+More tools can be added here in the future.
+
+## Exposed tools
+
+- [`getTwoFactorAuthIcon()`](#gettwofactorauthicon)
+
+### `getTwoFactorAuthIcon()`
+
+This helper functions has `type` and `complete` passed to it and it returns the relevant `Icon` or `IconWithText` props.
+
+#### Usage
+
+Import
+
+```javascript
+import { getTwoFactorAuthIcon } from "../UI/Helpers"
+```
+
+Implement as follows
+
+```javascript
+<Icon {...getTwoFactorAuthIcon()} />
+```

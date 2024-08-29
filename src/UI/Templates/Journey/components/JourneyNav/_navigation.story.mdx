@@ -1,0 +1,19 @@
+import { Meta } from "@storybook/addon-docs"
+
+<Meta
+  title="Templates/Journey/Journey Components/JourneyNav"
+  parameters={{
+    viewMode: "docs",
+    previewTabs: { canvas: { hidden: true } }
+  }}
+/>
+
+# `JourneyNav`
+
+This is the menu on the left-hand side of the Journey. It is built from the `navigation` key pulled from the `JourneyProvider`, which relies on the `getNavigation` helper function defined in `UI/Helpers/journey`.
+
+What this essentially does is build a two-dimensional array from the pages object attached to the `journey` section of the data structure. The exact path is `data.journey.meta.pages`.
+
+Each page object has a `stage` key, which determines which array it goes into. This is what allows us to feature different pages in different categories on the nav bar.
+
+At the moment, these categories are hard-coded, but can be made dynamic if the need exists for multiple journey types.

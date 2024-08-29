@@ -1,0 +1,87 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import Container from "@4cplatform/elements/Atoms/Container"
+import { H1 } from "@4cplatform/elements/Typography"
+import { ConfigProvider } from "@4cplatform/elements/Config"
+import { TranslationsProvider } from "@4cplatform/elements/Translations"
+import { AlertsProvider, AlertsContainer } from "@4cplatform/elements/Alerts"
+import { Page } from "../../Organisms"
+import { FakeAuthProvider } from "../../Helpers"
+import CONFIG from "../../../config"
+import TestLeadsProvider from "./story/leads.story.provider"
+import LeadAdmin, { LeadsPanel } from "."
+
+<Meta
+  title="Templates/LeadAdmin"
+  parameters={{
+    layout: "fullscreen",
+    jest: ["_leads.test.js"]
+  }}
+  decorators={[
+    StoryFn => (
+      <ConfigProvider config={CONFIG}>
+        <TranslationsProvider>
+          <AlertsProvider>
+            <FakeAuthProvider>
+              <Page>
+                <TestLeadsProvider>
+                  <AlertsContainer />
+                  <StoryFn />
+                </TestLeadsProvider>
+              </Page>
+            </FakeAuthProvider>
+          </AlertsProvider>
+        </TranslationsProvider>
+      </ConfigProvider>
+    )
+  ]}
+/>
+
+# Lead Administration
+
+The `LeadAdmin` component allows the logged-in user to view leads, edit them, delete them, or add new leads to the platform.
+
+### Usage
+
+Implementing this component is more complicated than usual because there are three components that must be defined and implemented separately in order for it to work. This is because different contexts for `LeadAdmin` have different visual design guidelines that must be worked around. Developers therefore need more control over how these components are implemented.
+
+There are three main parts to this component:
+
+1. `LeadAdmin`
+2. `LeadsPanel`
+3. `LeadsProvider`
+
+`LeadAdmin` contains the `Table` component for displaying the index leads data as well as several tools for sorting and refining the Index Leads query.
+
+`LeadsPanel` is a `FlyOutPanel` component that contains the View Lead and Edit Lead functionality.
+
+`LeadsProvider` is the Context Provider. It controls the state of the `LeadAdmin` component and the `LeadsPanel` component. It must be defined outside of the component in order to allow developers to control how the queries and mutations are performed inside the multiple pages that the `LeadAdmin` component is defined within. Different implementations of `LeadAdmin` will have slightly different needs, and using a context to control the state will allow for that.
+
+Although the particular state management technique within the context is left open, it makes sense to use a `useReducer` hook for state management of page actions. For the `EditLead` component, a formik instance internal to the component handles the state of the form inputs.
+
+An example of a functional `LeadsProvider` instance can be found inside `./story/leads.story.provider.js`. Refer to this when considering the bare minimum of fields required to make this component functional.
+
+Implement as follows:
+
+```javascript
+<>
+  <Container>
+    <LeadAdmin {...props} />
+  </Container>
+  <LeadsPanel {...props} />
+</>
+```
+
+## Story
+
+export const Template = args => (
+  <>
+    <Container>
+      <LeadAdmin {...args} />
+    </Container>
+    <LeadsPanel {...args} />
+  </>
+)
+
+<Canvas>
+  <Story name="LeadAdmin">{Template.bind()}</Story>
+</Canvas>

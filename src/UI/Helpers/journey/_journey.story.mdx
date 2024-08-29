@@ -1,0 +1,232 @@
+import { Meta } from "@storybook/addon-docs"
+
+<Meta
+  title="Helpers/Journey"
+  parameters={{
+    viewMode: "docs",
+    previewTabs: { canvas: { hidden: true } }
+  }}
+/>
+
+# Journey helpers
+
+The tools defined within the `journey` directory are designed to provide a common resource for helper functions that which return or manipulate Journey `data`.
+
+More tools can be added here in the future.
+
+## Exposed tools
+
+- [`getPageData()`](#getpagedata)
+- [`mapDataToFormik()`](#mapdatatoformik)
+- [`mapDataToYup()`](#mapdatatoyup)
+- [`getNavigation()`](#getnavigation)
+- [`renderSectionComponent()`](#rendersectioncomponent)
+- [`getStageParam()`](#getstageparam)
+- [`getNextStage()`](#getnextstage)
+- [`getPreviousStage()`](#getpreviousstage)
+- [`getPageAudit()`](#getpageaudit)
+
+### `getPageData()`
+
+This helper functions has `data` passed to it and it returns the relevant `config` for the Journey page's `key` by calling its import further passing data through.
+
+This is used to augment the API data for each Journey page.
+
+#### Usage
+
+Import
+
+```javascript
+import { getPageData } from "../UI/Helpers"
+```
+
+Implement as follows
+
+```javascript
+const newData = get(res, "data", {})
+dispatch({
+  type: "FETCH_COMPLETE",
+  data: {
+    ...newData,
+    page: { ...get(newData, "page", {}), ...getPageData(newData) }
+  }
+})
+```
+
+### `mapDataToFormik()`
+
+This helper function maps the Journey page's `data` to an object for the `formik`'s `initialValues`.
+
+**Note:** In order to work as described above, `enableReinitialize` must be `true` on the `useFormik` hook.
+
+#### Usage
+
+Import
+
+```javascript
+import { mapDataToFormik } from "../UI/Helpers"
+```
+
+Implement as follows
+
+```javascript
+const validationSchema = mapDataToYup(data)
+
+const formikInstance = useFormik({
+  initialValues: mapDataToFormik(data),
+  validationSchema,
+  enableReinitialize: true,
+  onSubmit: body => {
+    const key = get(data, "page.key", null)
+    dispatch({ type: "UPDATE_VALUE", key: "data", value: getStoryJourneyPage(key) })
+  }
+})
+```
+
+### `mapDataToYup()`
+
+This helper function maps the Journey page's `data` to a `yup` schema for `formik`'s `validationSchema`.
+
+#### Usage
+
+Import
+
+```javascript
+import { mapDataToYup } from "../UI/Helpers"
+```
+
+Implement as follows
+
+```javascript
+const validationSchema = mapDataToYup(data)
+
+const formikInstance = useFormik({
+  initialValues: mapDataToFormik(data),
+  validationSchema,
+  enableReinitialize: true,
+  onSubmit: body => {
+    const key = get(data, "page.key", null)
+    dispatch({ type: "UPDATE_VALUE", key: "data", value: getStoryJourneyPage(key) })
+  }
+})
+```
+
+### `getNavigation()`
+
+This helper function creates a Journey pages navigation array divided and ordered into sub-arrays based on the `stage` and `order` keys of each page present in the `journey.meta.pages`.
+
+This is used in the `JourneyProvider`.
+
+#### Usage
+
+Import
+
+```javascript
+import { getNavigation } from "../UI/Helpers"
+```
+
+Implement as follows
+
+```javascript
+const navigation = getNavigation(data)
+```
+
+### `renderSectionComponent()`
+
+This helper function applies `componentProps` on the specific `component` based on the `config`, If `skipDataMap` is `true`, the `name`, `label`, `formik` and `isDisabled` props aren't passed.
+
+This mainly used in the `JourneyField`.
+
+#### Usage
+
+Import
+
+```javascript
+import { renderSectionComponent } from "../UI/Helpers"
+```
+
+Implement as follows
+
+```javascript
+<>{renderSectionComponent(data, formik, isLocked)}</>
+```
+
+### `getStageParam()`
+
+This helper function grabs the `:stage` path parameter from a passed Journey `page`'s `route` and returns it.
+
+This is mainly used in `getNextStage()` and `getPreviousStage()`
+
+#### Usage
+
+Import
+
+```javascript
+import { getStageParam } from "../UI/Helpers"
+```
+
+Implement as follows
+
+```javascript
+getStageParam(get(data, "page"))
+```
+
+### `getNextStage()`
+
+This helper function grabs the next page of the Journey. It's used by the Next `Button` when the Journey is locked.
+
+#### Usage
+
+Import
+
+```javascript
+import { getNextStage } from "../UI/Helpers"
+```
+
+Implement as follows
+
+```javascript
+const newStage = getNextStage(data)
+history.push(`/journeys/${reference}/${newStage}`)
+```
+
+### `getPreviousStage()`
+
+This helper function grabs the previous page of the Journey. It's used by the Previous `Button`.
+
+#### Usage
+
+Import
+
+```javascript
+import { getPreviousStage } from "../UI/Helpers"
+```
+
+Implement as follows
+
+```javascript
+const newStage = getPreviousStage(data)
+history.push(`/journeys/${reference}/${newStage}`)
+```
+
+### `getPageAudit()`
+
+This function constructs the Journey page's audit log from passed `data`.
+
+#### Usage
+
+Import
+
+```javascript
+import { getPageAudit } from "../UI/Helpers"
+```
+
+Implement as follows
+
+```javascript
+const auditBody = {
+  duration: moment().diff(duration, "seconds"),
+  ...getPageAudit(data)
+}
+submitAudit({ body: auditBody })
+```

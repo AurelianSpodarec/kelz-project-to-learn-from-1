@@ -1,0 +1,82 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import Container from "@4cplatform/elements/Atoms/Container"
+import { H1 } from "@4cplatform/elements/Typography"
+import { ConfigProvider } from "@4cplatform/elements/Config"
+import { TranslationsProvider } from "@4cplatform/elements/Translations"
+import { AlertsProvider, AlertsContainer } from "@4cplatform/elements/Alerts"
+import { Page } from "../../Organisms"
+import { FakeAuthProvider } from "../../Helpers"
+import CONFIG from "../../../config"
+import TestNetworkOrganisationsProvider from "./story/networkOrganisations.story.provider"
+import NetworkOrganisations, { NetworkOrganisationsPanel } from "."
+
+<Meta
+  title="Templates/NetworkOrganisations"
+  component={NetworkOrganisations}
+  parameters={{ jest: ["_networkOrganisations.test.js"], layout: "fullscreen" }}
+  decorators={[
+    StoryFn => (
+      <ConfigProvider config={CONFIG}>
+        <TranslationsProvider>
+          <AlertsProvider>
+            <FakeAuthProvider>
+              <Page>
+                <TestNetworkOrganisationsProvider>
+                  <AlertsContainer />
+                  <StoryFn />
+                </TestNetworkOrganisationsProvider>
+              </Page>
+            </FakeAuthProvider>
+          </AlertsProvider>
+        </TranslationsProvider>
+      </ConfigProvider>
+    )
+  ]}
+/>
+
+# NetworkOrganisations
+
+The `NetworkOrganisations` component allows the logged-in user to view a network's organisations. They can view in-depth information about the member organisation, view that organisation's quotes and policies, or remove them from the network.
+
+## Usage
+
+There are three main parts to this component:
+
+1. `NetworkOrganisations`
+2. `NetworkOrganisationsPanel`
+3. `NetworkOrganisationsProvider`
+
+`NetworkOrganisations` contains the `Table` component for displaying the index network organisations data as well as several tools for sorting and refining the Index Organisations query.
+
+`NetworkOrganisationsPanel` is a `FlyOutPanel` component that contains the View Organisation data, `Button`s to redirect to the quotes or policies view, and a `Button` to initiate the remove organisation action.
+
+`NetworkOrganisationsProvider` is the Context Provider. It controls the state of the `NetworkOrganisations` component and the `NetworkOrganisationsPanel` component.
+
+An example of a functional `NetworkOrganisationsPanel` instance can be found inside `./story/networkOrganisations.story.provider.js`. Refer to this when considering the bare minimum of fields required to make this component functional.
+
+Implement as follows:
+
+```javascript
+<NetworkOrganisationsProvider>
+  <Container>
+    <NetworkOrganisations {...props} />
+  </Container>
+  <NetworkOrganisationsPanel />
+</NetworkOrganisationsProvider>
+```
+
+## Story
+
+export const Template = args => (
+  <>
+    <Container>
+      <H1 margin="2rem 0">Network Members</H1>
+      <NetworkOrganisations {...args} />
+    </Container>
+    <NetworkOrganisationsPanel {...args} />
+  </>
+)
+
+<Canvas>
+  <Story name="NetworkOrganisations">{Template.bind()}</Story>
+</Canvas>

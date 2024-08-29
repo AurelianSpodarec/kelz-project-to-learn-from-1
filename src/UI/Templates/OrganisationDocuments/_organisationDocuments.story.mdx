@@ -1,0 +1,50 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import { Container } from "@4cplatform/elements/Atoms"
+import { H1 } from "@4cplatform/elements/Typography"
+import { ConfigProvider } from "@4cplatform/elements/Config"
+import { AlertsProvider, AlertsContainer } from "@4cplatform/elements/Alerts"
+import { Page } from "../../Organisms"
+import { FakeAuthProvider } from "../../Helpers"
+import TestOrganisationDocumentsProvider from "./story/organisationDocuments.story.provider"
+import OrganisationDocuments, { OrganisationDocumentsPanel } from "."
+
+<Meta
+  title="Templates/OrganisationDocuments"
+  decorators={[
+    StoryFn => (
+      <FakeAuthProvider>
+        <AlertsProvider>
+          <Page>
+            <TestOrganisationDocumentsProvider>
+              <AlertsContainer />
+              <StoryFn />
+            </TestOrganisationDocumentsProvider>
+          </Page>
+        </AlertsProvider>
+      </FakeAuthProvider>
+    )
+  ]}
+  parameters={{
+    layout: "fullscreen"
+  }}
+/>
+
+# OrganisationDocuments
+
+TBC
+
+## Story
+
+export const Template = args => (
+  <>
+    <Container>
+      <H1>Organisation Documents</H1>
+      <OrganisationDocuments {...args} />
+    </Container>
+    <OrganisationDocumentsPanel {...args} />
+  </>
+)
+
+<Canvas>
+  <Story name="OrganisationDocuments">{Template.bind()}</Story>
+</Canvas>

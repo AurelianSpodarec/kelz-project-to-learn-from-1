@@ -1,0 +1,83 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import LabelWithText from "."
+
+<Meta
+  title="Atoms/LabelWithText"
+  component={LabelWithText}
+  parameters={{ jest: ["_labelWithText.test.js"] }}
+/>
+
+# LabelWithText
+
+`LabelWithText` is a simple presentational component that displays a label positioned above a text element.
+
+By default, this text element is indented.
+
+## Usage
+
+This component can display text by using a `content` prop or by wrapping children within the `LabelWithText` tag.
+
+Import
+
+```javascript
+import { LabelWithText } from "../../UI/Atoms"
+```
+
+Usage
+
+```javascript
+<LabelWithText label="Label" content="Use the content prop for standard styles" />
+```
+
+```javascript
+<LabelWithText label="Label" margin="0 0 2rem">
+  <p style={{ margin: "0" }}>
+    This can also be used with children, however, it is desirable to use the margin prop on the
+    LabelWithText component instead of the margin on the wrapped text.
+  </p>
+</LabelWithText>
+```
+
+## Story
+
+export const Template = args => (
+  <div styles={{ width: "50rem" }}>
+    <LabelWithText {...args} />
+  </div>
+)
+
+<Canvas>
+  <Story
+    name="Basic"
+    args={{
+      label: "Interesting Label",
+      content: "This is rendered with the content prop."
+    }}
+  >
+    {Template.bind()}
+  </Story>
+  <Story
+    name="With Children"
+    args={{
+      label: "Interesting Label",
+      children: (
+        <>
+          <p style={{ margin: "0" }}>This is rendered with children.</p>
+          <p style={{ margin: "0" }}>This is another paragraph.</p>
+        </>
+      )
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Props / Args
+
+### Basic
+
+<ArgsTable story="Basic" />
+
+### With Children
+
+<ArgsTable story="With Children" />

@@ -1,0 +1,38 @@
+import { Meta } from "@storybook/addon-docs"
+
+<Meta
+  title="Helpers/Breadcrumbs"
+  parameters={{
+    viewMode: "docs",
+    previewTabs: { canvas: { hidden: true } }
+  }}
+/>
+
+# Breadcrumbs helpers
+
+The items defined in the `breadcrumbs` directory provide a definition for the breadcrumbs that appear on certain pages.
+
+More breadcrumbs for different pages can be added here in the future.
+
+## Exposed tools
+
+- [`getAddUserBreadcrumbs`](#getadduserbreadcrumbs)
+
+### `getAddUserBreadcrumbs()`
+
+This helper functions has `type` and `slug` passed to it and it returns the relevant breadcrumbs.
+
+#### Usage
+
+Import
+
+```javascript
+import { getAddUserBreadcrumbs } from "../UI/Helpers"
+```
+
+Implement as follows
+
+```javascript
+const breadcrumbsTrail = getAddUserBreadcrumbs(location, slug)
+return <Breadcrumbs trail={breadcrumbsTrail} />
+```

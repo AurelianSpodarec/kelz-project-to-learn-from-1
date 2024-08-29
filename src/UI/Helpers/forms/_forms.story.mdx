@@ -1,0 +1,67 @@
+import { Meta } from "@storybook/addon-docs"
+
+<Meta
+  title="Helpers/Forms"
+  parameters={{
+    viewMode: "docs",
+    previewTabs: { canvas: { hidden: true } }
+  }}
+/>
+
+# Forms helpers
+
+The forms helpers are designed to centralise the common declaration of useful tools for forms.
+
+More tools can be added here in the future.
+
+## Exposed tools
+
+- [`renderProductTypesOptions()`](#renderproducttypesoptions)
+- [`requiredIfFalse()`](#requirediffalse)
+
+### `renderProductTypesOptions()`
+
+This is a helper function for transforming the API formatted product types index to a frontend friendly format and returns the the `option`s to populate the `QuerySelect` component.
+
+#### Usage
+
+Import
+
+```javascript
+import { renderProductTypesOptions } from "../../UI/Helpers"
+```
+
+Implement as follows
+
+```javascript
+<QuerySelect {...args} render={renderProductTypesOptions} />
+```
+
+### `requiredIfFalse()`
+
+This is a helper function for evaluating a group of booleans. It is meant for use inside validationSchema objects. If any of the booleans are `true`, it will return `true`. Otherwise, it will return `false`.
+
+Import
+
+```javascript
+import { requiredIfFalse } from "../../UI/Helpers"
+```
+
+Implement as follows
+
+```javascript
+export const exampleModel = object({
+  underwriting_fmu: boolean()
+    .test("requiredIfFalse", "REQUIRED_IF_FALSE", (value, context) => {
+      const values = get(context, "parent", {})
+      return requiredIfFalse(values, ["underwriting_mori", "underwriting_fmu"])
+    })
+    .required("MISSING_REQUIRED_FIELD"),
+  underwriting_mori: boolean()
+    .test("requiredIfFalse", "REQUIRED_IF_FALSE", (value, context) => {
+      const values = get(context, "parent", {})
+      return requiredIfFalse(values, ["underwriting_mori", "underwriting_fmu"])
+    })
+    .required("MISSING_REQUIRED_FIELD")
+})
+```

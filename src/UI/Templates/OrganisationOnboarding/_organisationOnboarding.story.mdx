@@ -1,0 +1,71 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import { Container } from "@4cplatform/elements/Atoms"
+import { H1 } from "@4cplatform/elements/Typography"
+import { ConfigProvider } from "@4cplatform/elements/Config"
+import { TranslationsProvider } from "@4cplatform/elements/Translations"
+import { AlertsProvider, AlertsContainer } from "@4cplatform/elements/Alerts"
+import { Page } from "../../Organisms"
+import { FakeAuthProvider } from "../../Helpers"
+import TestOrganisationOnboardingProvider from "./story/organisationOnboarding.story.provider.js"
+import OrganisationOnboarding from "."
+
+<Meta
+  title="Templates/OrganisationOnboarding"
+  component={OrganisationOnboarding}
+  parameters={{ jest: ["_organisationOnboarding.test.js"], layout: "fullscreen" }}
+  decorators={[
+    StoryFn => (
+      <FakeAuthProvider>
+        <AlertsProvider>
+          <Page>
+            <TestOrganisationOnboardingProvider>
+              <AlertsContainer />
+              <StoryFn />
+            </TestOrganisationOnboardingProvider>
+          </Page>
+        </AlertsProvider>
+      </FakeAuthProvider>
+    )
+  ]}
+/>
+
+# OrganisationOnboarding
+
+The `OrganisationOnboarding` Template exposes `Typography` elements, Activation and
+Approval status `IconWithText`s, a collection of `Checkboxe`s and a `ConfirmationModal` driven by data from `OrganisationOnboardingContext`.
+
+It must be included with the provider exported from its directory in order to function.
+Please see `./story/organisationOnboarding.story.provider.js` for an example of a fully functional provider.
+
+## Usage
+
+Import
+
+```javascript
+import { OrganisationOnboarding } from "../../UI/Templates"
+```
+
+Implement as follows
+
+```javascript
+const Settings = () => (
+  <OrganisationOnboardingProvider>
+    <OrganisationOnboarding />
+  </OrganisationOnboardingProvider>
+)
+```
+
+## Story
+
+export const Template = args => (
+  <>
+    <Container width="80%">
+      <H1>Organisation Onboarding</H1>
+      <OrganisationOnboarding {...args} />
+    </Container>
+  </>
+)
+
+<Canvas>
+  <Story name="OrganisationOnboarding">{Template.bind()}</Story>
+</Canvas>

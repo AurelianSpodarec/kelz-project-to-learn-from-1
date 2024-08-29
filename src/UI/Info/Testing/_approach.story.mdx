@@ -1,0 +1,20 @@
+import { Meta, Description } from "@storybook/addon-docs"
+// Components
+import { Header, approachMd as markdown } from "@4cplatform/elements/Info"
+
+<Meta
+  title="Info/Testing/Approach"
+  parameters={{
+    viewMode: "docs",
+    previewTabs: { canvas: { hidden: true } }
+  }}
+/>
+
+<Header
+  text="Testing Approach"
+  link={{ href: "/?path=/docs/info-writing-stories--page", text: "See Testing Coverage" }}
+/>
+
+<br />
+
+<Description markdown={markdown} />

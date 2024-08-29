@@ -1,0 +1,54 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs"
+import { Providers } from "../../Helpers"
+import MyAccountSettings from "."
+import MyAccountSettingsStoryProvider from "./story/settings.story.provider.js"
+
+<Meta
+  title="Templates/MyAccountSettings"
+  decorators={[
+    StoryFn => (
+      <Providers>
+        <MyAccountSettingsStoryProvider>
+          <StoryFn />
+        </MyAccountSettingsStoryProvider>
+      </Providers>
+    )
+  ]}
+  parameters={{
+    jest: ["_settings.test.js"]
+  }}
+/>
+
+## MyAccountSettings
+
+The `MyAccountSettings` component displays the settings from the `/self-service` query for use by the user. The user can change their settings using this view. It is accessible by clicking your username and email address in the top-right corner of the screen and selecting the Settings tab.
+
+The `selfServiceUpdate` function - also exposed on `PageContext` - is used to update the `/self-service` data without refetching the query whenever the user runs the `PATCH` request on that endpoint successfully. This will instantly update the user's settings.
+
+## Usage
+
+Import
+
+```javascript
+import { MyAccountSettings } from "../../UI/Templates"
+```
+
+Implement as follows
+
+```javascript
+<MyAccountProvider>
+  <MyAccountSettings />
+</MyAccountProvider>
+```
+
+## Story
+
+export const Template = () => (
+  <div style={{ width: "100rem" }}>
+    <MyAccountSettings />
+  </div>
+)
+
+<Canvas>
+  <Story name="MyAccountSettings">{Template.bind()}</Story>
+</Canvas>

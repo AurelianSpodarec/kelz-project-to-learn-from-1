@@ -1,0 +1,84 @@
+import MockAdapter from "axios-mock-adapter"
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import { Container } from "@4cplatform/elements/Atoms"
+import { H1 } from "@4cplatform/elements/Typography"
+import { api } from "@4cplatform/elements/Api/fetchData"
+import {
+  Providers,
+  fakeApiUrl,
+  fakeProductTypesGetResponse,
+  fakeProvidersGetResponse
+} from "../../../Helpers"
+import TestAgencyCodesProvider from "./story/agencyCodes.story.provider"
+import AgencyCodeAdmin, { AgencyCodesPanel } from "."
+const mockAxios = new MockAdapter(api)
+mockAxios.onGet(`${fakeApiUrl}/product-types`).reply(200, fakeProductTypesGetResponse)
+mockAxios.onGet(`${fakeApiUrl}/providers`).reply(200, fakeProvidersGetResponse)
+
+<Meta
+  title="Templates/Agency Codes/AgencyCodeAdmin"
+  parameters={{
+    layout: "fullscreen",
+    jest: ["_agencyCodes.test.js"]
+  }}
+  decorators={[
+    StoryFn => (
+      <Providers mockAxios={mockAxios}>
+        <TestAgencyCodesProvider>
+          <StoryFn />
+        </TestAgencyCodesProvider>
+      </Providers>
+    )
+  ]}
+/>
+
+# AgencyCode Administration
+
+The `AgencyCodeAdmin` component allows you to view agency codes and commision rates on the platform. It is designed to be used in multiple different contexts, as the platform requires different views for agency codes in different states, and these require their own pages.
+
+## Usage
+
+Implementing this component is more complicated than usual because there are three components that must be defined and implemented separately in order for it to work. This is because different contexts for `AgencyCodeAdmin` have different visual design guidelines that must be worked around. Developers therefore need more control over how these components are implemented.
+
+There are three main parts to this component:
+
+1. `AgencyCodeAdmin`
+2. `AgencyCodesPanel`
+3. `AgencyCodesProvider`
+
+`AgencyCodeAdmin` contains the `Table` component for displaying the index agency codes data as well as several tools for sorting and refining the Index agency codes query.
+
+`AgencyCodesPanel` is a `FlyOutPanel` component that contains the View agency code and Edit agency code functionality. Because `FlyOutPanel` is an absolutely positioned element, it must be defined at the root of the page being designed. It is for this reason that a React context is desirable for managing the state of this component.
+
+`AgencyCodesProvider` is the Context Provider. It controls the state of the `AgencyCodeAdmin` component and the `AgencyCodesPanel` component. It must be defined outside of the component in order to allow developers to control how the queries and mutations are performed inside the multiple pages that the `AgencyCodeAdmin` component is defined within. Different implementations of `AgencyCodeAdmin` will have slightly different needs, and using a context to control the state will allow for that.
+
+Although the particular state management technique within the context is left open, it makes sense to use a `useReducer` hook for state management of page actions.
+
+An example of a functional `AgencyCodesProvider` instance can be found inside `./story/agencyCodes.story.provider.js`. Refer to this when considering the bare minimum of fields required to make this component functional.
+
+Implement as follows:
+
+```javascript
+<>
+  <Container>
+    <AgencyCodeAdmin {...props} />
+  </Container>
+  <AgencyCodesPanel {...props} />
+</>
+```
+
+## Story
+
+export const Template = args => (
+  <>
+    <Container backgroundColour="#fff">
+      <H1 margin="3rem 0">Agency codes</H1>
+      <AgencyCodeAdmin {...args} />
+    </Container>
+    <AgencyCodesPanel {...args} />
+  </>
+)
+
+<Canvas>
+  <Story name="AgencyCodeAdmin">{Template.bind()}</Story>
+</Canvas>

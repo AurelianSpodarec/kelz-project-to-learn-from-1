@@ -1,0 +1,57 @@
+name: "Build 4c-frontend static assests & Push to GCS"
+
+on:
+  workflow_dispatch:
+    inputs:
+      env_name:
+        description: "Which environment would you like to push the assests to?"
+        required: true
+
+env:
+  GCLOUD_SERVICE_KEY: ${{ secrets.gh_runner_sva_key }}
+  PROJECT_ID: mgcp-1288677-4c-ng-${{ github.event.inputs.env_name }}
+  FRONTEND_ENV: ${{ secrets.frontend_env }}
+  ENVIRONMENT: ${{ github.event.inputs.env_name }}
+
+jobs:
+  auth_gcp:
+    name: "Build 4c-frontend static assests & Push to GCS"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Install gcloud"
+        uses: google-github-actions/setup-gcloud@v0
+        with:
+          version: "latest"
+
+      - name: "Setup gcloud"
+        run: |
+          echo ${GCLOUD_SERVICE_KEY} > /tmp/key.json
+          gcloud auth activate-service-account --key-file /tmp/key.json
+          gcloud config set project ${PROJECT_ID}
+
+      - name: "Checkout"
+        uses: actions/checkout@v2
+        with:
+          ref: "develop"
+
+      - name: "Create .env file"
+        run: |
+          pwd
+          echo "$FRONTEND_ENV" > ./.env
+
+      - name: "Add SSH Private key for private repo installations"
+        uses: webfactory/ssh-agent@v0.5.4
+        with:
+          ssh-private-key: ${{ secrets.ACTIONS_SSH_PRIVATE_KEY }}
+
+      - name: "Install dependencies"
+        run: |
+          touch .npmrc
+          echo ${{ secrets.NPMRC_FILE }} > .npmrc
+          yarn
+          yarn build:portal
+          echo $REACT_APP_API_URL
+
+      - name: "Copy build assests to GCS"
+        run: |
+          gsutil cp -r ${GITHUB_WORKSPACE}/build/* gs://mgcp-1288677-4c-ng-${ENVIRONMENT}-frontend-assets/

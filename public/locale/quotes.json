@@ -1,0 +1,4 @@
+{
+  "QUOTES_INDEX_ERROR": "There was an error fetching quotes",
+  "QUOTE_VIEW_ERROR": "There was an error fetching the quote"
+}

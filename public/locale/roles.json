@@ -1,0 +1,10 @@
+{
+  "SYS_ADMIN": "System Administrator",
+  "SUPPORT_ADMIN": "Support Administrator",
+  "NETWORK_ADMIN": "Network Administrator",
+  "NETWORK_MEMBER_ADMIN": "Network Member Administrator",
+  "ORG_ADMIN": "Organisation Administrator",
+  "SALES_ADVISER": "Sales Adviser",
+  "PROVIDER_ADMIN": "Provider Administrator",
+  "UNDERWRITER": "Underwriter"
+}

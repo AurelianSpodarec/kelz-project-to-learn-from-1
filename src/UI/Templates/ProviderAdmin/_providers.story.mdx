@@ -1,0 +1,78 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import Container from "@4cplatform/elements/Atoms/Container"
+import { H1 } from "@4cplatform/elements/Typography"
+import { ConfigProvider } from "@4cplatform/elements/Config"
+import { TranslationsProvider } from "@4cplatform/elements/Translations"
+import { AlertsProvider, AlertsContainer } from "@4cplatform/elements/Alerts"
+import { Page } from "../../Organisms"
+import { FakeAuthProvider } from "../../Helpers"
+import TestProvidersProvider from "./story/providers.story.provider.js"
+import ProviderAdmin, { ProvidersPanel } from "."
+
+<Meta
+  title="Templates/ProviderAdmin"
+  decorators={[
+    StoryFn => (
+      <FakeAuthProvider>
+        <AlertsProvider>
+          <Page>
+            <TestProvidersProvider>
+              <AlertsContainer />
+              <StoryFn />
+            </TestProvidersProvider>
+          </Page>
+        </AlertsProvider>
+      </FakeAuthProvider>
+    )
+  ]}
+/>
+
+# Provider Administration
+
+The `ProviderAdmin` component allows the logged-in user to view providers, edit them, delete them, or add new providers to the platform.
+
+## Usage
+
+Implementing this component is more complicated than usual because there are three components that must be defined and implemented separately in order for it to work. This is because different contexts for `ProviderAdmin` have different visual design guidelines that must be worked around. Developers therefore need more control over how these components are implemented.
+
+There are three main parts to this component:
+
+1. `ProviderAdmin`
+2. `ProvidersPanel`
+3. `ProvidersProvider`
+
+`ProviderAdmin` contains the `Table` component for displaying the index providers data as well as several tools for sorting and refining the Index Users query.
+
+`ProvidersPanel` is a `FlyOutPanel` component that contains the View Provider functionality. Because `FlyOutPanel` is an absolutely positioned element, it must be defined at the root of the page being designed. It is for this reason that a React context is desirable for managing the state of this component.
+
+`ProvidersProvider` is the Context Provider. It controls the state of the `ProviderAdmin` component and the `ProvidersPanel` component.
+
+Although the particular state management technique within the context is left open, it makes sense to use a `useReducer` hook for state management of page actions.
+
+An example of a functional `ProvidersProvider` instance can be found inside `./story/providers.story.provider.js`. Refer to this when considering the bare minimum of fields required to make this component functional.
+
+Implement as follows:
+
+```javascript
+<>
+  <Container>
+    <ProviderAdmin {...props} />
+  </Container>
+  <ProvidersPanel {...props} />
+</>
+```
+
+## Story
+
+export const Template = props => (
+  <>
+    <Container backgroundColour="#fff">
+      <ProviderAdmin {...props} />
+    </Container>
+    <ProvidersPanel {...props} />
+  </>
+)
+
+<Canvas>
+  <Story name="ProviderAdmin">{Template.bind()}</Story>
+</Canvas>

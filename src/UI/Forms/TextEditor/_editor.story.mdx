@@ -1,0 +1,50 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import { useFormik } from "formik"
+import TextEditor from "."
+
+<Meta title="Forms/TextEditor" component={TextEditor} parameters={{ jest: ["_editor.test.js"] }} />
+
+# TextEditor
+
+The `TextEditor` component is an implementation of the [CK Editor Rich Text Editor for React](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/frameworks/react.html), wrapped in a very simple styled component.
+
+It is intended to be used where the user is expected to supply valid HTML for storage as a string on the backend.
+
+Only simple controls have been exposed on the toolbar - basic typography markup and lists. This can be addressed later as required, however, this component is meant to be used to supply simple text-based HTML only.
+
+## Usage
+
+Import
+
+```javascript
+import { TextEditor } from "../../UI/Forms"
+```
+
+Implement as follows
+
+```javascript
+<TextEditor name="story" formik={formik} />
+```
+
+## Story
+
+export const Template = args => {
+  const formik = useFormik({
+    initialValues: {
+      story: ""
+    },
+    onSubmit: values => console.log(values)
+  })
+  return (
+    <form autoComplete="off" noValidate onSubmit={formik.handleSubmit}>
+      <div style={{ width: "75rem" }}>
+        <TextEditor name="story" formik={formik} {...args} />
+        <button type="submit">Simulate Submit</button>
+      </div>
+    </form>
+  )
+}
+
+<Canvas>
+  <Story name="TextEditor">{Template.bind()}</Story>
+</Canvas>

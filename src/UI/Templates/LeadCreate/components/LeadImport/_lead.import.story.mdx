@@ -1,0 +1,74 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import { AlertsProvider, AlertsContainer } from "@4cplatform/elements/Alerts"
+import { Container } from "@4cplatform/elements/Atoms"
+import LeadImport from "."
+
+<Meta
+  title="Templates/LeadImport"
+  parameters={{
+    layout: "fullscreen",
+    jest: ["_lead.import.test.js"]
+  }}
+  decorators={[
+    StoryFn => (
+      <AlertsProvider>
+        <AlertsContainer />
+        <StoryFn />
+      </AlertsProvider>
+    )
+  ]}
+/>
+
+# Lead Import
+
+The `LeadImport` template implements a `formik` form around a `Modal` dialog, allowing users to submit files full of leads to the backend for import into the 4CNG platform.
+
+## Usage
+
+Import
+
+```javascript
+import { LeadImport } from "../../UI/Templates"
+```
+
+Implement as follows
+
+```javascript
+<LeadImport
+  isOpen={importOpen}
+  setIsOpen={val => dispatch({ type: "UPDATE_VALUE", key: "importOpen", value: val })}
+  clearImport={() => dispatch({ type: "CLEAR_IMPORT_MODAL" })}
+  onSubmit={body => {
+    const file = get(body, "file[0]", null)
+    const data = new FormData()
+    data.append("file", file, file.name)
+
+    importLead({ body: data })
+  }}
+  isLoading={importLoading}
+  errors={importErrors}
+/>
+```
+
+## Story
+
+export const Template = args => {
+  const [isOpen, setIsOpen] = React.useState(false)
+  return (
+    <div style={{ width: "70rem", margin: "0 auto" }}>
+      <Container>
+        <LeadImport
+          {...args}
+          onSubmit={body => console.log(body)}
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+          clearImport={() => setIsOpen(false)}
+        />
+      </Container>
+    </div>
+  )
+}
+
+<Canvas>
+  <Story name="LeadImport">{Template.bind()}</Story>
+</Canvas>

@@ -1,0 +1,60 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import { Container } from "@4cplatform/elements/Atoms"
+import { H1 } from "@4cplatform/elements/Typography"
+import { Providers } from "../../Helpers"
+import TestSystemSettingsProvider from "./story/system.story.provider.js"
+import SystemSettings from "."
+
+<Meta
+  title="Templates/SystemSettings"
+  component={SystemSettings}
+  decorators={[
+    StoryFn => (
+      <Providers>
+        <TestSystemSettingsProvider>
+          <StoryFn />
+        </TestSystemSettingsProvider>
+      </Providers>
+    )
+  ]}
+/>
+
+# SystemSettings
+
+The SystemSettings component is designed to allow users with the `SYS_ADMIN` and `SUPPORT_ADMIN` roles to:
+
+1. Enable or disable Maintenence Mode on the system.
+2. Add, View, Edit, and remove Due Diligence items on the system.
+
+## Usage
+
+As with other `Template` elements on the 4C `Platform`, state is managed with a Provider exported from the index file in the `SystemSettings` directory. An example of a functional SystemSettingsProvider can be found in `./story/system.story.provider.js`.
+
+Import:
+
+```javascript
+import SystemSettings from "../../UI/Templates"
+import { Provider } from "../../UI/Templates/SystemSettings"
+```
+
+Implement as follows:
+
+```javascript
+<>
+  <SystemSettingsProvider>
+    <Settings />
+  </SystemSettingsProvider>
+</>
+```
+
+## Story
+
+export const Template = args => (
+  <Container>
+    <SystemSettings {...args} />
+  </Container>
+)
+
+<Canvas>
+  <Story name="SystemSettings">{Template.bind()}</Story>
+</Canvas>

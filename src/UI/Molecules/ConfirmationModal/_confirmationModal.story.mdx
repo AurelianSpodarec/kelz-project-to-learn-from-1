@@ -1,0 +1,71 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import { P } from "@4cplatform/elements/Typography"
+import ConfirmationModal from "."
+
+<Meta title="Molecules/ConfirmationModal" component={ConfirmationModal} />
+
+# ConfirmationModal
+
+The `ConfirmationModal` component provides an easy-to-implement modal dialog for situations where it is desirable to give the user a chance to reconsider before they perform actions on the system that are permanent or difficult to reverse. This includes (but is not limited to) deleting records, resetting user passwords, locking/unlocking a user, etc.
+
+## Developer Experience
+
+Display of the `ConfirmationModal` should be controlled by a boolean state variable. Typically, this will be controlled by a `useState` hook. The variable can be controlled from within the `ConfirmationModal` by passing an `onClose` prop, which will fire when the close button is clicked, when the overlay is clicked, and when the `Cancel` button is clicked. If an `onCancel` function is passed, then the `Cancel` button will fire `onCancel` instead of `onClose`.
+
+The `appearance` prop of the `Button` components can be set by passing `confirmAppearance` and `cancelAppearance` props to the `ConfirmationModal`. All button appearances outlined in the `@4cplatform/elements` package are permitted.
+
+Any `children` wrapped inside the `ConfirmationModal` component will be displayed above the buttons. This is to permit presenting a relevant message to the user when the modal is displayed, though it could theoretically be used to show any kind of content.
+
+## Usage
+
+Import
+
+```javascript
+import ConfirmationModal from "./UI/Molecules/ConfirmationModal"
+```
+
+Implement as follows
+
+```javascript
+{
+  open && (
+    <ConfirmationModal
+      onClose={() => setOpen(false)}
+      onConfirm={() => console.log("This fires when the confirm button is clicked")}
+      onCancel={() => console.log("This fires when the cancel button is clicked")}
+      confirmAppearance="success"
+      cancelAppearance="errorGhost"
+    >
+      <P>This content is displayed inside the modal, above the buttons.</P>
+    </ConfirmationModal>
+  )
+}
+```
+
+## Story
+
+export const Template = args => {
+  const [open, setOpen] = React.useState(false)
+  return (
+    <>
+      <div style={{ width: "30rem" }}>
+        <button onClick={() => setOpen(true)} onClose={() => setOpen(false)}>
+          Open Modal
+        </button>
+      </div>
+      {open && (
+        <ConfirmationModal
+          onClose={() => setOpen(false)}
+          onConfirm={() => console.log("Confirm button was clicked")}
+          onCancel={() => console.log("Cancel button was clicked")}
+        >
+          <P>This action will be logged!</P>
+        </ConfirmationModal>
+      )}
+    </>
+  )
+}
+
+<Canvas>
+  <Story name="ConfirmationModal">{Template.bind()}</Story>
+</Canvas>

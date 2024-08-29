@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Get name of the repo name
+REPO=${PWD##*/}
+
+# Get the absolute path of the current directory
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+# Run ESLint & Prettier
+echo -e "\nRunning ESLint & Prettier on the pushed files in ${REPO}:"
+. "$DIR/lint.sh"
+lint "push"
+
+# Run Jest
+echo -e "\nRunning Jest test suites in ${REPO}:\n"
+. "$DIR/jest.sh"
+jest

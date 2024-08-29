@@ -1,0 +1,86 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import Container from "@4cplatform/elements/Atoms/Container"
+import UserAdmin, { UsersPanel } from "."
+import TestUsersProvider from "./story/users.story.provider.js"
+import { Page } from "../../Organisms"
+import { FakeAuthProvider } from "../../Helpers"
+import { testData } from "./story/users.story.helpers.js"
+import { H1 } from "@4cplatform/elements/Typography"
+import { ConfigProvider } from "@4cplatform/elements/Config"
+import { TranslationsProvider } from "@4cplatform/elements/Translations"
+import { AlertsProvider, AlertsContainer } from "@4cplatform/elements/Alerts"
+
+<Meta
+  title="Templates/UserAdmin"
+  parameters={{
+    layout: "fullscreen"
+  }}
+  decorators={[
+    StoryFn => (
+      <FakeAuthProvider>
+        <AlertsProvider>
+          <Page>
+            <TestUsersProvider>
+              <AlertsContainer />
+              <StoryFn />
+            </TestUsersProvider>
+          </Page>
+        </AlertsProvider>
+      </FakeAuthProvider>
+    )
+  ]}
+/>
+
+# User Administration
+
+The `UserAdmin` component allows the logged-in user to view users, edit them, delete them, or add new users to the platform.
+
+## Usage
+
+Implementing this component is more complicated than usual because there are three components that must be defined and implemented separately in order for it to work. This is because different contexts for `UserAdmin` have different visual design guidelines that must be worked around. Developers therefore need more control over how these components are implemented.
+
+There are three main parts to this component:
+
+1. `UserAdmin`
+2. `UsersPanel`
+3. `UsersProvider`
+
+`UserAdmin` contains the `Table` component for displaying the index users data as well as several tools for sorting and refining the Index Users query.
+
+`UsersPanel` is a `FlyOutPanel` component that contains the View User and Edit User functionality. Because `FlyOutPanel` is an absolutely positioned element, it must be defined at the root of the page being designed. It is for this reason that a React context is desirable for managing the state of this component.
+
+`UsersProvider` is the Context Provider. It controls the state of the `UserAdmin` component and the `UsersPanel` component. It must be defined outside of the component in order to allow developers to control how the queries and mutations are performed inside the multiple pages that the `UserAdmin` component is defined within. Different implementations of `UserAdmin` will have slightly different needs, and using a context to control the state will allow for that.
+
+Although the particular state management technique within the context is left open, it makes sense to use a `useReducer` hook for state management of page actions. For the `EditUser` component, a formik instance internal to the component handles the state of the form inputs.
+
+An example of a functional `UsersProvider` instance can be found inside `./story/users.story.provider.js`. Refer to this when considering the bare minimum of fields required to make this component functional.
+
+Implement as follows:
+
+```javascript
+<>
+  <Container>
+    <H1 margin="5rem 0 2rem">User Administration</H1>
+    <UserAdmin {...props} />
+  </Container>
+  <UsersPanel {...props} />
+</>
+```
+
+## Story
+
+export const Template = props => (
+  <>
+    <Container style={{ position: "static" }}>
+      <H1 margin="5rem 0 2rem">User Administration</H1>
+      <UserAdmin {...props} />
+    </Container>
+    <UsersPanel {...props} />
+  </>
+)
+
+<Canvas>
+  <Story name="UserAdmin" parameters={{ jest: ["_users.test.js"] }}>
+    {Template.bind()}
+  </Story>
+</Canvas>

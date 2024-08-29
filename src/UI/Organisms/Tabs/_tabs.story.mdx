@@ -1,0 +1,176 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import Tabs, { Tab } from "."
+
+<Meta title="Organisms/Tabs" component={Tabs} parameters={{ jest: ["_tabs.test.js"] }} />
+
+# Tabs
+
+The `Tabs` component and its attendant `Tab` component are designed to display discrete tools and content to the user in a way that is compact, easy to navigate, and very flexible.
+
+## Usage
+
+The basic idea is that the `Tabs` component manages the state of all the `Tab` components - which `Tab` is active, which should be active by default, etc.
+
+Any valid component can be wrapped within a `Tab`.
+
+Import
+
+```javascript
+import { Tabs, Tab } from "../../UI/Organisms"
+```
+
+Implement as follows
+
+```javascript
+<Tabs>
+  <Tab header="Paragraph Content">
+    <p>Tab components can render a simple paragraph.</p>
+  </Tab>
+  <Tab header="Complex JSX">
+    <>
+      <Component appearance="error" />
+      <p>
+        Tabs can also be used to display complicated content, or content imported from other files,
+        as above.
+      </p>
+    </>
+  </Tab>
+</Tabs>
+```
+
+### Buttons type
+
+By default, the `Tab` component's links are styled anchor elements. If desired, however, the `Tabs` can be controlled by passing `type="buttons"` to the `Tabs` component.
+This will render them as `Button` Molecules from the `elements` library. The appearances can be set using `activeAppearance` and `inactiveAppearance` props on the `Tabs` component.
+Any valid `buttonTheme` is acceptable. By default, `activeAppearance` is `primary` and `inactiveAppearance` is `primaryGhost`.
+
+### Vertical type
+
+The `Tabs` component can also be displayed with `type='vertical'`. What this does is render the tabs as a vertically-aligned menu on the lefthand side with the content on the right.
+This is meant for use in situations where the standard horizontal menu is not suitable, such as nested within another `Tabs` component as in `OrganisationManage`.
+
+### Table type
+
+The `Tabs` component can also be displayed with `type='table'`. What this does is render the tabs in a style that is able to contain tables.
+This is meant for use in situations where tables are rendered inside the `Tab` as in `AgencyCodeAdmin`
+
+### Panel type
+
+The `Tabs` component can also be displayed with `type='panel'`. What this does is render the tabs in a style that is destined to be contained in the `FlyOutPanel`.
+
+### Conditional Rendering and the `isPresent` prop
+
+When using the `Tabs` component, individual `Tab` elements can be hidden by passing `false` to the `isPresent` prop.
+It is necessary to handle the conditional rendering this way because using `{}` within `Tabs` will break the `React.Children` statement within it.
+
+Good usage:
+
+```javascript
+<Tabs>
+  <Tab header="show">
+    <p>I will be shown.</p>
+  </Tab>
+  <Tab header="hide" isPresent={false}>
+    <p>I will be hidden.</p>
+  </Tab>
+</Tabs>
+```
+
+Bad usage:
+
+```javascript
+<Tabs>
+  <Tab header="show">
+    <p>I will be shown.</p>
+  </Tab>
+  {isHidden && (
+    <Tab header="hide">
+      <p>
+        Hiding me this way will cause problems, as this returns 'null' and breaks the React.Children
+        statement.
+      </p>
+    </Tab>
+  )}
+</Tabs>
+```
+
+## hasQueryControls
+
+There are some cases in which it is desirable for the `Tabs` component to control (and be controlled by) the URL. This is to allow users to copy and paste the URL, render the page, and arrive at the view with the correct tabs already open in some instances.
+
+In order to achieve this, pass a unique `name` string to the `Tabs` component and pass `hasQueryControls={true}` to the same component.
+
+Example:
+
+```javascript
+<Tabs hasQueryControls name="manage">
+  <Tab header="Tab One">
+    <p>This is Tab One content.</p>
+  </Tab>
+  <Tab header="Tab Two">
+    <p>This is Tab Two content.</p>
+  </Tab>
+</Tabs>
+```
+
+When this is rendered, the URL will look like `example.com?manage=tab_one`.
+
+You could directly link to the same page with Tab Two open instead by using the link `example.com?manage=tab_two`.
+
+## Story
+
+export const Template = args => (
+  <>
+    <h1>{args.type}</h1>
+    <div style={{ width: !!args.width ? args.width : "90rem" }}>
+      <Tabs {...args}>
+        <Tab header="First Tab">
+          <p>This is the content for the first tab.</p>
+        </Tab>
+        <Tab header="Second Tab">
+          <p>This is the content for the second tab.</p>
+        </Tab>
+        <Tab header="Third Tab">
+          <p>This is the content for the third tab.</p>
+        </Tab>
+        <Tab header="Fourth Tab">
+          <p>This is the content for the fourth tab.</p>
+        </Tab>
+      </Tabs>
+    </div>
+  </>
+)
+
+<Canvas>
+  <Story name="Anchors" args={{ type: "anchors" }}>
+    {Template.bind()}
+  </Story>
+  <Story name="Buttons" args={{ type: "buttons" }}>
+    {Template.bind()}
+  </Story>
+  <Story name="Vertical" args={{ type: "vertical" }}>
+    {Template.bind()}
+  </Story>
+  <Story name="Table" args={{ type: "table" }}>
+    {Template.bind()}
+  </Story>
+  <Story
+    name="Panel"
+    args={{ type: "panel", width: "30rem" }}
+    parameters={{
+      backgrounds: { default: "blue" }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Props / Args
+
+### Tabs
+
+<ArgsTable of={Tabs} />
+
+### Tab
+
+<ArgsTable of={Tab} />

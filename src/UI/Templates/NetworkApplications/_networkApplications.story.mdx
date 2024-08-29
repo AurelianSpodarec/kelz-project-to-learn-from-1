@@ -1,0 +1,70 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import { Container } from "@4cplatform/elements/Atoms"
+import { H1 } from "@4cplatform/elements/Typography"
+import { ConfigProvider } from "@4cplatform/elements/Config"
+import { TranslationsProvider } from "@4cplatform/elements/Translations"
+import { AlertsProvider, AlertsContainer } from "@4cplatform/elements/Alerts"
+import { Page } from "../../Organisms"
+import { FakeAuthProvider } from "../../Helpers"
+import TestNetworkApplicationsProvider from "./story/networkApplications.story.provider.js"
+import NetworkApplications from "."
+
+<Meta
+  title="Templates/NetworkApplications"
+  decorators={[
+    StoryFn => (
+      <FakeAuthProvider>
+        <AlertsProvider>
+          <Page>
+            <TestNetworkApplicationsProvider>
+              <AlertsContainer />
+              <StoryFn />
+            </TestNetworkApplicationsProvider>
+          </Page>
+        </AlertsProvider>
+      </FakeAuthProvider>
+    )
+  ]}
+/>
+
+# NetworkApplications
+
+The `NetworkApplications` component allows the logged-in user to view, sort, filter, accept, and reject applications to join the network.
+
+## Usage
+
+Implementing this component requires two components that must be defined and implemented separately.
+
+1. `NetworkApplications`
+2. `NetworkApplicationsProvider`
+
+`NetworkApplications` contains the `Table` component for displaying and interacting with the index network applications data.
+
+`NetworkApplicationsProvider` is the Context Provider. It controls the state of the `NetworkApplications` component.
+
+An example of a functional `NetworkApplicationsProvider` instance can be found inside `./story/networkApplications.story.provider.js`.
+
+Implement as follows:
+
+```javascript
+<>
+  <Container>
+    <NetworkApplications {...props} />
+  </Container>
+</>
+```
+
+## Story
+
+export const Template = args => (
+  <>
+    <Container>
+      <H1 margin="3rem 0">Network Applications</H1>
+      <NetworkApplications {...args} />
+    </Container>
+  </>
+)
+
+<Canvas>
+  <Story name="NetworkApplications">{Template.bind()}</Story>
+</Canvas>

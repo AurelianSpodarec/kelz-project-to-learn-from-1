@@ -1,0 +1,47 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import Breadcrumbs from "."
+
+<Meta title="Molecules/Breadcrumbs" component={Breadcrumbs} />
+
+# Breadcrumbs
+
+The `Breadcrumbs` component creates a styled collection of links at the top of the page, which allows users to access related pages with ease.
+
+## Usage
+
+Import
+
+```javascript
+import Breadcrumbs from "../src/UI/Molecules/Breadcrumbs"
+```
+
+Implement as follows
+
+```javascript
+<Breadcrumbs
+  trail={[
+    { label: "Home", link: "https://www.google.co.uk" },
+    { label: "Previous page", link: "/previous-page" },
+    { label: "Current page" }
+  ]}
+/>
+```
+
+## Story
+
+export const Template = args => <Breadcrumbs {...args} />
+
+<Canvas>
+  <Story
+    name="Breadcrumbs"
+    args={{
+      trail: [
+        { label: "Home", link: "https://www.google.co.uk" },
+        { label: "Previous page", link: "/previous-page" },
+        { label: "Current page" }
+      ]
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>

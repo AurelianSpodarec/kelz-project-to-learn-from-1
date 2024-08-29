@@ -1,0 +1,84 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import Container from "@4cplatform/elements/Atoms/Container"
+import { H1 } from "@4cplatform/elements/Typography"
+import { ConfigProvider } from "@4cplatform/elements/Config"
+import { TranslationsProvider } from "@4cplatform/elements/Translations"
+import { AlertsProvider, AlertsContainer } from "@4cplatform/elements/Alerts"
+import { Page } from "../../Organisms"
+import { FakeAuthProvider } from "../../Helpers"
+import CONFIG from "../../../config"
+import TestPoliciesProvider from "./story/policies.story.provider"
+import PolicyAdmin, { PoliciesPanel } from "."
+
+<Meta
+  title="Templates/PolicyAdmin"
+  decorators={[
+    StoryFn => (
+      <ConfigProvider config={CONFIG}>
+        <TranslationsProvider>
+          <AlertsProvider>
+            <FakeAuthProvider>
+              <Page>
+                <TestPoliciesProvider>
+                  <AlertsContainer />
+                  <StoryFn />
+                </TestPoliciesProvider>
+              </Page>
+            </FakeAuthProvider>
+          </AlertsProvider>
+        </TranslationsProvider>
+      </ConfigProvider>
+    )
+  ]}
+/>
+
+# Policy Administration
+
+The `PolicyAdmin` component allows you to view policies sold on the platform. It is designed to be used in multiple different contexts, as the platform requires different views for policies in different states, and these require their own pages.
+
+## Usage
+
+Implementing this component is more complicated than usual because there are three components that must be defined and implemented separately in order for it to work. This is because different contexts for `PolicyAdmin` have different visual design guidelines that must be worked around. Developers therefore need more control over how these components are implemented.
+
+There are three main parts to this component:
+
+1. `PolicyAdmin`
+2. `PoliciesPanel`
+3. `PoliciesProvider`
+
+`PolicyAdmin` contains the `Table` component for displaying the index policies data as well as several tools for sorting and refining the Index Policies query.
+
+`PoliciesPanel` is a `FlyOutPanel` component that contains the View Policy and Edit Policy functionality. Because `FlyOutPanel` is an absolutely positioned element, it must be defined at the root of the page being designed. It is for this reason that a React context is desirable for managing the state of this component.
+
+`PoliciesProvider` is the Context Provider. It controls the state of the `PolicyAdmin` component and the `PoliciesPanel` component. It must be defined outside of the component in order to allow developers to control how the queries and mutations are performed inside the multiple pages that the `PolicyAdmin` component is defined within. Different implementations of `PolicyAdmin` will have slightly different needs, and using a context to control the state will allow for that.
+
+Although the particular state management technique within the context is left open, it makes sense to use a `useReducer` hook for state management of page actions. For the `EditPolicy` component, a formik instance internal to the component handles the state of the form inputs.
+
+An example of a functional `PoliciesProvider` instance can be found inside `./story/policies.story.provider.js`. Refer to this when considering the bare minimum of fields required to make this component functional.
+
+Implement as follows:
+
+```javascript
+<>
+  <Container>
+    <PolicyAdmin {...props} />
+  </Container>
+  <PoliciesPanel {...props} />
+</>
+```
+
+## Story
+
+export const Template = args => (
+  <>
+    <Container backgroundColour="#fff">
+      <H1 margin="3rem 0">Policies</H1>
+      <PolicyAdmin {...args} />
+    </Container>
+    <PoliciesPanel {...args} />
+  </>
+)
+
+<Canvas>
+  <Story name="PolicyAdmin">{Template.bind()}</Story>
+</Canvas>

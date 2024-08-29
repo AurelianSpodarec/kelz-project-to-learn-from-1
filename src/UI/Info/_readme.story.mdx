@@ -1,0 +1,18 @@
+import { Meta, Description } from "@storybook/addon-docs"
+// Components
+import { Header } from "@4cplatform/elements/Info"
+import markdown from "outer-scope/README.md"
+
+<Meta
+  title="Info/README"
+  parameters={{
+    viewMode: "docs",
+    previewTabs: { canvas: { hidden: true } }
+  }}
+/>
+
+<Header link={{ href: "/?path=/docs/info-patterns--page", text: "See Patterns" }} />
+
+<br />
+
+<Description markdown={markdown} />

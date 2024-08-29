@@ -1,0 +1,132 @@
+import { Meta } from "@storybook/addon-docs"
+
+<Meta
+  title="Helpers/Tests"
+  parameters={{
+    viewMode: "docs",
+    previewTabs: { canvas: { hidden: true } }
+  }}
+/>
+
+# Tests helpers
+
+The tests helpers are designed to centralise the common declaration of useful tools for writing Jest tests and Storybook stories.
+
+More tools can be added here in the future.
+
+## Exposed tools
+
+- [`testDash`](#testdash)
+- [`FakeAuthProvider`](#storyauthprovider)
+- [`fakeConfig`](#fakeconfig)
+- [`fakeApiUrl`](#fakeapiurl)
+- [`Providers`](#providers)
+- [`renderWithMockedRouter`](#renderwithmockedrouter)
+
+### testDash
+
+This is a sample `dashboard` object with the valid and expected data structure from which the application builds the `Dashboard` component and the `Navigation` menu.
+
+It has dummy links and sample Icons attached.
+
+#### Usage
+
+Import
+
+```javascript
+import { testDash } from "../UI/Helpers"
+```
+
+### FakeAuthProvider
+
+This is a simple AuthProvider instance that provides a logged-in user for use in stories that require it.
+
+Import
+
+```javascript
+import { FakeAuthProvider } from "../../UI/Helpers"
+```
+
+Implement as follows
+
+```javascript
+<FakeAuthProvider>
+  <TestComponent />
+</FakeAuthProvider>
+```
+
+### fakeConfig
+
+`fakeConfig` provides a mock config object which provides a common resource for situations where such an object is useful in testing and stories. This is reused within the `Providers` component, so it is useful to reference `fakeConfig` when mocking axios requests.
+
+Import
+
+```javascript
+import { fakeConfig } from "../../UI/Helpers"
+```
+
+Usage
+
+```javascript
+<ConfigProvider config={fakeConfig}></ConfigProvider>
+```
+
+### fakeApiUrl
+
+`fakeApiUrl` is simply a string that is composed of `fakeConfig`'s `API_URL` and `API_SCOPE` properties.
+
+Import
+
+```javascript
+import { fakeApiUrl } from "../../UI/Helpers"
+```
+
+Usage
+
+```javascript
+mockAxios.onGet(`${fakeApiUrl}/widgets`).replyOnce(200, { data: { count: 81 } })
+```
+
+### Providers
+
+The `Providers` component provides a useful set of Context Providers to support components which need them lower in the tree. They are most useful for `Template` and `page`-level components.
+
+The list of Providers nested includes:
+
+- `ConfigProvider`
+- `HelmetProvider`
+- `TranslationsProvider`
+- `AlertsProvider`
+- `FakeAuthProvider`
+- `Page`
+
+An `AlertsContainer` component is also declared.
+
+These are wrapped in roughly the same order in which they appear in `App.js`.
+
+### renderWithMockedRouter
+
+This is a helper function which allows you to mock the Router component and its match object for unit testing. This is most useful for testing components which use the `withRouter` HOC.
+
+It comes attached with `renderWithTheme` from the `elements` library, so if using this inside unit tests, there is no need to wrap it with an additional `renderWithTheme` or `render`.
+
+Import
+
+```javascript
+import { renderWithMockedRouter } from "../../UI/Helpers"
+```
+
+Implement as follows
+
+```javascript
+const { getByText } = renderWithMockedRouter(
+  () => (
+    <Providers>
+      <ProviderManageProvider>
+        <Details />
+      </ProviderManageProvider>
+    </Providers>
+  ),
+  { path: "/providers/:slug", route: "/providers/aviva" }
+)
+```

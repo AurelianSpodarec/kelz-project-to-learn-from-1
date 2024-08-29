@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Avatar /> Render default Column and styles 1`] = `
+.c0 {
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+}
+
+.c1 {
+  height: 100%;
+  width: 100%;
+  color: #335257;
+  font-size: calc(3rem / 2);
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  text-align: center;
+  background-color: #EFEFEF;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+<div
+  class="c0"
+  data-testid="nullnullavatar-wrapper"
+>
+  <div
+    class="c1"
+    data-testid="nullnullavatar-content"
+  >
+    T
+    T
+  </div>
+</div>
+`;

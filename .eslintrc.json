@@ -1,0 +1,4 @@
+{
+  "extends": ["@4cplatform/eslint-config"],
+  "rules": {}
+}

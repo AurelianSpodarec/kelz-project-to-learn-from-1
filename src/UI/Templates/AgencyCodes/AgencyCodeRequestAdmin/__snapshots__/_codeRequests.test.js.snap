@@ -1,0 +1,2491 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AgencyCodeRequestAdmin /> Basic component & styles 1`] = `
+.c33 {
+  width: 128rem;
+  margin: 0 auto;
+  position: relative;
+  background-color: transparent;
+  box-sizing: border-box;
+  max-width: 128rem;
+  padding: 1rem;
+}
+
+.c14 {
+  width: 2.2rem;
+  height: 2.2rem;
+  margin: 0;
+}
+
+.c25 {
+  width: 2rem;
+  height: 2rem;
+  margin: 0;
+}
+
+.c15 {
+  -webkit-transition: fill 0.2s linear;
+  transition: fill 0.2s linear;
+}
+
+.c62 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c71 {
+  margin-bottom: 0;
+  line-height: 6rem;
+  margin-right: 5rem;
+}
+
+.c72 {
+  padding: 1rem 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  max-width: 66.5rem;
+}
+
+.c63 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 5rem;
+}
+
+.c73 {
+  border: 1px solid #B2BEC0;
+  background: none;
+  outline: none;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  font-size: 1.6rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin: 0 0.25rem 0;
+  color: #197DA4;
+  width: 3rem;
+  height: 3rem;
+  background: #197DA4;
+  color: #FFF;
+}
+
+.c73.active {
+  color: #FFF;
+  background: #00272E;
+  border: none;
+}
+
+.c73:hover:not(.active):not([disabled]) {
+  background: #EFEFEF;
+  color: #197DA4;
+}
+
+.c73[disabled] {
+  background: rgba(0,34,43,0.4);
+  color: #FFF;
+  cursor: not-allowed;
+}
+
+.c73 svg path {
+  fill: #FFF;
+}
+
+.c75 {
+  border: 1px solid #B2BEC0;
+  background: none;
+  outline: none;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  font-size: 1.6rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin: 0 0.25rem 0;
+  color: #197DA4;
+}
+
+.c75.active {
+  color: #FFF;
+  background: #00272E;
+  border: none;
+}
+
+.c75:hover:not(.active):not([disabled]) {
+  background: #EFEFEF;
+  color: #197DA4;
+}
+
+.c75[disabled] {
+  background: rgba(0,34,43,0.4);
+  color: #FFF;
+  cursor: not-allowed;
+}
+
+.c74 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c64 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c64 svg {
+  cursor: pointer;
+}
+
+.c64 svg:hover {
+  opacity: 0.8;
+}
+
+.c65 {
+  width: auto;
+  font-size: 1.4rem;
+  margin: 0 1rem 0 0;
+  padding: 0;
+  display: inline-block;
+  font-weight: 400;
+  font-style: normal;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+  line-height: 1.6rem;
+  color: #335257;
+  word-break: break-word;
+}
+
+.c66 {
+  margin: 0;
+}
+
+.c68 {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  background: #FFF;
+  border-radius: 0.3rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.c67 {
+  width: 7.8rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c69 {
+  width: 100%;
+  background: transparent;
+  color: #335257;
+  margin: 0;
+  text-overflow: "";
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none !important;
+  font-size: 1.6rem;
+  -webkit-transition: border 0.2s linear;
+  transition: border 0.2s linear;
+  position: relative;
+  height: 5rem;
+  padding-left: 1.5rem;
+  padding-right: 4rem;
+  border: 1px solid;
+  border-color: #B2BEC0;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.c69[disabled] {
+  cursor: not-allowed;
+}
+
+.c69[disabled] + .icon-after {
+  -webkit-transform: none !important;
+  -ms-transform: none !important;
+  transform: none !important;
+}
+
+.c69 > option {
+  color: #232323;
+}
+
+.c69:focus,
+.c69:active,
+.c69:hover {
+  border-color: #197DA4;
+  outline: none;
+}
+
+.c69:focus::-webkit-input-placeholder,
+.c69:active::-webkit-input-placeholder,
+.c69:hover::-webkit-input-placeholder {
+  color: #335257;
+}
+
+.c69:focus::-moz-placeholder,
+.c69:active::-moz-placeholder,
+.c69:hover::-moz-placeholder {
+  color: #335257;
+}
+
+.c69:focus:-ms-input-placeholder,
+.c69:active:-ms-input-placeholder,
+.c69:hover:-ms-input-placeholder {
+  color: #335257;
+}
+
+.c69:focus::placeholder,
+.c69:active::placeholder,
+.c69:hover::placeholder {
+  color: #335257;
+}
+
+.c69:active + .icon-after {
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
+.c70 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 4rem;
+  height: calc(100% - 1.5rem);
+  font-size: 2rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  right: 0;
+  top: 0.75rem;
+  position: absolute;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  z-index: 1;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  -webkit-transition: transform 0.2s linear;
+  transition: transform 0.2s linear;
+}
+
+.c70 svg path {
+  fill: #00272E;
+}
+
+.c34 {
+  width: 100%;
+}
+
+.c35 {
+  width: 100%;
+  box-shadow: 0 0 10px 0 rgba(0,34,43,0.05);
+}
+
+.c61 {
+  padding: 2rem;
+}
+
+.c36 {
+  background: #FFF;
+  padding: 1.2rem;
+  padding-left: 1.6rem;
+  padding-right: 4rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  min-height: 5rem;
+  -webkit-flex-wrap: none;
+  -ms-flex-wrap: none;
+  flex-wrap: none;
+  position: relative;
+  border: 1px solid #B2BEC0;
+  border-bottom: none;
+  border-radius: 0;
+  overflow-x: hidden;
+  border-left: none;
+  border-right: none;
+}
+
+.c37 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+  -webkit-flex-basis: 16.666666666666668%;
+  -ms-flex-preferred-size: 16.666666666666668%;
+  flex-basis: 16.666666666666668%;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 70px;
+  padding-right: 2rem;
+}
+
+.c40 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+  -webkit-flex-basis: 16.666666666666668%;
+  -ms-flex-preferred-size: 16.666666666666668%;
+  flex-basis: 16.666666666666668%;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 180px;
+  padding-right: 2rem;
+}
+
+.c44 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+  -webkit-flex-basis: 16.666666666666668%;
+  -ms-flex-preferred-size: 16.666666666666668%;
+  flex-basis: 16.666666666666668%;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 50px;
+  padding-right: 2rem;
+}
+
+.c45 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+  -webkit-flex-basis: 16.666666666666668%;
+  -ms-flex-preferred-size: 16.666666666666668%;
+  flex-basis: 16.666666666666668%;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 150px;
+  padding-right: 2rem;
+}
+
+.c46 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+  -webkit-flex-basis: 16.666666666666668%;
+  -ms-flex-preferred-size: 16.666666666666668%;
+  flex-basis: 16.666666666666668%;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 80px;
+  padding-right: 2rem;
+}
+
+.c41 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c38 {
+  color: #335257;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.6rem;
+}
+
+.c42 {
+  color: #335257;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.6rem;
+  margin-bottom: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c43 {
+  color: #335257;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.6rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c47 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c48 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  min-height: 5rem;
+  -webkit-flex-wrap: none;
+  -ms-flex-wrap: none;
+  flex-wrap: none;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  border-top: none;
+  border-left: 1px solid #B2BEC0;
+  border-right: 1px solid #B2BEC0;
+  border-bottom: 1px solid #B2BEC0;
+  border-radius: 0 0 .5rem .5rem;
+  background: #F9F9F9;
+  overflow-x: hidden;
+  padding-left: 1.6rem;
+  padding-right: 0;
+  -webkit-transition: background 0.2s linear;
+  transition: background 0.2s linear;
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+}
+
+.c49 {
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 1.4rem;
+  min-width: 70px;
+  -webkit-flex-basis: 16.666666666666668%;
+  -ms-flex-preferred-size: 16.666666666666668%;
+  flex-basis: 16.666666666666668%;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  word-break: break-word;
+  line-height: 2.5;
+  font-size: 1.6rem;
+  color: #335257;
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+
+.c51 {
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 1.4rem;
+  min-width: 180px;
+  -webkit-flex-basis: 16.666666666666668%;
+  -ms-flex-preferred-size: 16.666666666666668%;
+  flex-basis: 16.666666666666668%;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  word-break: break-word;
+  line-height: 2.5;
+  font-size: 1.6rem;
+  color: #335257;
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+
+.c55 {
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 1.4rem;
+  min-width: 50px;
+  -webkit-flex-basis: 16.666666666666668%;
+  -ms-flex-preferred-size: 16.666666666666668%;
+  flex-basis: 16.666666666666668%;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  word-break: break-word;
+  line-height: 2.5;
+  font-size: 1.6rem;
+  color: #335257;
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+
+.c56 {
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 1.4rem;
+  min-width: 150px;
+  -webkit-flex-basis: 16.666666666666668%;
+  -ms-flex-preferred-size: 16.666666666666668%;
+  flex-basis: 16.666666666666668%;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  word-break: break-word;
+  line-height: 2.5;
+  font-size: 1.6rem;
+  color: #335257;
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+
+.c57 {
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 1.4rem;
+  min-width: 80px;
+  -webkit-flex-basis: 16.666666666666668%;
+  -ms-flex-preferred-size: 16.666666666666668%;
+  flex-basis: 16.666666666666668%;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  word-break: break-word;
+  line-height: 2.5;
+  font-size: 1.6rem;
+  color: #335257;
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+
+.c58 {
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 1.4rem;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  word-break: break-word;
+  line-height: 2.5;
+  font-size: 1.6rem;
+  color: #335257;
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+
+.c52 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+}
+
+.c50 {
+  color: #335257;
+  line-height: 2.5rem;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+  width: 100%;
+}
+
+.c53 {
+  color: #335257;
+  line-height: 2.5rem;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+  width: 100%;
+  font-size: 1.6rem;
+}
+
+.c54 {
+  color: #335257;
+  line-height: 2.5rem;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+  width: 100%;
+  opacity: 0.7;
+}
+
+.c59 {
+  width: 4rem;
+  min-width: 4rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.c60 {
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  width: 3.8rem;
+  height: 3.8rem;
+  background: transparent;
+  overflow: hidden;
+  -webkit-transition: color 0.2s linear,-webkit-transform 0.2s linear;
+  -webkit-transition: color 0.2s linear,transform 0.2s linear;
+  transition: color 0.2s linear,transform 0.2s linear;
+}
+
+.c60 svg path {
+  fill: #197DA4;
+}
+
+.c60:focus {
+  outline: none;
+}
+
+.c60:disabled {
+  cursor: not-allowed;
+}
+
+.c39 {
+  margin-left: 0.5rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  color: #197DA4;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c39:focus {
+  outline: none;
+}
+
+.c7 {
+  margin: 1rem;
+  width: 3rem;
+  height: 3rem;
+}
+
+.c8 {
+  height: 100%;
+  width: 100%;
+  color: #335257;
+  font-size: calc(3rem / 2);
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  text-align: center;
+  background-color: #EFEFEF;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c17 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  color: #FFF;
+}
+
+.c19 {
+  font-size: 1.2rem;
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+
+.c18 {
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c76 {
+  height: 7rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.c76:before {
+  position: absolute;
+  content: "";
+  background: linear-gradient(45deg,rgba(255,255,255,0) 0%,#4797B6 50%,#197DA4 100%);
+  height: 0.4rem;
+  width: calc(100vw - 7.5rem);
+  right: 0;
+  bottom: 7rem;
+  z-index: 2;
+  right: 0rem;
+  width: calc(100vw - 7rem);
+}
+
+.c77 {
+  color: #EFEFEF;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.c1 {
+  height: 7rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c1:after {
+  content: "";
+  position: absolute;
+  top: 7rem;
+  z-index: 2;
+  height: 0.4rem;
+  width: calc(100vw - 7.5rem);
+  right: 0;
+  background: linear-gradient(45deg,rgba(255,255,255,0) 0%,#4797B6 50%,#197DA4 100%);
+  right: 0rem;
+  width: calc(100vw - 7rem);
+}
+
+.c3 {
+  width: 7.8rem;
+}
+
+.c2 {
+  height: 7rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 2rem;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-right: 1rem;
+  position: relative;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c6:hover,
+.c6:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c6::after {
+  content: "";
+  position: absolute;
+  width: 0.1rem;
+  height: 4rem;
+  background: #193C42;
+  right: 0;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-right: 1rem;
+  position: relative;
+}
+
+.c5::after {
+  content: "";
+  position: absolute;
+  width: 0.1rem;
+  height: 4rem;
+  background: #193C42;
+  right: 0;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c10 {
+  color: #FFF;
+  font-size: 1.4rem;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  line-height: 1.7rem;
+  margin: 0;
+}
+
+.c11 {
+  color: #7F9396;
+  font-size: 1.3rem;
+  line-height: 2rem;
+  margin: 0;
+}
+
+.c12 {
+  height: 100%;
+  width: 4rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+}
+
+.c12:hover,
+.c12:focus {
+  opacity: 0.8;
+}
+
+.c12::after {
+  content: "";
+  position: absolute;
+  width: 0.1rem;
+  height: 4rem;
+  background: #193C42;
+  right: 0;
+}
+
+.c13 {
+  position: relative;
+  font-size: 3rem;
+  height: 4rem;
+  width: 4rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c16 {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 9rem;
+}
+
+.c16:hover,
+.c16:focus {
+  opacity: 0.8;
+}
+
+.c0 {
+  background-color: #00272E;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.c31 {
+  -webkit-transition: padding-right 0.25s ease-in-out;
+  transition: padding-right 0.25s ease-in-out;
+  z-index: 1;
+  border-radius: 0.3rem 0 0 0.3rem;
+  overflow-y: auto;
+  -webkit-flex: 2 0px;
+  -ms-flex: 2 0px;
+  flex: 2 0px;
+  background-color: #FFF;
+  height: calc(100% - 14rem);
+  width: calc(100% - 7.5rem);
+}
+
+.c20 {
+  height: calc(100% - 14rem);
+  width: 7.5rem;
+  padding-top: 2rem;
+}
+
+.c21:not(:hover) svg path {
+  fill: #197DA4;
+}
+
+.c21:hover > .nav-link:hover {
+  color: #197DA4;
+}
+
+.c21:hover > .nav-link:not(:hover) {
+  opacity: 0.25;
+}
+
+.c21:hover > .nav-link:not(:hover) svg path {
+  fill: #5ABEE6;
+}
+
+.c22 {
+  position: relative;
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+  z-index: 50;
+}
+
+.c22:hover > .sub-nav {
+  opacity: 1;
+  left: 7rem;
+}
+
+.c27 {
+  background-color: #00272E;
+  position: absolute;
+  top: 0;
+  left: -23rem;
+  width: 23rem;
+  opacity: 0;
+  -webkit-transition: left 0s linear 0s,opacity 0.2s linear 0s;
+  transition: left 0s linear 0s,opacity 0.2s linear 0s;
+}
+
+.c23 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 7rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+  color: inherit;
+}
+
+.c23:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #197DA4;
+}
+
+.c23:hover > .icon svg path {
+  fill: #FFF;
+}
+
+.c29 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 7rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+  color: inherit;
+}
+
+.c29:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #197DA4;
+}
+
+.c29:hover > .icon svg path {
+  fill: #FFF;
+}
+
+.c28 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 5rem;
+  color: #FFF;
+  font-size: 1.6rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+}
+
+.c28:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #197DA4;
+}
+
+.c30 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 5rem;
+  color: #FFF;
+  font-size: 1.6rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+}
+
+.c30:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #197DA4;
+}
+
+.c24 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+
+.c26 {
+  color: #FFF;
+}
+
+.c32 {
+  position: absolute;
+  z-index: 40;
+  width: calc(100vw - 7rem);
+  background-color: transparent;
+  -webkit-transition: background-color 0.25s linear,opacity 0.25s linear;
+  transition: background-color 0.25s linear,opacity 0.25s linear;
+  opacity: 0;
+}
+
+<div
+  class="c0"
+  data-testid="test-page"
+>
+  <header
+    class="c1"
+    data-testid="test-header"
+  >
+    <a
+      class="c2"
+      href="/"
+    >
+      <img
+        alt="4C Branding"
+        class="c3"
+        src="./logo-short.svg"
+      />
+    </a>
+    <div
+      class="c4"
+      data-testid="self-service-wrapper"
+    >
+      <div
+        class="c5"
+      />
+      <a
+        class="c6"
+        data-testid="user_info-wrapper"
+        href="/my-account?my-account=details"
+      >
+        <div
+          class="c7"
+          data-testid="self-service-avatar-wrapper"
+        >
+          <div
+            class="c8"
+            data-testid="self-service-avatar-content"
+          >
+            S
+            A
+          </div>
+        </div>
+        <div
+          class="c9"
+        >
+          <p
+            class="c10"
+            data-testid="self-service-name"
+          >
+            System Admin
+          </p>
+          <p
+            class="c11"
+            data-testid="self-service-email"
+          >
+            system.admin@usaycompare.com
+          </p>
+        </div>
+      </a>
+      <div
+        class="c12"
+        data-testid="self-service-notifications"
+      >
+        <div
+          class="c13"
+          data-testid="self-service-icon"
+        >
+          <svg
+            class="c14"
+            style="transform: rotate(-10deg);"
+            viewBox="0 0 24 24"
+          >
+            <path
+              class="c15"
+              d="M21,19V20H3V19L5,17V11C5,7.9 7.03,5.17 10,4.29C10,4.19 10,4.1 10,4A2,2 0 0,1 12,2A2,2 0 0,1 14,4C14,4.1 14,4.19 14,4.29C16.97,5.17 19,7.9 19,11V17L21,19M14,21A2,2 0 0,1 12,23A2,2 0 0,1 10,21"
+              fill="#FFF"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        class="c16"
+        data-testid="logout-button"
+        role="button"
+      >
+        <div
+          class="c17"
+        >
+          <div
+            class="c18"
+          >
+            <svg
+              class="c14"
+              viewBox="0 0 24 24"
+            >
+              <path
+                class="c15"
+                d="M19,3H5C3.89,3 3,3.89 3,5V9H5V5H19V19H5V15H3V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M10.08,15.58L11.5,17L16.5,12L11.5,7L10.08,8.41L12.67,11H3V13H12.67L10.08,15.58Z"
+                fill="#FFF"
+              />
+            </svg>
+          </div>
+          <span
+            class="c19"
+            font-size="1.2rem"
+          >
+            Log out
+          </span>
+        </div>
+      </div>
+    </div>
+  </header>
+  <nav
+    class="c20"
+  >
+    <div
+      class="c21"
+    >
+      <div
+        class="c22 nav-link"
+      >
+        <a
+          class="c23"
+          href="/providers"
+        >
+          <div
+            class="c24 icon"
+          >
+            <svg
+              class="c25"
+              viewBox="0 0 24 24"
+            >
+              <path
+                class="c15"
+                d="M2,22V7A1,1 0 0,1 3,6H7V2H17V6H21A1,1 0 0,1 22,7V22H14V17H10V22H2M9,4V10H11V8H13V10H15V4H13V6H11V4H9M4,20H8V17H4V20M4,15H8V12H4V15M16,20H20V17H16V20M16,15H20V12H16V15M10,15H14V12H10V15Z"
+                fill="#00222b"
+              />
+            </svg>
+          </div>
+          <label
+            class="c26 label"
+          >
+            Providers
+          </label>
+        </a>
+        <div
+          class="c27 sub-nav"
+        >
+          <a
+            class="c28"
+            href="/providers/add"
+          >
+            Add provider
+          </a>
+          <a
+            class="c28"
+            href="/providers"
+          >
+            Manage providers
+          </a>
+        </div>
+      </div>
+      <div
+        class="c22 nav-link"
+      >
+        <a
+          class="c23"
+          href="/networks"
+        >
+          <div
+            class="c24 icon"
+          >
+            <svg
+              class="c25"
+              viewBox="0 0 24 24"
+            >
+              <path
+                class="c15"
+                d="M18,15H16V17H18M18,11H16V13H18M20,19H12V17H14V15H12V13H14V11H12V9H20M10,7H8V5H10M10,11H8V9H10M10,15H8V13H10M10,19H8V17H10M6,7H4V5H6M6,11H4V9H6M6,15H4V13H6M6,19H4V17H6M12,7V3H2V21H22V7H12Z"
+                fill="#00222b"
+              />
+            </svg>
+          </div>
+          <label
+            class="c26 label"
+          >
+            Networks
+          </label>
+        </a>
+        <div
+          class="c27 sub-nav"
+        >
+          <a
+            class="c28"
+            href="/networks/add"
+          >
+            Add network
+          </a>
+          <a
+            class="c28"
+            href="/networks"
+          >
+            Manage networks
+          </a>
+        </div>
+      </div>
+      <div
+        class="c22 nav-link"
+      >
+        <a
+          class="c23"
+          href="/organisations"
+        >
+          <div
+            class="c24 icon"
+          >
+            <svg
+              class="c25"
+              viewBox="0 0 24 24"
+            >
+              <path
+                class="c15"
+                d="M19 3V21H13V17.5H11V21H5V3H19M15 7H17V5H15V7M11 7H13V5H11V7M7 7H9V5H7V7M15 11H17V9H15V11M11 11H13V9H11V11M7 11H9V9H7V11M15 15H17V13H15V15M11 15H13V13H11V15M7 15H9V13H7V15M15 19H17V17H15V19M7 19H9V17H7V19M21 1H3V23H21V1Z"
+                fill="#00222b"
+              />
+            </svg>
+          </div>
+          <label
+            class="c26 label"
+          >
+            Organisations
+          </label>
+        </a>
+        <div
+          class="c27 sub-nav"
+        >
+          <a
+            class="c28"
+            href="/organisations"
+          >
+            Manage organisations
+          </a>
+        </div>
+      </div>
+      <div
+        class="c22 nav-link"
+      >
+        <div
+          class="c29"
+        >
+          <div
+            class="c24 icon"
+          >
+            <svg
+              class="c25"
+              viewBox="0 0 24 24"
+            >
+              <path
+                class="c15"
+                d="M12,6A3,3 0 0,0 9,9A3,3 0 0,0 12,12A3,3 0 0,0 15,9A3,3 0 0,0 12,6M6,8.17A2.5,2.5 0 0,0 3.5,10.67A2.5,2.5 0 0,0 6,13.17C6.88,13.17 7.65,12.71 8.09,12.03C7.42,11.18 7,10.15 7,9C7,8.8 7,8.6 7.04,8.4C6.72,8.25 6.37,8.17 6,8.17M18,8.17C17.63,8.17 17.28,8.25 16.96,8.4C17,8.6 17,8.8 17,9C17,10.15 16.58,11.18 15.91,12.03C16.35,12.71 17.12,13.17 18,13.17A2.5,2.5 0 0,0 20.5,10.67A2.5,2.5 0 0,0 18,8.17M12,14C10,14 6,15 6,17V19H18V17C18,15 14,14 12,14M4.67,14.97C3,15.26 1,16.04 1,17.33V19H4V17C4,16.22 4.29,15.53 4.67,14.97M19.33,14.97C19.71,15.53 20,16.22 20,17V19H23V17.33C23,16.04 21,15.26 19.33,14.97Z"
+                fill="#00222b"
+              />
+            </svg>
+          </div>
+          <label
+            class="c26 label"
+          >
+            People
+          </label>
+        </div>
+        <div
+          class="c27 sub-nav"
+        >
+          <a
+            class="c28"
+            href="/leads"
+          >
+            Manage leads
+          </a>
+          <a
+            class="c28"
+            href="/clients"
+          >
+            Manage clients
+          </a>
+        </div>
+      </div>
+      <div
+        class="c22 nav-link"
+      >
+        <a
+          class="c23"
+          href="/policies"
+        >
+          <div
+            class="c24 icon"
+          >
+            <svg
+              class="c25"
+              viewBox="0 0 24 24"
+            >
+              <path
+                class="c15"
+                d="M3,5H9V11H3V5M5,7V9H7V7H5M11,7H21V9H11V7M11,15H21V17H11V15M5,20L1.5,16.5L2.91,15.09L5,17.17L9.59,12.59L11,14L5,20Z"
+                fill="#00222b"
+              />
+            </svg>
+          </div>
+          <label
+            class="c26 label"
+          >
+            Policies
+          </label>
+        </a>
+        <div
+          class="c27 sub-nav"
+        >
+          <a
+            class="c28"
+            href="/policies?status=AWAITING_TERMS"
+          >
+            Awaiting terms
+          </a>
+          <a
+            class="c28"
+            href="/policies?status=AWAITING_TERMS&simulated=true"
+          >
+            Simulated awaiting terms
+          </a>
+          <a
+            class="c28"
+            href="/policies?status=AWAITING_ACCEPTANCE"
+          >
+            Awaiting acceptance
+          </a>
+          <a
+            class="c28"
+            href="/policies?status=AWAITING_ACCEPTANCE&simulated=true"
+          >
+            Simulated awaiting acceptance
+          </a>
+          <a
+            class="c28"
+            href="/policies?status=FAILED_ONBOARDING"
+          >
+            Failed to onboard
+          </a>
+          <a
+            class="c28"
+            href="/policies?status=FAILED_ONBOARDING&simulated=true"
+          >
+            Simulated failed to onboard
+          </a>
+        </div>
+      </div>
+      <div
+        class="c22 nav-link"
+      >
+        <div
+          class="c29"
+        >
+          <div
+            class="c24 icon"
+          >
+            <svg
+              class="c25"
+              viewBox="0 0 24 24"
+            >
+              <path
+                class="c15"
+                d="M18,15A3,3 0 0,1 21,18A3,3 0 0,1 18,21C16.69,21 15.58,20.17 15.17,19H14V17H15.17C15.58,15.83 16.69,15 18,15M18,17A1,1 0 0,0 17,18A1,1 0 0,0 18,19A1,1 0 0,0 19,18A1,1 0 0,0 18,17M18,8A1.43,1.43 0 0,0 19.43,6.57C19.43,5.78 18.79,5.14 18,5.14C17.21,5.14 16.57,5.78 16.57,6.57A1.43,1.43 0 0,0 18,8M18,2.57A4,4 0 0,1 22,6.57C22,9.56 18,14 18,14C18,14 14,9.56 14,6.57A4,4 0 0,1 18,2.57M8.83,17H10V19H8.83C8.42,20.17 7.31,21 6,21A3,3 0 0,1 3,18C3,16.69 3.83,15.58 5,15.17V14H7V15.17C7.85,15.47 8.53,16.15 8.83,17M6,17A1,1 0 0,0 5,18A1,1 0 0,0 6,19A1,1 0 0,0 7,18A1,1 0 0,0 6,17M6,3A3,3 0 0,1 9,6C9,7.31 8.17,8.42 7,8.83V10H5V8.83C3.83,8.42 3,7.31 3,6A3,3 0 0,1 6,3M6,5A1,1 0 0,0 5,6A1,1 0 0,0 6,7A1,1 0 0,0 7,6A1,1 0 0,0 6,5M11,19V17H13V19H11M7,13H5V11H7V13Z"
+                fill="#00222b"
+              />
+            </svg>
+          </div>
+          <label
+            class="c26 label"
+          >
+            Sales
+          </label>
+        </div>
+        <div
+          class="c27 sub-nav"
+        >
+          <a
+            class="c28"
+            href="/journeys?status=IN_PROGRESS"
+          >
+            Journeys in progress
+          </a>
+          <a
+            class="c28"
+            href="/journeys?status=COMPLETE"
+          >
+            Quotes completed
+          </a>
+          <a
+            class="c28"
+            href="/policies?status=SOLD"
+          >
+            Policies sold
+          </a>
+          <div
+            class="c30"
+          >
+            Reports
+          </div>
+        </div>
+      </div>
+      <div
+        class="c22 nav-link"
+      >
+        <a
+          class="c23"
+          href="/my-account?my-account=details"
+        >
+          <div
+            class="c24 icon"
+          >
+            <svg
+              class="c25"
+              viewBox="0 0 24 24"
+            >
+              <path
+                class="c15"
+                d="M16,15H9V13H16V15M19,11H9V9H19V11M19,7H9V5H19V7M3,5V21H19V23H3A2,2 0 0,1 1,21V5H3M21,1A2,2 0 0,1 23,3V17C23,18.11 22.11,19 21,19H7A2,2 0 0,1 5,17V3C5,1.89 5.89,1 7,1H21M7,3V17H21V3H7Z"
+                fill="#00222b"
+              />
+            </svg>
+          </div>
+          <label
+            class="c26 label"
+          >
+            Admin
+          </label>
+        </a>
+        <div
+          class="c27 sub-nav"
+        >
+          <a
+            class="c28"
+            href="/system-settings"
+          >
+            System settings
+          </a>
+          <a
+            class="c28"
+            href="/users"
+          >
+            User administration
+          </a>
+          <a
+            class="c28"
+            href="/agency-codes?agency_codes_type=agency_codes"
+          >
+            Agency codes
+          </a>
+          <a
+            class="c28"
+            href="/deal-codes"
+          >
+            Deal codes
+          </a>
+          <a
+            class="c28"
+            href="/my-account?my-account=details"
+          >
+            My account
+          </a>
+          <div
+            class="c30"
+          >
+            Mail log
+          </div>
+          <a
+            class="c28"
+            href="/api-status"
+          >
+            Quote API Status
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <main
+    class="c31"
+    data-testid="test-content"
+  >
+    <div
+      class="c32"
+      data-testid="test-page-overlay"
+    />
+    <div
+      class="c33"
+      style="position: static;"
+      width="128rem"
+    >
+      <div
+        class="c34"
+        width="100%"
+      >
+        <div
+          class="c35"
+          type="contained"
+        >
+          <div
+            class="c36"
+            data-testid="test-header"
+            type="contained"
+          >
+            <div
+              class="c37"
+            >
+              <label
+                class="c38"
+                data-testid="test-header-label"
+              >
+                Type
+              </label>
+              <button
+                class="c39"
+                data-testid="product_type-sorting"
+              >
+                <svg
+                  class="c25"
+                  style="margin-right: -.5rem;"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    class="c15"
+                    d="M7,10L12,15L17,10H7Z"
+                    fill="#197DA4"
+                  />
+                </svg>
+                <svg
+                  class="c25"
+                  style="margin-left: -.5rem;"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    class="c15"
+                    d="M7,15L12,10L17,15H7Z"
+                    fill="#197DA4"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="c40 c41"
+            >
+              <label
+                class="c42"
+                data-testid="test-header-label"
+              >
+                Provider
+                <button
+                  class="c39"
+                  data-testid="provider.name-sorting"
+                >
+                  <svg
+                    class="c25"
+                    style="margin-right: -.5rem;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      class="c15"
+                      d="M7,10L12,15L17,10H7Z"
+                      fill="#197DA4"
+                    />
+                  </svg>
+                  <svg
+                    class="c25"
+                    style="margin-left: -.5rem;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      class="c15"
+                      d="M7,15L12,10L17,15H7Z"
+                      fill="#197DA4"
+                    />
+                  </svg>
+                </button>
+              </label>
+              <label
+                class="c43"
+                data-testid="test-header-label"
+              >
+                Product
+                <button
+                  class="c39"
+                  data-testid="product-sorting"
+                >
+                  <svg
+                    class="c25"
+                    style="margin-right: -.5rem;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      class="c15"
+                      d="M7,10L12,15L17,10H7Z"
+                      fill="#197DA4"
+                    />
+                  </svg>
+                  <svg
+                    class="c25"
+                    style="margin-left: -.5rem;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      class="c15"
+                      d="M7,15L12,10L17,15H7Z"
+                      fill="#197DA4"
+                    />
+                  </svg>
+                </button>
+              </label>
+            </div>
+            <div
+              class="c40"
+            >
+              <label
+                class="c38"
+                data-testid="test-header-label"
+              >
+                Code
+              </label>
+              <button
+                class="c39"
+                data-testid="agency_code-sorting"
+              >
+                <svg
+                  class="c25"
+                  style="margin-right: -.5rem;"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    class="c15"
+                    d="M7,10L12,15L17,10H7Z"
+                    fill="#197DA4"
+                  />
+                </svg>
+                <svg
+                  class="c25"
+                  style="margin-left: -.5rem;"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    class="c15"
+                    d="M7,15L12,10L17,15H7Z"
+                    fill="#197DA4"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="c44"
+            >
+              <label
+                class="c38"
+                data-testid="test-header-label"
+              >
+                Rate
+              </label>
+              <button
+                class="c39"
+                data-testid="primary_commission_rate-sorting"
+              >
+                <svg
+                  class="c25"
+                  style="margin-right: -.5rem;"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    class="c15"
+                    d="M7,10L12,15L17,10H7Z"
+                    fill="#197DA4"
+                  />
+                </svg>
+                <svg
+                  class="c25"
+                  style="margin-left: -.5rem;"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    class="c15"
+                    d="M7,15L12,10L17,15H7Z"
+                    fill="#197DA4"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="c45"
+            >
+              <label
+                class="c38"
+                data-testid="test-header-label"
+              >
+                Owner
+              </label>
+              <button
+                class="c39"
+                data-testid="owner.type-sorting"
+              >
+                <svg
+                  class="c25"
+                  style="margin-right: -.5rem;"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    class="c15"
+                    d="M7,10L12,15L17,10H7Z"
+                    fill="#197DA4"
+                  />
+                </svg>
+                <svg
+                  class="c25"
+                  style="margin-left: -.5rem;"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    class="c15"
+                    d="M7,15L12,10L17,15H7Z"
+                    fill="#197DA4"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="c46"
+            >
+              <label
+                class="c38"
+                data-testid="test-header-label"
+              >
+                Applied at
+              </label>
+              <button
+                class="c39"
+                data-testid="created_at-sorting"
+              >
+                <svg
+                  class="c25"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    class="c15"
+                    d="M7,15L12,10L17,15H7Z"
+                    fill="#197DA4"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div
+            class="c47"
+            data-testid="test-table-body"
+          >
+            <div
+              class="c48"
+              data-testid="test-row-0"
+              type="contained"
+            >
+              <div
+                class="c49"
+              >
+                <span
+                  class="c50"
+                  data-testid="test-span"
+                >
+                  PMI
+                </span>
+              </div>
+              <div
+                class="c51 c52"
+              >
+                <span
+                  class="c53"
+                  data-testid="test-span"
+                >
+                  Provider 1
+                </span>
+                <span
+                  class="c54"
+                  data-testid="test-span"
+                >
+                  Apple
+                </span>
+              </div>
+              <div
+                class="c51"
+              >
+                <span
+                  class="c50"
+                  data-testid="test-span"
+                >
+                  -
+                </span>
+              </div>
+              <div
+                class="c55"
+              >
+                <span
+                  class="c50"
+                  data-testid="test-span"
+                >
+                  0%
+                </span>
+              </div>
+              <div
+                class="c56"
+              >
+                <span
+                  class="c50"
+                  data-testid="test-span"
+                >
+                  Network 1
+                </span>
+              </div>
+              <div
+                class="c57"
+              >
+                <span
+                  class="c50"
+                  data-testid="test-span"
+                >
+                  01/01/2021 00:00
+                </span>
+              </div>
+              <div
+                class="c58 c59"
+              >
+                <button
+                  class="c60"
+                  data-testid="agency_codes_requests-table-actions_button_0"
+                >
+                  <svg
+                    class="c25"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      class="c15"
+                      d="M16,12A2,2 0 0,1 18,10A2,2 0 0,1 20,12A2,2 0 0,1 18,14A2,2 0 0,1 16,12M10,12A2,2 0 0,1 12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12M4,12A2,2 0 0,1 6,10A2,2 0 0,1 8,12A2,2 0 0,1 6,14A2,2 0 0,1 4,12Z"
+                      fill="#00222b"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="c61"
+          type="contained"
+        >
+          <div
+            class="c62"
+            data-testid="agency_codes_requests-pagination-outer-wrapper"
+          >
+            <div
+              class="c63"
+              data-testid="agency_codes_requests_per_page-wrapper"
+            >
+              <div
+                class="c64"
+                data-testid="label-helper_text-container"
+              >
+                <label
+                  class="c65"
+                  font-size="1.4rem"
+                  for="pagination"
+                >
+                  Results per page:
+                </label>
+                
+              </div>
+              <div
+                class="c66"
+                data-testid="agency_codes_requests_per_page-select-wrapper"
+              >
+                <div
+                  class="c67 select"
+                  data-testid="agency_codes_requests_per_page-select-outer_wrapper"
+                  width="7.8rem"
+                >
+                  <div
+                    class="c68"
+                  >
+                    <select
+                      aria-invalid="false"
+                      aria-required="false"
+                      class="c69 select__field"
+                      data-testid="agency_codes_requests_per_page-select"
+                      id="agency_codes_requests_per_page"
+                    >
+                      <option
+                        value="5"
+                      >
+                        5
+                      </option>
+                      <option
+                        value="10"
+                      >
+                        10
+                      </option>
+                      <option
+                        value="15"
+                      >
+                        15
+                      </option>
+                      <option
+                        value="20"
+                      >
+                        20
+                      </option>
+                    </select>
+                    <span
+                      class="c70 select__icon-after icon-after"
+                      data-testid="agency_codes_requests_per_page-select-trailing_icon"
+                    >
+                      <svg
+                        class="c25 select__icon-after default"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          class="c15"
+                          d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
+                          fill="#00222b"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p
+              class="c71"
+            >
+              Total 
+              agency codes requests
+              : 
+              50
+            </p>
+            <div
+              class="c72"
+              data-testid="agency_codes_requests-pagination-wrapper"
+            >
+              <button
+                class="c73"
+                data-testid="agency_codes_requests-pagination-advance_previous"
+                disabled=""
+                type="nav"
+              >
+                <svg
+                  class="c25"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    class="c15"
+                    d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"
+                    fill="#00222b"
+                  />
+                </svg>
+              </button>
+              <div
+                class="c74"
+              >
+                <button
+                  class="c75 active"
+                  data-testid="agency_codes_requests-pagination-button_1"
+                  role="button"
+                >
+                  1
+                </button>
+                <button
+                  class="c75"
+                  data-testid="agency_codes_requests-pagination-button_2"
+                  role="button"
+                >
+                  2
+                </button>
+                <button
+                  class="c75"
+                  data-testid="agency_codes_requests-pagination-button_3"
+                  role="button"
+                >
+                  3
+                </button>
+                <button
+                  class="c75"
+                  data-testid="agency_codes_requests-pagination-button_4"
+                  role="button"
+                >
+                  4
+                </button>
+                <button
+                  class="c75"
+                  data-testid="agency_codes_requests-pagination-button_5"
+                  role="button"
+                >
+                  5
+                </button>
+              </div>
+              <button
+                class="c73"
+                data-testid="agency_codes_requests-pagination-advance_next"
+                type="nav"
+              >
+                <svg
+                  class="c25"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    class="c15"
+                    d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"
+                    fill="#00222b"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer
+    class="c76"
+    data-testid="test-footer"
+  >
+    <p
+      class="c77"
+    >
+      V:0.0.1
+    </p>
+    <p
+      class="c77"
+    >
+      © Copyright 4C Platform 
+      2021
+    </p>
+  </footer>
+</div>
+`;

@@ -1,0 +1,51 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import { Container } from "@4cplatform/elements/Atoms"
+import { H1 } from "@4cplatform/elements/Typography"
+import { ConfigProvider } from "@4cplatform/elements/Config"
+import { TranslationsProvider } from "@4cplatform/elements/Translations"
+import { AlertsProvider, AlertsContainer } from "@4cplatform/elements/Alerts"
+import { Page } from "../../Organisms"
+import { FakeAuthProvider } from "../../Helpers"
+import TestNetworkDocumentsProvider from "./story/networkDocuments.story.provider.js"
+import NetworkDocuments, { NetworkDocumentsPanel } from "."
+
+<Meta
+  title="Templates/NetworkDocuments"
+  decorators={[
+    StoryFn => (
+      <FakeAuthProvider>
+        <AlertsProvider>
+          <Page>
+            <TestNetworkDocumentsProvider>
+              <AlertsContainer />
+              <StoryFn />
+            </TestNetworkDocumentsProvider>
+          </Page>
+        </AlertsProvider>
+      </FakeAuthProvider>
+    )
+  ]}
+  parameters={{
+    layout: "fullscreen"
+  }}
+/>
+
+# NetworkDocuments
+
+TBC
+
+## Story
+
+export const Template = args => (
+  <>
+    <Container>
+      <H1>Network Documents</H1>
+      <NetworkDocuments {...args} />
+    </Container>
+    <NetworkDocumentsPanel {...args} />
+  </>
+)
+
+<Canvas>
+  <Story name="NetworkDocuments">{Template.bind()}</Story>
+</Canvas>

@@ -1,0 +1,62 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import { AlertsProvider, AlertsContainer } from "@4cplatform/elements/Alerts"
+import { Container } from "@4cplatform/elements/Atoms"
+import { H1 } from "@4cplatform/elements/Typography"
+import LeadCreate from "."
+
+<Meta
+  title="Templates/LeadCreate"
+  parameters={{
+    layout: "fullscreen",
+    jest: ["_leadCreate.test.js"]
+  }}
+  decorators={[
+    StoryFn => (
+      <AlertsProvider>
+        <AlertsContainer />
+        <StoryFn />
+      </AlertsProvider>
+    )
+  ]}
+/>
+
+# Lead Creation
+
+The Create Lead template implements a `formik` form around several fields. When the submit button is clicked, it runs the passed `onSubmit` button with the body passed as an argument. These can then be used within a `usePost` hook as desired.
+
+## Usage
+
+Import
+
+```javascript
+import { LeadCreate } from "../src/UI/Templates"
+```
+
+Implement as follows
+
+```javascript
+<LeadCreate onSubmit={body => create({ body })} />
+```
+
+## Story
+
+export const Template = args => {
+  const [importOpen, setImportOpen] = React.useState(false)
+  return (
+    <div style={{ width: "70rem", margin: "0 auto" }}>
+      <Container>
+        <H1>Add Lead</H1>
+        <LeadCreate
+          onSubmit={body => console.log(body)}
+          importOpen={importOpen}
+          setImportOpen={val => setImportOpen(val)}
+          errors={[]}
+        />
+      </Container>
+    </div>
+  )
+}
+
+<Canvas>
+  <Story name="LeadCreate">{Template.bind()}</Story>
+</Canvas>

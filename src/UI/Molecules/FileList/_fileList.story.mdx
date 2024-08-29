@@ -1,0 +1,50 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import { get } from "lodash"
+import { FileSelect } from "@4cplatform/elements/Forms"
+import { useFormik } from "formik"
+import FileList from "."
+
+<Meta title="Molecules/FileList" component={FileList} />
+
+# FileList
+
+The `FileList` component provides standard dressing for a list of files. It is meant to be used in conjunction with the `FileSelect` in 4c-elements, in particular with regard to implementing Logo Upload and parts of the client journey.
+
+## Usage
+
+This component only requires a single prop - `files`. This can either be an `array` or a `FileList` object.
+
+If a `FileList` is passed, the component will convert it to an array before use. This is necessary because `FileList` cannot make use of native array methods.
+
+Import
+
+```javascript
+import { FileList } from "../../UI/Molecules"
+```
+
+Usage
+
+```javascript
+<FileList files={files} />
+```
+
+## Story
+
+export const Template = args => {
+  const formik = useFormik({
+    initialValues: {
+      story: null
+    },
+    onSubmit: values => console.log(values)
+  })
+  return (
+    <div style={{ width: "46.5rem" }}>
+      <FileSelect formik={formik} name="story" canAllowMultiple={true} />
+      <FileList {...args} files={get(formik, "values.story", [])} />
+    </div>
+  )
+}
+
+<Canvas>
+  <Story name="FileList">{Template.bind()}</Story>
+</Canvas>

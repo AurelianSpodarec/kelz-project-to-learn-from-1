@@ -1,0 +1,68 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import { H1, P } from "@4cplatform/elements/Typography"
+import { colours } from "@4cplatform/elements/Helpers"
+import { Providers } from "../../Helpers"
+import MyAccountDetails from "."
+import MyAccountDetailsStoryProvider from "./story/details.story.provider.js"
+
+<Meta
+  title="Templates/MyAccountDetails"
+  decorators={[
+    StoryFn => (
+      <Providers>
+        <MyAccountDetailsStoryProvider>
+          <StoryFn />
+        </MyAccountDetailsStoryProvider>
+      </Providers>
+    )
+  ]}
+  parameters={{
+    jest: ["_details.test.js"]
+  }}
+/>
+
+## MyAccountDetails
+
+The `MyAccountDetails` component displays the information from the `/self-service` query for use by the user. The user can edit their details and settings using this view. It is accessible by clicking your username and email address in the top-right corner of the screen.
+
+The `self-service` query itself is actually based in the `Page` component, which wraps the React Router `Switch` and exposes this information on the `PageContext`. This is so that the `UserInformation` subcomponent in the `Header` can access the same details as the `MyAccountDetails` component without refetching the same query on every page load.
+
+The `selfServiceUpdate` function - also exposed on `PageContext` - is used to update the `/self-service` data without refetching the query whenever the user runs the `PATCH` request on that endpoint successfully. This will instantly update the user's name and email address in the `UserInfo` subcomponent as well, as they are both based on the same data source.
+
+## Usage
+
+Import
+
+```javascript
+import { MyAccountDetails } from "../../UI/Templates"
+```
+
+Implement as follows
+
+```javascript
+<MyAccountProvider>
+  <Container>
+    <H1 margin="0 0 2rem">My Account</H1>
+    <P margin="0 0 3rem" style={{ color: colours.tints.secondary.darkBlue.t20 }}>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </P>
+    <MyAccountDetails />
+  </Container>
+</MyAccountProvider>
+```
+
+## Story
+
+export const Template = args => (
+  <div style={{ width: "100rem" }}>
+    <H1 margin="0 0 2rem">My Account</H1>
+    <P margin="0 0 3rem" style={{ color: colours.tints.secondary.darkBlue.t20 }}>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </P>
+    <MyAccountDetails {...args} />
+  </div>
+)
+
+<Canvas>
+  <Story name="MyAccountDetails">{Template.bind()}</Story>
+</Canvas>

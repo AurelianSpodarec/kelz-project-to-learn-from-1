@@ -1,0 +1,837 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dashboard page Logged in as Sales Adviser 1`] = `
+<div
+  class="sc-kBzgEd gXUufT"
+  data-testid="test-page"
+>
+  <header
+    class="sc-iWBNLc kTycSn"
+    data-testid="test-header"
+  >
+    <a
+      class="sc-hJZKUC qxGEm"
+      href="/"
+    >
+      <img
+        alt="4C Branding"
+        class="sc-hYQoXb caWgWu"
+        src="./logo-short.svg"
+      />
+    </a>
+    <div
+      class="sc-ewSTlh bTxKvC"
+      data-testid="self-service-wrapper"
+    >
+      <div
+        class="sc-dkqQuH hLXA-dc"
+      />
+      <a
+        class="sc-eicpiI cFCoYH"
+        data-testid="user_info-wrapper"
+        href="/my-account?my-account=details"
+      >
+        <div
+          class="sc-djWRfJ hHXyWW"
+          data-testid="self-service-avatar-wrapper"
+        >
+          <div
+            class="sc-gIBqdA fxBeoA"
+            data-testid="self-service-avatar-content"
+          >
+            S
+            A
+          </div>
+        </div>
+        <div
+          class="sc-cVAmsi gmbLyk"
+        >
+          <p
+            class="sc-kHxTfl bggTM"
+            data-testid="self-service-name"
+          >
+            System Admin
+          </p>
+          <p
+            class="sc-ksHpcM iVhVcV"
+            data-testid="self-service-email"
+          >
+            system.admin@usaycompare.com
+          </p>
+        </div>
+      </a>
+      <div
+        class="sc-gXRojI cjiNtA"
+        data-testid="self-service-notifications"
+      >
+        <div
+          class="sc-bGaVxB cBktYB"
+          data-testid="self-service-icon"
+        >
+          <svg
+            class="sc-jRQBWg hVeekp"
+            style="transform: rotate(-10deg);"
+            viewBox="0 0 24 24"
+          >
+            <path
+              class="sc-gKclnd gxtOty"
+              d="M21,19V20H3V19L5,17V11C5,7.9 7.03,5.17 10,4.29C10,4.19 10,4.1 10,4A2,2 0 0,1 12,2A2,2 0 0,1 14,4C14,4.1 14,4.19 14,4.29C16.97,5.17 19,7.9 19,11V17L21,19M14,21A2,2 0 0,1 12,23A2,2 0 0,1 10,21"
+              fill="#FFF"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        class="sc-gnnDb joniBa"
+        data-testid="logout-button"
+        role="button"
+      >
+        <div
+          class="sc-fyrocj cqUqRs"
+        >
+          <div
+            class="sc-jKTccl iICdJh"
+          >
+            <svg
+              class="sc-jRQBWg hVeekp"
+              viewBox="0 0 24 24"
+            >
+              <path
+                class="sc-gKclnd gxtOty"
+                d="M19,3H5C3.89,3 3,3.89 3,5V9H5V5H19V19H5V15H3V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M10.08,15.58L11.5,17L16.5,12L11.5,7L10.08,8.41L12.67,11H3V13H12.67L10.08,15.58Z"
+                fill="#FFF"
+              />
+            </svg>
+          </div>
+          <span
+            class="sc-iWVNaa cTUDJE"
+            font-size="1.2rem"
+          >
+            Log out
+          </span>
+        </div>
+      </div>
+    </div>
+  </header>
+  <nav
+    class="sc-eJRTFu dXEujO"
+  >
+    <div
+      class="sc-fGoOlv hwAozh"
+    >
+      <div
+        class="sc-hlGDCY kulXJq nav-link"
+      >
+        <a
+          class="sc-dYPfWK fUBKOS"
+          href="/leads"
+        >
+          <div
+            class="sc-gfXuXe uXOgA icon"
+          >
+            <svg
+              class="sc-jRQBWg gltuxR"
+              viewBox="0 0 24 24"
+            >
+              <path
+                class="sc-gKclnd gxtOty"
+                d="M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H9.18C9.6,1.84 10.7,1 12,1C13.3,1 14.4,1.84 14.82,3H19M12,3A1,1 0 0,0 11,4A1,1 0 0,0 12,5A1,1 0 0,0 13,4A1,1 0 0,0 12,3M7,7V5H5V19H19V5H17V7H7M12,9A2,2 0 0,1 14,11A2,2 0 0,1 12,13A2,2 0 0,1 10,11A2,2 0 0,1 12,9M8,17V16C8,14.9 9.79,14 12,14C14.21,14 16,14.9 16,16V17H8Z"
+                fill="#00222b"
+              />
+            </svg>
+          </div>
+          <label
+            class="sc-hcupDf gdDUDh label"
+          >
+            Leads
+          </label>
+        </a>
+        <div
+          class="sc-iidyiZ cTa-DCV sub-nav"
+        >
+          <div
+            class="sc-hxaKAp fsFePj"
+          >
+            Quick quote
+          </div>
+          <a
+            class="sc-gA-DPUo oWriJ"
+            href="/leads/add"
+          >
+            Create new lead
+          </a>
+          <a
+            class="sc-gA-DPUo oWriJ"
+            href="/leads"
+          >
+            Manage leads
+          </a>
+          <div
+            class="sc-hxaKAp fsFePj"
+          >
+            Reports
+          </div>
+        </div>
+      </div>
+      <div
+        class="sc-hlGDCY kulXJq nav-link"
+      >
+        <div
+          class="sc-eVmaCL flZdNV"
+        >
+          <div
+            class="sc-gfXuXe uXOgA icon"
+          >
+            <svg
+              class="sc-jRQBWg gltuxR"
+              viewBox="0 0 24 24"
+            >
+              <path
+                class="sc-gKclnd gxtOty"
+                d="M18,15A3,3 0 0,1 21,18A3,3 0 0,1 18,21C16.69,21 15.58,20.17 15.17,19H14V17H15.17C15.58,15.83 16.69,15 18,15M18,17A1,1 0 0,0 17,18A1,1 0 0,0 18,19A1,1 0 0,0 19,18A1,1 0 0,0 18,17M18,8A1.43,1.43 0 0,0 19.43,6.57C19.43,5.78 18.79,5.14 18,5.14C17.21,5.14 16.57,5.78 16.57,6.57A1.43,1.43 0 0,0 18,8M18,2.57A4,4 0 0,1 22,6.57C22,9.56 18,14 18,14C18,14 14,9.56 14,6.57A4,4 0 0,1 18,2.57M8.83,17H10V19H8.83C8.42,20.17 7.31,21 6,21A3,3 0 0,1 3,18C3,16.69 3.83,15.58 5,15.17V14H7V15.17C7.85,15.47 8.53,16.15 8.83,17M6,17A1,1 0 0,0 5,18A1,1 0 0,0 6,19A1,1 0 0,0 7,18A1,1 0 0,0 6,17M6,3A3,3 0 0,1 9,6C9,7.31 8.17,8.42 7,8.83V10H5V8.83C3.83,8.42 3,7.31 3,6A3,3 0 0,1 6,3M6,5A1,1 0 0,0 5,6A1,1 0 0,0 6,7A1,1 0 0,0 7,6A1,1 0 0,0 6,5M11,19V17H13V19H11M7,13H5V11H7V13Z"
+                fill="#00222b"
+              />
+            </svg>
+          </div>
+          <label
+            class="sc-hcupDf gdDUDh label"
+          >
+            Quotes
+          </label>
+        </div>
+        <div
+          class="sc-iidyiZ cTa-DCV sub-nav"
+        >
+          <a
+            class="sc-gA-DPUo oWriJ"
+            href="/journeys?status=IN_PROGRESS"
+          >
+            Journeys in progress
+          </a>
+          <a
+            class="sc-gA-DPUo oWriJ"
+            href="/organisations/?manage=client_journeys&status=COMPLETE"
+          >
+            Quotes completed
+          </a>
+          <a
+            class="sc-gA-DPUo oWriJ"
+            href="/clients"
+          >
+            Manage clients
+          </a>
+        </div>
+      </div>
+      <div
+        class="sc-hlGDCY kulXJq nav-link"
+      >
+        <a
+          class="sc-dYPfWK fUBKOS"
+          href="/policies"
+        >
+          <div
+            class="sc-gfXuXe uXOgA icon"
+          >
+            <svg
+              class="sc-jRQBWg gltuxR"
+              viewBox="0 0 24 24"
+            >
+              <path
+                class="sc-gKclnd gxtOty"
+                d="M3,5H9V11H3V5M5,7V9H7V7H5M11,7H21V9H11V7M11,15H21V17H11V15M5,20L1.5,16.5L2.91,15.09L5,17.17L9.59,12.59L11,14L5,20Z"
+                fill="#00222b"
+              />
+            </svg>
+          </div>
+          <label
+            class="sc-hcupDf gdDUDh label"
+          >
+            Policies
+          </label>
+        </a>
+        <div
+          class="sc-iidyiZ cTa-DCV sub-nav"
+        >
+          <a
+            class="sc-gA-DPUo oWriJ"
+            href="/policies?status=SOLD"
+          >
+            All policies
+          </a>
+          <a
+            class="sc-gA-DPUo oWriJ"
+            href="/policies?status=AWAITING_TERMS"
+          >
+            Awaiting terms
+          </a>
+          <a
+            class="sc-gA-DPUo oWriJ"
+            href="/policies?status=AWAITING_TERMS&simulated=true"
+          >
+            Simulated awaiting terms
+          </a>
+          <a
+            class="sc-gA-DPUo oWriJ"
+            href="/policies?status=AWAITING_ACCEPTANCE"
+          >
+            Awaiting acceptance
+          </a>
+          <a
+            class="sc-gA-DPUo oWriJ"
+            href="/policies?status=AWAITING_ACCEPTANCE&simulated=true"
+          >
+            Simulated awaiting acceptance
+          </a>
+          <a
+            class="sc-gA-DPUo oWriJ"
+            href="/policies?status=FAILED_ONBOARDING"
+          >
+            Failed to onboard
+          </a>
+          <a
+            class="sc-gA-DPUo oWriJ"
+            href="/policies?status=FAILED_ONBOARDING&simulated=true"
+          >
+            Simulated failed to onboard
+          </a>
+        </div>
+      </div>
+      <div
+        class="sc-hlGDCY kulXJq nav-link"
+      >
+        <a
+          class="sc-dYPfWK fUBKOS"
+          href="/my-account?my-account=details"
+        >
+          <div
+            class="sc-gfXuXe uXOgA icon"
+          >
+            <svg
+              class="sc-jRQBWg gltuxR"
+              viewBox="0 0 24 24"
+            >
+              <path
+                class="sc-gKclnd gxtOty"
+                d="M16,15H9V13H16V15M19,11H9V9H19V11M19,7H9V5H19V7M3,5V21H19V23H3A2,2 0 0,1 1,21V5H3M21,1A2,2 0 0,1 23,3V17C23,18.11 22.11,19 21,19H7A2,2 0 0,1 5,17V3C5,1.89 5.89,1 7,1H21M7,3V17H21V3H7Z"
+                fill="#00222b"
+              />
+            </svg>
+          </div>
+          <label
+            class="sc-hcupDf gdDUDh label"
+          >
+            Admin
+          </label>
+        </a>
+        <div
+          class="sc-iidyiZ cTa-DCV sub-nav"
+        >
+          <a
+            class="sc-gA-DPUo oWriJ"
+            href="/my-account?my-account=details"
+          >
+            My account
+          </a>
+          <div
+            class="sc-hxaKAp fsFePj"
+          >
+            Mail log
+          </div>
+          <div
+            class="sc-hxaKAp fsFePj"
+          >
+            Commission rates
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <main
+    class="sc-gJbFto jgzHYM"
+    data-testid="test-content"
+  >
+    <div
+      class="sc-oXPCX kKsbl"
+      data-testid="test-page-overlay"
+    />
+    <div
+      class="sc-dkPtRN ipRncA sc-dXNJws iNDVyt"
+      width="128rem"
+    >
+      <div
+        class="sc-hRMJXU hrfWkr"
+      >
+        <div
+          class="sc-crHmcD cHTHyz"
+          data-testid="heading_1-helper_text-container"
+        >
+          <h1
+            class="sc-hGPBjI ftPUlS"
+          >
+            Organisation dashboard
+          </h1>
+          
+        </div>
+      </div>
+      <div
+        class="sc-czWrlN jKTYaV"
+      >
+        <div
+          class="sc-icMgfS gdORRA"
+          data-testid="dash-category-leads"
+        >
+          <div
+            class="sc-crHmcD cHTHyz"
+            data-testid="heading_3-helper_text-container"
+          >
+            <h3
+              class="sc-kfPuZi hLnUNx"
+            >
+              Leads
+            </h3>
+            
+          </div>
+          <div
+            class="sc-hgJWpk jFQKZW"
+          >
+            <h4
+              class="sc-bOTDDd cOATmY"
+            >
+              Quick quote
+            </h4>
+            <p
+              class="sc-hrJsxi kKajxd"
+            >
+              Create a quick quote based on the date of birth and postcode
+            </p>
+          </div>
+          <a
+            background="#197DA4"
+            class="sc-cKVNtL cwOTEf"
+            href="/leads/add"
+            length="4"
+            simulated=""
+          >
+            <h4
+              class="sc-bOTDDd cOATmY"
+            >
+              Create new lead
+            </h4>
+            <p
+              class="sc-hrJsxi kKajxd"
+            >
+              Create new leads for this account
+            </p>
+          </a>
+          <a
+            background="#197DA4"
+            class="sc-cKVNtL cwOTEf"
+            href="/leads"
+            length="4"
+            simulated=""
+          >
+            <h4
+              class="sc-bOTDDd cOATmY"
+            >
+              Manage leads
+            </h4>
+            <p
+              class="sc-hrJsxi kKajxd"
+            >
+              Manage leads for this account
+            </p>
+          </a>
+          <div
+            class="sc-hgJWpk jFQKZW"
+          >
+            <h4
+              class="sc-bOTDDd cOATmY"
+            >
+              Reports
+            </h4>
+            <p
+              class="sc-hrJsxi kKajxd"
+            >
+              Manage information, screen, print and download
+            </p>
+          </div>
+        </div>
+        <div
+          class="sc-icMgfS fOdyjz"
+          data-testid="dash-category-quotes"
+        >
+          <div
+            class="sc-crHmcD cHTHyz"
+            data-testid="heading_3-helper_text-container"
+          >
+            <h3
+              class="sc-kfPuZi hLnUNx"
+            >
+              Quotes
+            </h3>
+            
+          </div>
+          <a
+            background="#3F53B8"
+            class="sc-cKVNtL gkEtPh"
+            href="/journeys?status=IN_PROGRESS"
+            length="4"
+            simulated=""
+          >
+            <h4
+              class="sc-bOTDDd cOATmY"
+            >
+              Journeys in progress
+            </h4>
+            <p
+              class="sc-hrJsxi kKajxd"
+            >
+              Journeys in progress
+            </p>
+          </a>
+          <a
+            background="#3F53B8"
+            class="sc-cKVNtL gkEtPh"
+            href="/organisations/?manage=client_journeys&status=COMPLETE"
+            length="4"
+            simulated=""
+          >
+            <h4
+              class="sc-bOTDDd cOATmY"
+            >
+              Quotes completed
+            </h4>
+            <p
+              class="sc-hrJsxi kKajxd"
+            >
+              Quotes completed
+            </p>
+          </a>
+          <a
+            background="#3F53B8"
+            class="sc-cKVNtL gkEtPh"
+            href="/clients"
+            length="4"
+            simulated=""
+          >
+            <h4
+              class="sc-bOTDDd cOATmY"
+            >
+              Manage clients
+            </h4>
+            <p
+              class="sc-hrJsxi kKajxd"
+            >
+              View all clients in this account
+            </p>
+          </a>
+        </div>
+        <div
+          class="sc-icMgfS fOdyjz"
+          data-testid="dash-category-policies"
+        >
+          <div
+            class="sc-crHmcD cHTHyz"
+            data-testid="heading_3-helper_text-container"
+          >
+            <h3
+              class="sc-kfPuZi hLnUNx"
+            >
+              Policies
+            </h3>
+            
+          </div>
+          <a
+            background="#9D5899"
+            class="sc-cKVNtL dwMMwa"
+            href="/policies?status=SOLD"
+            length="4"
+            simulated=""
+          >
+            <h4
+              class="sc-bOTDDd cOATmY"
+            >
+              All policies
+            </h4>
+            <p
+              class="sc-hrJsxi kKajxd"
+            >
+              All policies sold to date
+            </p>
+          </a>
+          <a
+            background="#9D5899"
+            class="sc-cKVNtL dwMMwa"
+            href="/policies?status=AWAITING_TERMS"
+            length="4"
+            simulated=""
+          >
+            <h4
+              class="sc-bOTDDd cOATmY"
+            >
+              Awaiting terms
+            </h4>
+            <p
+              class="sc-hrJsxi kKajxd"
+            >
+              All quotes awaiting terms
+            </p>
+          </a>
+          <a
+            background="#9D5899"
+            class="sc-cKVNtL dwMMwa"
+            href="/policies?status=AWAITING_TERMS&simulated=true"
+            length="4"
+            simulated="true"
+          >
+            <div
+              class="sc-bZSZLb fFZsgh"
+            >
+              <div
+                class="sc-fyrocj cqUqRs"
+              >
+                <div
+                  class="sc-jKTccl bEaMQH"
+                >
+                  <svg
+                    class="sc-jRQBWg bqlKx"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      class="sc-gKclnd gxtOty"
+                      d="M21,16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V7.5C3,7.12 3.21,6.79 3.53,6.62L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.79,6.79 21,7.12 21,7.5V16.5M12,4.15L6.04,7.5L12,10.85L17.96,7.5L12,4.15M5,15.91L11,19.29V12.58L5,9.21V15.91M19,15.91V9.21L13,12.58V19.29L19,15.91Z"
+                      fill="#FFF"
+                    />
+                  </svg>
+                </div>
+                <span
+                  class="sc-iWVNaa cmOHyp"
+                  font-size="1.25rem"
+                >
+                  Simulated
+                </span>
+              </div>
+            </div>
+            <h4
+              class="sc-bOTDDd cOATmY"
+            >
+              Awaiting terms
+            </h4>
+            <p
+              class="sc-hrJsxi kKajxd"
+            >
+              All simulated quotes awaiting terms
+            </p>
+          </a>
+          <a
+            background="#9D5899"
+            class="sc-cKVNtL dwMMwa"
+            href="/policies?status=AWAITING_ACCEPTANCE"
+            length="4"
+            simulated=""
+          >
+            <h4
+              class="sc-bOTDDd cOATmY"
+            >
+              Awaiting acceptance
+            </h4>
+            <p
+              class="sc-hrJsxi kKajxd"
+            >
+              All policies awaiting final terms and policy numbers
+            </p>
+          </a>
+          <a
+            background="#9D5899"
+            class="sc-cKVNtL dwMMwa"
+            href="/policies?status=AWAITING_ACCEPTANCE&simulated=true"
+            length="4"
+            simulated="true"
+          >
+            <div
+              class="sc-bZSZLb fFZsgh"
+            >
+              <div
+                class="sc-fyrocj cqUqRs"
+              >
+                <div
+                  class="sc-jKTccl bEaMQH"
+                >
+                  <svg
+                    class="sc-jRQBWg bqlKx"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      class="sc-gKclnd gxtOty"
+                      d="M21,16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V7.5C3,7.12 3.21,6.79 3.53,6.62L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.79,6.79 21,7.12 21,7.5V16.5M12,4.15L6.04,7.5L12,10.85L17.96,7.5L12,4.15M5,15.91L11,19.29V12.58L5,9.21V15.91M19,15.91V9.21L13,12.58V19.29L19,15.91Z"
+                      fill="#FFF"
+                    />
+                  </svg>
+                </div>
+                <span
+                  class="sc-iWVNaa cmOHyp"
+                  font-size="1.25rem"
+                >
+                  Simulated
+                </span>
+              </div>
+            </div>
+            <h4
+              class="sc-bOTDDd cOATmY"
+            >
+              Awaiting acceptance
+            </h4>
+            <p
+              class="sc-hrJsxi kKajxd"
+            >
+              All simulated policies awaiting final terms and policy numbers
+            </p>
+          </a>
+          <a
+            background="#9D5899"
+            class="sc-cKVNtL dwMMwa"
+            href="/policies?status=FAILED_ONBOARDING"
+            length="4"
+            simulated=""
+          >
+            <h4
+              class="sc-bOTDDd cOATmY"
+            >
+              Failed to onboard
+            </h4>
+            <p
+              class="sc-hrJsxi kKajxd"
+            >
+              All policies that failed onboarding
+            </p>
+          </a>
+          <a
+            background="#9D5899"
+            class="sc-cKVNtL dwMMwa"
+            href="/policies?status=FAILED_ONBOARDING&simulated=true"
+            length="4"
+            simulated="true"
+          >
+            <div
+              class="sc-bZSZLb fFZsgh"
+            >
+              <div
+                class="sc-fyrocj cqUqRs"
+              >
+                <div
+                  class="sc-jKTccl bEaMQH"
+                >
+                  <svg
+                    class="sc-jRQBWg bqlKx"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      class="sc-gKclnd gxtOty"
+                      d="M21,16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V7.5C3,7.12 3.21,6.79 3.53,6.62L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.79,6.79 21,7.12 21,7.5V16.5M12,4.15L6.04,7.5L12,10.85L17.96,7.5L12,4.15M5,15.91L11,19.29V12.58L5,9.21V15.91M19,15.91V9.21L13,12.58V19.29L19,15.91Z"
+                      fill="#FFF"
+                    />
+                  </svg>
+                </div>
+                <span
+                  class="sc-iWVNaa cmOHyp"
+                  font-size="1.25rem"
+                >
+                  Simulated
+                </span>
+              </div>
+            </div>
+            <h4
+              class="sc-bOTDDd cOATmY"
+            >
+              Failed to onboard
+            </h4>
+            <p
+              class="sc-hrJsxi kKajxd"
+            >
+              All simulated policies that failed onboarding
+            </p>
+          </a>
+        </div>
+        <div
+          class="sc-icMgfS hhzqWg"
+          data-testid="dash-category-admin"
+        >
+          <div
+            class="sc-crHmcD cHTHyz"
+            data-testid="heading_3-helper_text-container"
+          >
+            <h3
+              class="sc-kfPuZi hLnUNx"
+            >
+              Admin
+            </h3>
+            
+          </div>
+          <a
+            background="#335257"
+            class="sc-cKVNtL cHAIZi"
+            href="/my-account?my-account=details"
+            length="4"
+            simulated=""
+          >
+            <h4
+              class="sc-bOTDDd cOATmY"
+            >
+              My account
+            </h4>
+            <p
+              class="sc-hrJsxi kKajxd"
+            >
+              Manage your account username and password, etc
+            </p>
+          </a>
+          <div
+            class="sc-hgJWpk lnXGuv"
+          >
+            <h4
+              class="sc-bOTDDd cOATmY"
+            >
+              Mail log
+            </h4>
+            <p
+              class="sc-hrJsxi kKajxd"
+            >
+              View mail sent from this domain
+            </p>
+          </div>
+          <div
+            class="sc-hgJWpk lnXGuv"
+          >
+            <h4
+              class="sc-bOTDDd cOATmY"
+            >
+              Commission rates
+            </h4>
+            <p
+              class="sc-hrJsxi kKajxd"
+            >
+              Commission rates for Organisations
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer
+    class="sc-edERGn jsHmuY"
+    data-testid="test-footer"
+  >
+    <p
+      class="sc-jlsrNB dOjJst"
+    >
+      V:0.0.1
+    </p>
+    <p
+      class="sc-jlsrNB dOjJst"
+    >
+      © Copyright 4C Platform 
+      2021
+    </p>
+  </footer>
+</div>
+`;

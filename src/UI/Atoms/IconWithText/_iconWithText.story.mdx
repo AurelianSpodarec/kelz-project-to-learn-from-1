@@ -1,0 +1,72 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import IconWithText from "."
+
+<Meta
+  title="Atoms/IconWithText"
+  component={IconWithText}
+  parameters={{ jest: ["_iconWithText.test.js"] }}
+/>
+
+# IconWithText
+
+`IconWithText` is a simple presentational component that puts an icon alongside a text element.
+
+## Usage
+
+This component can display text by using a `content` prop or by wrapping Text children in the element.
+
+Import
+
+```javascript
+import { IconWithText } from "../../UI/Atoms"
+```
+
+Usage
+
+```javascript
+<IconWithText icon="check" content="Use the content prop for standard styles" />
+```
+
+```javascript
+<IconWithText icon="checklist" margin="0 0 2rem">
+  <p style={{ margin: "0" }}>
+    This can also be used with children, however, it is desirable to use the margin prop on the
+    IconWithText component instead of the margin on the wrapped text.
+  </p>
+</IconWithText>
+```
+
+## Story
+
+export const Template = args => <IconWithText {...args} />
+
+<Canvas>
+  <Story
+    name="Basic"
+    args={{
+      icon: "check",
+      content: "This is rendered with the content prop."
+    }}
+  >
+    {Template.bind()}
+  </Story>
+  <Story
+    name="With Children"
+    args={{
+      icon: "check",
+      children: <p style={{ margin: "0" }}>This is rendered with children</p>
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Props / Args
+
+### Basic
+
+<ArgsTable story="Basic" />
+
+### With Children
+
+<ArgsTable story="With Children" />

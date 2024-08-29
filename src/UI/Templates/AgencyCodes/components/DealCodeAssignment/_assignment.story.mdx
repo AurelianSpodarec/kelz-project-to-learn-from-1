@@ -1,0 +1,108 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs"
+import { get } from "lodash"
+import { colours } from "@4cplatform/elements/Helpers"
+import { H3 } from "@4cplatform/elements/Typography"
+import { FlyOutPanel } from "../../../../Molecules"
+import { Providers, fakeDealCodesGetResponse } from "../../../../Helpers"
+import { PageContext } from "../../../../Organisms"
+import StoryAgencyCodesProvider from "../../AgencyCodeAdmin/story/agencyCodes.story.provider"
+import DealCodeAssignment from "."
+
+<Meta
+  title="Templates/Agency Codes/DealCodeAssignment"
+  component={DealCodeAssignment}
+  parameters={{
+    jest: ["_assignment.test.js"]
+  }}
+  decorators={[
+    StoryFn => (
+      <Providers>
+        <StoryAgencyCodesProvider>
+          <StoryFn />
+        </StoryAgencyCodesProvider>
+      </Providers>
+    )
+  ]}
+/>
+
+# DealCodeAssignment
+
+This component provides an interface for assigning, viewing, suspending, reinstating, and unassigning deal codes against the selected agency code.
+
+## Usage
+
+This component can obly be used from inside the scope of the AgencyCodesContext. The viewDeal variable is controlled inside that context, and all of the query data and mutations must be passed in from there.
+
+E.g.
+
+```javascript
+<Provider
+  value={{
+    assignedDealCodes,
+    assignedDealCodesLoading,
+    availableDealCodes,
+    availableDealCodesLoading,
+    onAssignDealCode: body => {
+      const deal = get(body, "deal_code_slug", "")
+      assignDealCode({ params: { deal, slug: get(selectedAgencyCode, "slug", "") } })
+    },
+    assignDealCodeLoading,
+    onUnassignDealCode: () => unassignDealCode(),
+    unassignDealCodeLoading,
+    onSuspendDealCode: () => suspendDealCode(),
+    suspendDealCodeLoading,
+    onReinstateDealCode: () => reinstateDealCode(),
+    reinstateDealCodeLoading,
+    viewDeal,
+    setViewDeal: val => dispatch({ type: "UPDATE_VALUE", key: "viewDeal", value: val }),
+    ...otherValues
+  }}
+>
+  {children}
+  <ApiError
+    error={
+      assignedDealCodesError ||
+      availableDealCodesError ||
+      suspendDealCodeError ||
+      reinstateDealCodeError ||
+      unassignDealCodeError ||
+      assignDealCodeError
+    }
+  />
+</Provider>
+```
+
+## Story
+
+export const Template = args => {
+  const { setPanelStatus } = React.useContext(PageContext)
+  return (
+    <div style={{ height: "50rem" }}>
+      <div
+        style={{
+          width: "100%",
+          height: "calc(100vh - 14rem)",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }}
+      >
+        <button onClick={() => setPanelStatus("open")}>Open Panel</button>
+      </div>
+      <FlyOutPanel
+        body={() => (
+          <div style={{ padding: "2rem 3rem" }}>
+            <H3 appearance="light" margin="0 0 4rem">
+              Deal Code Assignment Example
+            </H3>
+            <DealCodeAssignment {...args} />
+          </div>
+        )}
+      />
+    </div>
+  )
+}
+
+<Canvas>
+  <Story name="DealCodeAssignment">{Template.bind()}</Story>
+</Canvas>
